@@ -1,5 +1,5 @@
 name: "Datafiles for Ken Butler's courses"
-output_dir: "."
+output_dir: "docs"
 navbar:
   title: "Datafiles"
   left:

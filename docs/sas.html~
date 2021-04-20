@@ -1,0 +1,28 @@
+<html>
+  <head>
+<title>Links to SAS documentation</title>
+</head>
+<body>
+<h1>Links to SAS documentation</h1>
+
+Back in the day, serious SAS users had a shelf-ful of intimidatingly
+thick books about SAS. These books still exist, but you can get them
+for free as PDFs these days. Here are some of the most useful
+ones. They are as thick as they ever were, but you can use the tables
+of contents to zero on in what you're looking for.
+
+<ul>
+<li><a href="http://support.sas.com/documentation/onlinedoc/91pdf/sasdoc_913/base_proc_8977.pdf">Base
+    SAS procedures guide</a>: the simpler data-management procedures,
+    like <tt>proc univariate</tt>, are in here.
+<li><a href="http://support.sas.com/documentation/onlinedoc/91pdf/sasdoc_913/base_lrdictionary_10307.pdf">SAS
+    language reference: dictionary</a>: an encyclopedia of stuff you
+    can do in data steps.
+<li><a href="http://support.sas.com/documentation/onlinedoc/91pdf/sasdoc_913/base_step_10071.pdf">Step-by-step
+    programming in SAS</a>: more about getting your data into SAS and
+    a whole bunch of other things you might someday need.
+<li>
+</ul>
+
+</body>
+</html>
