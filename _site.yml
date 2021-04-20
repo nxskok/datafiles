@@ -1,0 +1,11 @@
+name: "Datafiles for Ken Butler's courses"
+output_dir: "."
+navbar:
+  title: "Datafiles"
+left:
+  - text: "Home"
+    href: index.html
+  - text: "Ken's other courses"
+    href: http://ritsokiguess.site/home/courses.html
+  - text: "Ken Butler homepage"
+    href: http://ritsokiguess.site/home

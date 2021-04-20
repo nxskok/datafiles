@@ -1,0 +1,7 @@
+---
+title: "Datafiles page"
+---
+
+#  Title
+
+This isn't meant to be accessed. Use the URL for a datafile to access the file directly.

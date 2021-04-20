@@ -1,731 +1,313 @@
-<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 
-transitional//en">
-<html><head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<meta name="GENERATOR" content="Mozilla/4.77 (Macintosh; U; PPC) [Netscape]"><title>Statistics for the Life and Social Sciences</title></head>
-<body style="color: rgb(0, 0, 102); background-color: rgb(255, 255, 255);" link="#003333" vlink="#996600">
-<br><table border="0" cellpadding="0" cellspacing="0" width="640">
-<tbody>
-<tr>
-<td valign="top"><a href="http://www.utsc.utoronto.ca"><img src="utsc_websignature.jpg" border="0" height="60" width="180"></a></td>
-<td valign="top">&nbsp;</td>
-<td valign="top">
-<p><font face="Arial, Helvetica,
-	       sans-serif"><b><font size="5">Statistics for the Life and Social Sciences </font></b></font></p>
-<p><font face="Arial, Helvetica, sans-serif" size="4">STAD29/STA429/STA1007 Ken Butler</font></p>
-</td>
-</tr>
-<tr>
-<td align="center" valign="top" width="180">&nbsp;</td>
-<td valign="top" width="20">&nbsp;</td>
-<td valign="top" width="400">&nbsp;</td>
-</tr>
-<tr>
-<td align="left" valign="top" width="180"><span style="font-family:
-							 Helvetica,Arial,sans-serif;
-							 font-size: 0.75em;"
-							 >
-    <ul>
-<li><a href="slides-sw.pdf">Lecture slides</a> (last update Mar 18, 2019.)
-<li><a href="slides-sw.R">R code</a> for lecture slides.
-<li><a href="http://ritsokiguess.site/pasias/">Problems and Solutions in Applied Statistics</a> (will continue to be updated), and <a href="http://ritsokiguess.site/pasias/pasias.pdf">PDF version</a>.
-<li> Data files
-  should be accessible <a href="mydata.txt">like this</a>. Change end
-  of URL to filename you want. Let me know if something is not there.
-<li>Course outline in first few pages
-  of <a href="slides-sw.pdf">lecture slides</a>.
-<li><a href="r.html">Links to R stuff</a>
-<li><a href="http://r4ds.had.co.nz/">R for Data Science</a> book.
-</ul>
-</span></td>
-<td valign="top" width="10">&nbsp;</td>
-<td valign="top" width="460">
-<img src="ken.jpg" width="300">
-<p><font face="Arial, Helvetica, sans-serif">
-Welcome
-to the home page for STA 1007 / STAD29. This is the place to look for
-all things course-related (notes, assignments, announcements etc.) except for
-assignment hand-ins and marks, which will be on <a href="https://q.utoronto.ca/courses/77890">Quercus</a>.</font></p>
-<hr style="width: 100%; height: 2px;">
+<!DOCTYPE html>
 
-<p><font face="Arial, Helvetica, sans-serif">
-News here, most recent at the top:
+<html>
 
-<ul><font face="Arial, Helvetica, sans-serif">
-    <li>2019-04-15 12:00: grades submitted. They will come to you as
-    soon as they have been approved. Everyone passed, and my special
-      congratulations to the 12 people who earned A+ grades.
+<head>
 
-      <p> A couple of things about the grade calculation:
-	<ul>
-	  <li>I had four grading schemes: counting or not counting the
-	    final exam instead of the midterm, and counting or not
-	    counting the project according to the STA 1007 scheme (a
-	    non-issue for most of you). You automatically get
-	    whichever one comes out the highest. This was about an
-	    even split between counting and not counting the midterm,
-	    and one student benefitted from each of the project
-	    options.
-	  <li>I don't give grades one below a grade boundary. Thus,
-	    for example, 79.6 becomes 80, but 79.4 is rounded down to
-	    78. If you want the higher grade, you have to earn it.
-	</ul>
-    <li>2019-04-14 20:30: done grading! The nice thing about Crowdmark
-    is that it does the adding up and recording for me. I have put the
-    final exam marks on Quercus and will release them to you in a
-    moment. Before I do that, the obligatory few remarks:
-
-      <ul>
-	<li>I don't like to fail people in this course, and this year,
-	as in other years, it looks as if everyone will pass.
-	<li>You will also shortly be receiving your marked exam by
-	  email. I anticipate that by looking at this and my
-	  solutions, you will be able to see why you got the mark you
-	  did.
-	<li>If you wish for any part of your final exam to be
-	  regraded, file a petition through the Registrar's office
-	  as usual.
-	<li> You will now be in a position to calculate your
-	  (unofficial) course grade. I will do the official
-	  calculation tomorrow. If you do not like what you
-	  got, <em>do not appeal to me</em>, since that is a waste
-	  of everyone's time.
-      </ul>
-    <li>2019-04-14 19:15: 6(c) done. One more part to go.
-    <li>2019-04-14 17:50: 6(b) done, at the speed of light.
-    <li>2019-04-14 17:20: a circuit of the mall, and 6(a) done. I
-    think I can finish grading tonight.
-    <li>2019-04-14 15:50: question 5, and page 9, is done. Only one
-    question to go. I think I could do with a walk around the mall, if
-    I can get there without getting soaking wet.
-    <li>2019-04-14 15:10: 5(f) is done. At least I knew what I was
-    looking for this time. I want to have a walk outside, but looking
-    out the window I don't want to have a walk outside. I'm hoping the
-    grading is all downhill from here.
-    <li>2019-04-14 13:50: 5(e) is finally done. And now I have to
-    tackle (f) which is similar. I may need lunch first.
-    <li>2019-04-14 10:35: 5(d) done. I need a cup of tea before I
-    tackle (e) and (f).
-    <li>2019-04-13 20:50: 5(c), and page 8, done. Today mainly
-    featured time with Megan (including baking cookies), riding the
-    subway to drop her off with mom, and going for a bike ride before
-    dark. I think that is as much energy as I can summon tonight. The
-    forecast for tomorrow appears to be good exam-marking weather!
-    <li>2019-04-13 13:30: 5(b) done, while Megan watches Minecraft
-    videos on YouTube.
-    <li>2019-04-12 21:45: 5(a) done. Bedtime (for Megan and for me). 
-    <li>2019-04-12 20:15: 4(e) done. There were some really nice
-    ideas. I might venture into question 5 tonight, or I might not.
-    <li>2019-04-12 18:00: 4(c) done. I have a feeling part (e) will be
-    an adventure (questions beginning with "describe" tend to be fun
-    and games to mark).
-    <li>2019-04-12 11:50: 4(d) done (as expected, fast). Lunchtime,
-    then I have to go get Megan. After we get back, I suspect she will
-    be watching YouTube for a while, so I might get some more marking
-    done then.
-    <li>2019-04-12 11:25: 4(b) done. I think part (c) will take me
-    longer than I have now, so I will skip ahead to 4(d) and come back
-    to (c) later.
-    <li>2019-04-12 10:40: 4(a) done. There were about a thousand
-      different ways to do this one, but fortunately I was ready for
-      that.  I don't know how much more will get done today, since I have
-      to go get Megan from school this afternoon.
-    <li>2019-04-11 22:35: 3(j), and question 3, done. My concentration
-    is wavering, so I will pick up with question 4 tomorrow. I call
-    the exam halfway graded.
-    <li>2019-04-11 22:05: 3(i) done. Will attempt to get through (j)
-    tonight, but that may be as far as I go for now.
-    <li>2019-04-11 21:35: dinner eaten, (decaf) coffee drunk, daughter
-    chatted with, and 3(h) done. There were a lot of ways you could do
-    this part, and some of them found their way
-    into <a href="final-20191.pdf">my solutions</a>.
-    <li>2019-04-11 17:45: 3(g) done. Going home. 
-    <li>2019-04-11 17:10: 3(f) done. It goes quicker when I sit down
-    and do it. Funny, that.
-    <li>2019-04-11 16:50: 3(e) done, via another walk down the hallway
-    and a quick check to see if Arsenal are still winning (they were).
-    <li>2019-04-11 16:00: 3(d), and page 4, done. It feels like slow progress
-    today, but the exam is getting marked. I am also following the
-    fortunes of Arsenal and Chelsea in the Europa League.
-    <li>2019-04-11 15:35: 3(c) done. Of course, the walk down the
-    hallway resulted in a chat with colleagues.
-    <li>2019-04-11 14:50: 3(b) done. I need at least a walk down the hallway. 
-    <li>2019-04-11 14:15: I am fuelled by lunch <em>and</em> tea. 3(a)
-    done.
-    <li>2019-04-11 13:15: 2(h) and thus page 3 done. I'm hungry.
-    <li>2019-04-11 12:40: 2(g) done. Let me try for one more part
-      before lunch.  The good thing about being in my office is that
-      people pass by. The bad thing about being in my office is that
-      people pass by.
-    <li>2019-04-11 12:00: Back in my marking chair, with coffee. 2(f)
-    done.
-    <li>2019-04-10 23:05: 2(e) done. 9 parts out of 38 done. I am out
-    of (mental) juice, though I could probably round up some (actual
-    real) juice. That's it for tonight. I see I have some coding to
-    start grading with tomorrow, which is a nice way to start. I
-    suppose I had better tackle that kitchen now.
-    <li>2019-04-10 22:25: 2(d) and page 2 of 11 done. My computer told
-    me that I had to stand up and walk around, so I took the
-    opportunity to start de-messing my kitchen. A long way to go there. I
-    have dates (the fruit) to help me through the next stage of
-    marking. The latest solutions are <a href="final-20191.pdf">here</a>.
-    <li>2019-04-10 21:55: I'm back, and 2(c) is done. My kitchen is
-    still a mess, but at least my fridge has food in it now. I picked
-    up some snacks to help the marking along, but they may not all be
-    healthy ones.
-    <li>2019-04-10 20:15: 2(b) done; more fast work because most
-    people got this right. I'm getting groceries now because (i) I
-    don't mind going late tonight and (ii) this will give me a chance
-    to work all day tomorrow without interruptions apart from my own
-    procrastination.
-    <li>2019-04-10 19:55: dinner eaten and 2(a) sped
-    through. Crowdmark tells me I went through the entire (virtual)
-    pile of 2(a)'s in 8 minutes "at 392 exams per hour".
-
-      <p> I have to get groceries at some point tonight also.
-    <li>2019-04-10 19:10: question 1 done, and, by happy coincidence,
-    my dinner is ready.
-    <li>2019-04-10 18:50: dinner is under way and won't need attention
-    until it is ready to eat. On we go. (My kitchen is a mess, but I
-    will ignore that until (much) later.)
-    <li>2019-04-10 18:20: 1(c) marked. Back in the land of the living;
-    amazing how things go faster when you're awake! The next thing I'm
-    going to need is dinner, but I think I have something that can
-    cook while I continue to grade.
-    <li>2019-04-10 15:15: 1(b) marked. Progress is feeling rather slow.
-    <li>2019-04-10 14:15: 1(a) marked. I may need a nap soon. I don't
-      care for early mornings. My (evolving as I mark) solutions
-      are <a href="final-20191.pdf">here</a>. The Figures
-      are <a href="final-20191-f.pdf">here</a>, if you forgot to take
-      yours with you. At the end, I will be returning your marked
-      final exam to you by email, so you don't have to pay
-      however-much-it-is to get a look at it.
-    <li>2019-04-10 13:10: the exams have been scanned, and I now get
-    to start grading (online). There may have to be tea involved
-    first.
-    <li>2019-04-03 12:40: pre-exam office hours Monday 1:00-4:00 in my
-    office. I may be around before and (a little) after that as well.
-    <li>2019-04-03 12:40: last lecture today: the rest of time series
-    and as much of the frequency table stuff as I feel inclined to
-    do. (I want to get to the airlines example, which is Simpson's
-    Paradox and an explanation thereof.)
-    <li>2019-04-01 15:50: heading over to BV 498 shortly, in case
-    anyone is there. (A couple of people were, so it was a worthwhile trip.)
-    <li>2019-03-29 21:00: The current state of the final exam
-    (complete, apart from editing) is: 6 questions with a total of 38
-    parts worth a total of 91 points. Printed out with space for
-    answers it makes 11 pages. I think this is, by the usual standards
-    of final exams in this course, a short exam. Note: (i) I've been
-    wrong about that before, so don't count on it, (ii) we had more
-    stuff on the midterm this time than usual, so there is less to go
-    on the final. As befits my questions on this course, one of the
-    questions goes up to part (j).
-    <li>2019-03-28 14:30: I've been working on your final exam. It
-    currently has 5 questions with 34 parts altogether worth a total
-    of 81 points, but I want to add one more question which will
-    probably bring the points up near 100. (The questions, or at least
-    some of them, are longer than the ones on the midterm because they
-    came out with a lot of small parts.)
-    <li>2019-03-28 13:45: I think the last two chapters
-    of <a href="http://ritsokiguess.site/pasias/">PASIAS</a> read
-    properly now, and match up with how I currently do things.
-    <li>2019-03-27 16:30: I
-    think <a href="https://rstudio.cloud/project/164745">this link</a>
-    will get you to the lecture code project, including today's
-    lecture
-    code. Also, <a href="https://raw.githubusercontent.com/nxskok/d29-lecture-code/master/20190327.Rmd">here</a>
-    is the R Markdown itself if you are running R Studio on your
-    computer.
-    <li>2019-03-27 11:05: My solutions to <a href="a7.pdf">assignment
-    7</a>. We are now officially done with assignments!
-    <li>2019-03-26 14:45: don't forget to work through the <a href="https://www.utsc.utoronto.ca/~butler/d29/oldexams.html">old final exams</a>. 
-    <li>2019-03-26 14:35: as review of Principal Components (last week
-    and this), Factor Analysis (this week) and frequency table
-    analysis (next week), please work through chapters 25 and 26
-    of <a href="http://ritsokiguess.site/pasias/">PASIAS</a>. There
-    may be typos and/or confusions in there. If you see any of those
-    before I do, let me know. I also have some material on time
-    series, which you will see at the end of this week's class and the
-    start of next week's. I don't have practice problems on that, so
-    the time series material <em>will not be on the final exam</em>.
-    <li>2019-03-26 14:30: Our final exam is on <strong>Wednesday April
-    10 at 9:00am in IC 220</strong>. I will have pre-exam office hours between
-    the end of classes and the exam. I'm thinking the Monday before
-    the exam. (The last day of classes is April 5; if you are doing a
-    project, it is due that day at 11:59pm to my email.)
-    <li>2019-03-21 21:00: I forgot to post my solutions to assignment 6. <a href="a6.pdf">Here</a>.
-    <li>2019-03-20 12:30: <a href="a7.pdf">Assignment 7</a>, the last
-    one, is up. (The draft version had the wrong due date, now
-    corrected.)  I'll put up my solutions to assignment 6 after class
-    today.
-      <p> I also have some material on time series that I dusted off
-      and modernized (a little). If we have time, I'll share that with
-      you in the last week of classes, but it won't be on the exam
-      because I don't have any practice questions on it. (It needs
-      eventually to find its way into PASIAS, but it hasn't yet.) The
-      material I'm skipping on multidimensional scaling is a little
-      more than two hours, but I don't have a sense of how much more,
-      so I'm not sure how time left and material left stack up yet.
-	
-    <li>2019-03-18 12:30: we have lecture code for
-    Wednesday, <a href="https://rstudio.cloud/spaces/3935/join?access_code=f4%2BCD3RZZ32ylG1wbVwdE2mvfAR9eyP8YQXBKmkk">here</a>
-    or <a href="https://raw.githubusercontent.com/nxskok/d29-lecture-code/master/20190320.Rmd">here</a>. I
-    also corrected some errors in the <a href="slides-sw.pdf">lecture
-    slides</a>. (I was trying to access a file that didn't exist.)
-    Also, a draft <a href="a7.pdf">assignment 7</a>, the first hand-in
-    question of which you can do now. (The material for the second is
-    on the agenda for the first half of this week's lecture.)
-    <li>2019-03-13 09:45: my <a href="a5.pdf">assignment 5
-    solutions</a>. Also, assignment 6, on discriminant analysis, is up
-    on Quercus.
-    <li>2019-03-12 11:50: this week's lecture code is the notebook
-    with tomorrow's date
-    in <a href="https://rstudio.cloud/spaces/3935/project/164745">this
-    project</a>, or
-    equivalently <a href="https://raw.githubusercontent.com/nxskok/d29-lecture-code/master/20190313.Rmd">this</a>. I
-    don't expect to get all the way through cluster analysis this
-      week, so some of this is likely to get moved to next week.
-      <p> A rough plan for the rest of the way:
-	<ul>
-	  <li>March 13: the rest of discriminant analysis and the
-	  start of cluster analysis
-	  <li>March 20: the rest of cluster analysis and possibly the
-	  beginning of principal components.
-	  <li>March 27: principal components and some of factor analysis
-	  <li>April 3: the rest of factor analysis and frequency tables
-	</ul>
-	I feel as if I missed something, but that will do as a plan,
-	skipping multidimensional scaling. I also have some material
-	on time series that I might be able to bash into shape.
-    <li>2019-03-12 11:45: I declare myself happy
-    with <a href="a6.pdf">Assignment 6</a>, with its one very long
-    question. You'll see the rest of this material in the first half
-    of this week's lecture. A cluster analysis question will appear on
-    Assignment 7, which is likely to be the last one. The rest of the
-    way, I will direct you to problems in PASIAS to work
-    through. (There are normally eight assignments in this course, but
-    we missed a week due to snow.)
-    <li>2019-03-08 12:15: on the agenda for next week: the second half
-    of discriminant analysis, and at least part of cluster
-    analysis. Part of the code
-    behind <a href="https://www.utsc.utoronto.ca/~butler/d29/slides-sw.pdf">my
-    lecture slides</a> wasn't drawing the pretty pictures on slides
-    410-413, but that is fixed now. (Check your copy and download a
-    new one if needed.)
-    <li>2019-03-08 12:00: I forgot to share this week's lecture
-    code, <a href="https://rstudio.cloud/spaces/3935/join?access_code=f4%2BCD3RZZ32ylG1wbVwdE2mvfAR9eyP8YQXBKmkk">here</a>
-    on R Studio Cloud
-    or <a href="https://raw.githubusercontent.com/nxskok/d29-lecture-code/master/20190306.Rmd">here</a>
-    for the notebook itself.
-    <li>2019-03-07 16:30: I have a draft Assignment 6, which has one
-    very long question on discriminant analysis. I'm expecting to
-    start cluster analysis next week, but there won't be an assignment
-    question on that until Assignment 7. I realize I am running out of
-    weeks for assignments, but there will be a "fractional assignment"
-      or two at the end, basically telling you to work through PASIAS.
-
-      <p>We only have four more weeks of lectures! (How did that
-      happen?) I'm thinking I'll skip Multidimensional Scaling because
-      I want to do justice to cluster analysis and the principal
-      components-factor analysis stuff. The frequency table analysis
-      is quick, and I think quite interesting and useful, but it is
-      covered in C51 in much more detail, so I might skip that too. (I
-      like to end with that, because I think it's a nice cool-down
-      from the rest of the course, but we'll see.)
-
-      
-    <li>2019-03-06 16:15: I am obviously dopey today. I realized that
-    I wasn't intending to complete discriminant analysis today. We can
-    take up to another hour on that, so we can look at
-    cross-validation and the other two examples after all. My plan is
-    for assignment 6 to have just one question on this stuff, since I
-    have given you a long assignment 5. Next week, we can also start
-    cluster analysis, time permitting.
-    <li>2019-03-06 12:45: assignment 5 is up. It's a long one (three
-    questions), but I warned you that it might be. Some stuff from
-    last week's class and the first half of this week's.
-    <li>2019-03-06 12:00: midterm stats: Q1 51.5 (64%), median 61
-    (75%), Q3 69 (85%). These are about in line with what I'd expect
-    in this course. Now I need to get ready for class!
-    <li>2019-03-06 10:50: when you see your exam, read it through
-    with <a href="midterm-20191.pdf">my solutions</a>. Note that two
-    of the question parts changed marks (one from 2 to 3 and the other
-    from 3 to 2 marks). If you have questions about any of the grading
-    after that, email me with specifics of which question(s) you are
-    curious about. I don't need the actual exam because I have access
-    to that. (Coloured rectangles around answers mean that they are
-    wrong; coloured rectangles around bits of the question indicate
-    something missing. If I were doing this by hand, I would circle
-    these.)
-    <li>2019-03-06 10:44: the grades are up on Quercus. There were a
-    few in the high 70s (out of 81), which is really nice work. Next,
-    I will email everyone a link that you should be able to use to
-    access your exam to look at it. (If you see a request for a
-    username and password, wait a moment until you see something like
-    "log in with Quercus", and then use your UTorID and password. I
-    don't know how this will look for you, since this is my first
-    time.)
-    <li>2019-03-06 10:40: Gosh, I'm done marking. Now I know I can get
-    the grades <em>and</em> the graded papers to you; I just have to
-    figure out how.
-    <li>2019-03-06 10:20: In the office earlier than expected. 6(d)
-    done. I have a meeting at 11; if we are lucky, I can get 6(e) done
-    before it.
-    <li>2019-03-05 23:45: I had a very pleasant evening but no
-    grading. Two parts to go, maybe about an hour's work, which I
-    might have time to squeeze in tomorrow. But I want to make sure I
-    am sufficiently organized for our lecture, and do things like
-    getting assignment 5 up.
-    <li>2019-03-05 15:20: 6(c) done (a fast one).
-    <li>2019-03-05 15:00: 6(b) done (now out of 2 rather than 3). One
-    more before I go home.
-    <li>2019-03-05 14:30: 6(a) and page 8 done. On to the last page.
-    <li>2019-03-05 14:05: 5(f) done. Tea required, then on to the last
-    question.
-    <li>2019-03-05 13:15: 5(e) done. I had a visitor in the
-    meanwhile. Lunchtime.
-    <li>2019-03-05 12:10: 5(d) and page 7 done. You guys made me work
-    a bit harder on this one.
-    <li>2019-03-05 11:20: 5(c) done, a mostly fast one.
-    <li>2019-03-05 10:55: back in the saddle. 5(b) done.
-    <li>2019-03-04 22:20: 5(a), and me for tonight, are done. My
-    remaining task for the night is to fold laundry, about the only thing
-    that is less exciting than marking exams!
-    <li>2019-03-04 21:45: 4(g), and page 6, is done. Two-thirds of the
-    way through. Looking ahead, I won't have as much time tomorrow (I
-    have an R event in the evening!), so it seems unlikely that I'll
-    finish tomorrow. I won't have much time on Wednesday, so we are
-    currently looking at grades around lunchtime on Thursday.
-    <li>2019-03-04 21:05: 4(f) is done. One more part to finish page 6.
-    <li>2019-03-04 20:35: a reminder
-    that <a href="midterm-20191.pdf">my solutions</a>, evolving as I
-    mark, and the <a href="midterm-20191-f.pdf">code and output</a>,
-    are available.
-    <li>2019-03-04 20:35: 4(e) done. I have dinner in me and a hot
-    drink beside me, so I hope I am good now.
-    <li>2019-03-04 19:30: 4(d) done. This one is now out of 3, not 2.
-      I ate salad, but am still hungry,
-    which I am about to fix.
-    <li>2019-03-04 17:30: 4(c) done. Heading home for dinner.
-    <li>2019-03-04 16:55: 4(b) done. A quicker one. This is so far
-    an easy exam to grade by my standards. I wonder what I have coming
-    up?
-    <li>2019-03-04 16:30: 4(a) done. (I took a bit of a break.)
-    <li>2019-03-04 15:00: question 3 done. I have completed 4.5 of 9
-    pages and 3 of 6 questions, so I declare myself halfway done.
-    <li>2019-03-04 13:55: 3(e) done. A bit more thought required. I
-    should have an Accessability paper to deal with, which will take a
-    moment.
-    <li>2019-03-04 13:05: 3(d) done. Faster than I thought. Lunchtime.
-    <li>2019-03-04 12:20: 3(c) done. I knew that would be a fast
-    one. 3(d), not so much, I suspect.
-    <li>2019-03-04 12:05: 3(b) done. I can't help feeling I'm doing
-    all the easy ones first, and the grading is about to get a whole
-    lot more difficult.
-    <li>2019-03-04 11:40: back to work. 3(a) done. I have a T-card
-    (left at the exam) with student number ending in 1296. If you want
-      it back, get it from me.
-      <p> In case you are wondering, Crowdmark presents the exams to
-      me in the order of the codes on the question paper. I don't want
-      the same people at the top of the "pile" every time, so I pick a
-      random exam to start at, and it loops around until I am done.
-    <li>2019-03-03 22:05: Talking of tomorrow: <em>no tutorial</em>
-    again. I'll be in my office (marking exams!) if you need to track
-    me down.
-    <li>2019-03-03 22:00: 2(g) done. Twelve minutes. One-third
-    done. That'll do for tonight. Back to work tomorrow.
-    <li>2019-03-03 21:35: 2(f) done. That was a slow one, because I
-    had to work out what some of you were trying to do (and why it
-    wouldn't work). Crowdmark tells me I took 49 minutes "at 66 exams
-    per hour", the slowest one so far. (The fastest one is 2(c), which
-    took me all of 9 minutes to go through all the exams.)
-    <li>2019-03-03 20:30: dinner eaten, and 2(e) done. I haven't
-    needed musical support yet, perhaps because it's not as huge a
-    pile of exams as we had in C32.
-    <li>2019-03-03 18:50: 2(d) done. I definitely need dinner
-    now. (One nice thing about marking this way is that I don't have
-    to stop to add the pages.)
-    <li>2019-03-03 18:05: back from walk, and 2(c) done (fast). I may
-    need dinner soon.
-    <li>2019-03-03 16:50: 2(b) done. Going for a short walk before it
-    gets dark.
-    <li>2019-03-03 16:05: 2(a) done. Moving fast.
-    <li>2019-03-03 15:25: 1(c) done. This took me a fair bit longer
-    since there was more judgement involved on my part (and I used a
-    lot more different comments). I've also eaten lunch.
-    <li>2019-03-03 14:00: 1(b) done, and I still haven't eaten lunch
-    yet. Must fix that.
-    <li>2019-03-03 13:15: and so we begin. It looks as if Crowdmark
-    grading will be pretty fast. I like how I don't have to write the
-    same thing over and over (or handle all that paper), but I'm still
-    getting the hang of the interface. 1(a) done. I need lunch. By the
-    way,
-    the <a href="https://www.flashscore.ca/game/O650AfjI/#game-summary">Wolfpack
-    came from behind to win</a>, so I'm in a good mood.
-    <li>2019-03-02 12:00: though it is snowing, campus is open and our
-    midterm goes ahead. Allow extra time to get to campus.
-    <li>2019-02-28 13:55: I am in my office now until 4:00pm if you
-    have questions about midterm stuff.
-    <li>2019-02-28 13:45: next week's lecture code
-    is <a href="https://raw.githubusercontent.com/nxskok/d29-lecture-code/master/20190306.Rmd">here</a>
-    and on rstudio.cloud. I don't imagine you care much about this
-    yet. (I'm trying to get ahead of the game so that when I have
-    midterms to grade, I can spend some time grading them.)
-    <li>2019-02-27 16:40: today's lecture code is
-    on <a href="https://rstudio.cloud/spaces/3935/project/164745">R
-    Studio Cloud</a>
-    or <a href="https://raw.githubusercontent.com/nxskok/d29-lecture-code/master/20190227.Rmd">here</a>.
-    <li>2019-02-27 16:15: my <a href="a4.pdf">solutions to assignment
-	4</a>, and my <a href="a5.pdf">draft assignment 5</a>. The
-	assignment 4 material is on the midterm; the assignment 5
-	stuff <em>is not</em>. I didn't get all the way through
-	repeated measures today, but assignment 5 is not due until
-	March 12, so I will probably leave question 6 there with the
-	anticipation that we will complete the material for it
-	next week. (Suggestion: don't worry about assignment 5 at all
-	until after the midterm.)
-    <li>2019-02-27 12:10: according to the campus status page, "we are
-    monitoring conditions and will provide an update at 2 p.m. today."
-    Just in time to cancel class part way through, I bet.
-    <li>2019-02-27 12:00: reminder: midterm is Saturday March 2 at
-    5:00pm in MW 170.
-    <li>2019-02-27 10:15: The weather looks awful, but I am here, and
-    campus is open, so class (as things currently stand) goes ahead.
-    <li>2019-02-25 10:45: I will have the usual office hours plus
-    tutorial this week, plus also pre-exam office hours on Thursday
-    2:00-4:00 in my office. If you are done the assignment, the
-    tutorial would be a good chance to get some of your questions
-    about the midterm answered.
-    <li>2019-02-21 16:45: after much shuffling about and recompiling
-    of exams, we have an <a href="oldexams.html">old exams
-    page</a>. These are all the relevant old exams I have. If any of
-    the links don't work, or if they link to the wrong exam, let me
-    know.
-
-      <p>The best way to use these is to sit yourself down with a pen
-    and all the stuff you would bring to the real exam, and <em>do an
-    old exam under exam conditions</em>. When you have done
-    it, <em>then</em> look at the solutions and grade yourself. What
-    are you missing, and what do you need to go back and study again?
-    There is no substitute for practice, which is why I give you
-    assignments after every class. Reading through my solutions is a
-    poor second-best, because answering questions, that you have not
-    seen before, yourself is the way to see whether you know the
-    stuff. (What you are after is a way of solving the questions that
-    works <em>now</em>; code has changed a bit over the years, but the
-    ideas have not (much). Ask if in doubt.)
-    <li>2019-02-21 16:15: I have a folder of old exams, which I will
-    update and share with you shortly. 
-    <li>2019-02-21 16:00: The midterm is ready to roll. I spread the
-    six questions out onto nine pages to give you room to
-    write. Questions in this course seem to come out with a lot of
-    parts. There are 34 parts altogether on this exam, mostly worth
-    two or three points each, in my usual style.
-    <li>2019-02-21 13:15: I am working on the midterm now. I think I
-    am good with the current six questions worth 81 points (up to and
-    including last week's lecture). The questions are currently
-    arranged on six pages, but I am going to space them out a bit to
-      give you more room to write.
-
-      <p> I am trying out a system
-      called <a href="https://crowdmark.com/">Crowdmark</a>. There is
-      some work ahead of time to get the exam formatted correctly, but
-      when I get the completed exams back, I scan them and then mark
-      them online. At the end of the process, you get the marked exam
-      back by email with my comments. If it all works. The advantage for me is
-      that I am not handling paper or adding anything up, so the
-      process should go faster and be better for you (eg. I can re-use
-      my comments so I don't have to write them for each exam).
-    <li>2019-02-17 09:45: I messed up questions 1 and 3 on the current
-    assignment: the practice problems are from chapter <em>19</em> of
-    PASIAS. If you re-download the question file, you should find that
-    it is correct now. Sorry for confusion.
-    <li>2019-02-13 17:00: I am hoping that I have found a way of
-    sychronizing my lecture
-    code <a href="https://raw.githubusercontent.com/nxskok/d29-lecture-code/master/20190213.Rmd">on
-    Github</a>, so that I don't have to keep downloading it.
-    <li>2019-02-13 13:00: <a href="a4.pdf">Assignment 4</a>, on
-    today's stuff, is up on Quercus. It is due on February 26,
-    since <em>next week is reading week</em>. As I look out of my
-    office window, there is a hint of brightness and it's
-    even <em>stopped snowing</em>.
-    <li>2019-02-13 11:30: I am here, the weather is not so awful, and
-    class is on. This week we follow <a href="20190213.Rmd">this R
-    Notebook</a>, which might be on R on my computer since R Studio
-    Cloud is looking rather slow today.
-    <li>2019-02-11 11:30: I am having a very quiet office hour, and
-    since there is no assignment due this week, on account of class
-    being cancelled last week, I will <em>cancel</em> the tutorial
-      today. If you want to find me, I'll be in my office until 5.
-
-      <p> On the schedule for this week is exactly what we missed out
-      on last week: analysis of variance, including two-way analysis,
-      interactions and contrasts. Assignment 4, on this stuff, will be
-      due after reading week (which is next week, so the assignment
-	will be due something like the 26th).
-
-	<p>There will be one more class before the midterm, on the
-      27th. The material in that class <em>will not</em> be on the
-      midterm. That means that this material <em>certainly will
-      be</em> on the final, so you will need to know it at some
-	  point.
-
-	  <p>There will be no assignment due on March 5 (too soon
-      after the midterm), but the material from February 27 will be on
-      the assignment due March 12, which might thus be longer. It
-      looks as if we'll have 7 assignments altogether rather than the
-      usual 8; you get a break now rather than at the end of the
-      semester. In summary: assignment 4 due on Feb 26, 5 on March 13,
-      6 on March 20, 7 on March 27. I may have a short assignment 8
-      due the last day of classes, depending on when the final exam
-      is. Not because I want to be nasty, but because I want you to
-      get practice with as much as possible, so that you can write a
-      good final exam.
-
-	<p>Having missed a week probably means that I won't get as far
-      in this course as I would do otherwise, and I will have to make
-      some selections of things to skip later on.
-    <li>2019-02-08 15:30: I forgot to announce that the midterm
-    is <em>Saturday March 2 5:00-7:00 pm</em>. Yes, Saturday night, I
-    know. This is really late for a midterm, but so it is.
-    <li>2019-02-06 13:00: my <a href="a3.pdf">assignment 3
-    solutions</a>. Normally, this would be coupled with a posting of
-    assignment 4, but there won't be an assignment 4 until next week.
-    <li>2019-02-06 11:00: you are probably seeing a big red banner
-    across the top of this page, but in case not, there is <em>no
-    lecture</em> today because of the weather. This also means <em>no
-    assignment</em> this week (you may cheer now). The stuff I was
-    planning to talk about this week, on analysis of variance, will be
-    deferred to next week, and assignment 4 will go up next week and
-    be due later, probably after reading week.
-    <li>2019-02-05
-    12:20: <a href="https://rstudio.cloud/spaces/3935/join?access_code=f4%2BCD3RZZ32ylG1wbVwdE2mvfAR9eyP8YQXBKmkk">lecture
-    code</a> for tomorrow's class. (This might take you into the
-    "space", from which you need to navigate to the D29 notes project
-    and then find the notebook with tomorrow's date on it.)
-    Or, <a href="https://rstudio.cloud/spaces/3935/project/164745">try
-    this</a> and see whether it works.  Or, if you prefer,
-    the <a href="20190206.Rmd">R Markdown</a> in its current state.
-    <li>2019-02-05 12:15: preview of <a href="a4.pdf">assignment
-    4</a>, which will be doable after this week's class. There are two
-    things on the agenda for this week: two-factor ANOVA (with, as
-    subtopics, interactions and simple effects), and contrasts in
-    ANOVA. The lecture notes (and code, which I will post in a moment)
-    contain a review ANOVA example, which I don't think I need to
-    spend much time on.
-    <li>2019-01-31 21:15: I've been working on stuff for next week,
-    when we will be revisiting analysis of variance: two-way ANOVA,
-    simple effects, contrasts and the like. I reorganized the problems
-    in chapter 18 of PASIAS to reflect the order of things in the
-    lecture notes. Assignment 4 is almost ready to go: I will put up a
-    preview of that later, maybe Monday.
-    <li>2019-01-30 13:15: my solutions to <a href="a2.pdf">assignment
-      2</a>; <a href="a3.pdf">assignment 3</a> is up on Quercus.
-    <li>2019-01-29 13:00: A few edits to <a href="a3.pdf">assignment
-    3</a>. I simplified one of the parts of question 4: not much
-    shorter, but a good bit less thinking required. Also, R code for
-    tomorrow's lecture is
-    up <a href="https://rstudio.cloud/spaces/3935/project/164745">here</a>
-    or <a href="20190130.Rmd">here</a>. (Addendum: both updated after class on 30th.)
-    <li>2019-01-28 21:30: here is the current state
-    of <a href="a3.pdf">assignment 3</a>. Yes, it is long, especially
-    question 4. Partly this is to give you practice with basically
-    everything you might meet in a survival analysis question.
-    <li>2019-01-28 14:45: classes are cancelled from 5:00pm today,
-    which means that our tutorial goes ahead.
-    <li>2019-01-27 21:00: I've been working on assignment 3, the
-    preview version of which will go up tomorrow. There's a question
-    on survival analysis (the subject of this week's class) that you
-    might consider unreasonably long. I may, or may not, edit it down.
-    <li>2019-01-23 10:45: <a href="a1.pdf">My solutions to assignment
-    1</a>. Also, <a href="a2.pdf">Assignment 2</a> up on Quercus.
-    <li>2019-01-22 14:00: my R code for tomorrow's lecture is on R
-    Studio
-    Cloud <a href="https://rstudio.cloud/spaces/3935/join?access_code=f4%2BCD3RZZ32ylG1wbVwdE2mvfAR9eyP8YQXBKmkk">here</a>,
-    named with tomorrow's date under STAD29, or the R Markdown file itself
-    is <a href="20190123.Rmd">here (updated after class).</a>
-    <li>2019-01-21 15:30: here is <a href="a2.pdf">Assignment
-    2</a>. If you want to get started, questions 1 and 2 are doable
-    now; questions 3 and 4 will make more sense after Wednesday's
-    class.
-    <li>2019-01-14 14:00: we have an <a href="a1.pdf">Assignment
-    1</a>, which will be due Tuesday of <em>next</em> week. Questions
-    1 and 2 are doable now; questions 3 and 4 will make sense after
-    this week's lecture. Assignment is
-    now <a href="https://q.utoronto.ca/courses/77890/assignments">up
-    on Quercus</a>; let me know if you don't see it.
-    <li>2019-01-11 15:00: update: proofreading chapter 16 (logistic
-    regression) of PASIAS in preparation for next week; working on
-    Assignment 1 which will go out next week. We have the BV 498
-    computer lab Mondays 4-5pm starting next week. There is no
-    assignment due next week, but if you have questions
-    on <a href="a0.pdf">Assignment 0</a> or anything else, then or
-    office hours would be a good time to find me to ask them.
-    <li>2019-01-09 17:00: <a href="20190109.Rmd">R Notebook</a> of
-    today's lecture code.
-    <li>2019-01-09 13:20: <a href="https://rstudio.cloud/spaces/3935/join?access_code=f4%2BCD3RZZ32ylG1wbVwdE2mvfAR9eyP8YQXBKmkk">This link</a> should get you to a "shared space" in R Studio Cloud with the STAD29 lecture code in it. You'll need an R Studio Cloud username and password first. I will also put a link to the R Notebook here after class.
-    <li>2019-01-09 13:15: <a href="a0.pdf">"Assignment 0"</a>, for
-    after today's class. Nothing to hand in.
-    <li>2019-01-04 10:30: Welcome to STAD29/STA 1007! Course stuff is
-    here; assignment hand-in and grades are
-    on <a href="https://q.utoronto.ca/courses/77890">Quercus</a>. Here
-    is where you will see class news.
-</ul>
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<br style="font-family: Helvetica,Arial,sans-serif;">
-</td>
-</tr>
-<tr>
-<td style="font-family: Helvetica,Arial,sans-serif;" align="center" valign="top" width="180">&nbsp;
-</td>
-<td style="font-family: Helvetica,Arial,sans-serif;" valign="top" width="10">&nbsp;</td>
-<td valign="top" width="460">&nbsp; </td>
-</tr>
-<tr>
-<td bgcolor="#003333" valign="top" width="180">&nbsp;</td>
-<td bgcolor="#996600" valign="top">&nbsp;</td>
-<td bgcolor="#996600" valign="top" width="460">&nbsp;</td>
-</tr>
-<tr>
-<td valign="top" width="180">&nbsp;</td>
-<td valign="top">&nbsp;</td>
-<td valign="top" width="460">&nbsp;</td>
-</tr>
-<tr>
-<td valign="top" width="180">
-<center> </center>
-</td>
-<td valign="top">&nbsp;</td>
-<td valign="top" width="460"><font face="Arial, Helvetica, sans-serif"><font size="2">This
-Web Page is maintained by <a href="mailto:butler@utsc.utoronto.ca">Ken
-Butler</a>.</font></font><font size="2"><br>
 
-<font face="Arial, Helvetica, sans-serif">
-<i>
-<script language="JavaScript">
-<!-- Hide JavaScript...
-var date = new Date(document.lastModified);
-document.writeln ("Last modified " + date.toDateString()+".");
-// End Hiding -->
+
+<title>Datafiles page</title>
+
+<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
 </script>
-</i>
 
-<br>
-<font face="Arial, Helvetica, sans-serif">�
-2008-2018 University of Toronto at Scarborough. All rights reserved.</font></font>
-</td>
-</tr>
-<tr>
-<td colspan="4">&nbsp;</td>
-</tr>
-<tr>
-<td colspan="4">
-<p>&nbsp; </p>
-</td>
-</tr>
-</tbody>
-</table>
-<a name="grades"></a>
-</body></html>
- 
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Datafiles</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Datafiles page</h1>
+
+</div>
+
+
+<div id="title" class="section level1">
+<h1>Title</h1>
+<p>This isn’t meant to be accessed. Use the URL for a datafile to access the file directly.</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
