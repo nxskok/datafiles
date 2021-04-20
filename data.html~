@@ -1,0 +1,74 @@
+<html>
+  <head>
+<title>Data page</title>
+</head>
+<body>
+<h1>Data page</h1>
+
+Here are the data sets used, variously, in class, in the book, and on
+assignments. When I get around to putting them up. If something should
+be here but is not, let me know (by e-mail).
+
+<p> For R, read in files ending with ".csv" using read.csv and files
+ending with ".txt" using read.table. In either case, you'll need
+header=T as well unless I say otherwise.
+
+<ul>
+
+  <li><a href="basket.txt" >Basket data (groceries)</a></li>
+  <li><a href="beers.txt">Beers data</a>
+  <li><a href="ancova.txt" >Before and after data for ANCOVA</a></li>
+  <li><a href="mlogit.csv" >Brand preferences data</a>(csv; despite
+  what it may say in the notes, this is a .csv file)</li>
+  <li><a href="calcium.txt" >Calcium in ulna bone data</a></li>
+  <li><a href="../r/cars.csv">Cars data</a> (csv)
+  <li><a href="../r/cereals.csv">Cereals data</a>  (csv)
+  <li><a href="cheese.txt">Cheese data</a>
+  <li><a href="manova2.txt" >Children disability data (manova2)</a></li>
+  <li><a href="cookingpot.txt" >Cooking pot data</a></li>
+  <li><a href="cube.txt" >Cube data</a></li>
+  <li><a href="curvy.txt">Curvy data</a>
+  <li><a href="dancing.txt" >Dancing data</a> (for survival analysis) </li>
+  <li><a href="deer.csv">Deer leg length data</a>
+  <li><a href="dim1.txt" >dim1.dat</a> (made-up discriminant data)</li>
+  <li><a href="disc1.txt" > Discriminant analysis data</a> (jobs and
+  psychological tests, disc1.dat) </li>
+  <li><a href="regressx.txt">Doctor visits data</a>
+  <li><a href="dogs.txt" >Dogs data</a></li>
+  <li><a href="europe.csv" >Europe road distances</a> (csv)</li>
+  <li><a href="genetic.txt" >Genetic distance data</a></li>
+  <li><a href="genetic2.txt" >Genetic distance data part 2 (actual locations)</a></li>
+  <li><a href="gradschool.txt" >Grad school data</a></li>
+  <li><a href="houseprice.csv">House prices</a>  (csv)
+  <li><a href="profile.txt" >Jobs and leisure activities data</a></li>
+  <li><a href="jumping.txt" >Jumping data (rats)</a></li>
+  <li><a href="leslie_salt.txt">Leslie Salt property data</a>
+  <li><a href="madeup.csv">Made up data</a> (for Box-Cox) (csv)
+  <li><a href="miners-tab.txt" >Miners lung disease data</a></li>
+  <li><a href="languages.txt" >Languages data (1-10,
+  dissimilarities)</a></li>
+  <li><a href="one-ten.txt" >Languages data (number names)</a></li>
+  <li><a href="ldspkr.txt" >Loudspeaker data</a> (assgt 7)</li>
+  <li><a href="ontario-road-distances.csv" >Ontario road distances</a>
+  (csv)</li>
+  <li><a href="peanuts.txt" >Peanuts data</a></li>
+  <li><a href="rat.txt">Rat data (original)</a>
+  <li><a href="rat2.txt">Rat data (second version)</a>
+  <li><a href="readtyp.txt">Reading types</a> (jobs, sex and reading
+  preferences)</li>
+  <li><a href="remote-sensing.txt" >Remote sensing of crops</a></li>
+  <li><a href="scaffold.txt" >Scaffold data</a></li>
+  <li><a href="manova1.txt" >Seed yield and weight data</a></li>
+  <li><a href="sep.txt">Sep (separation) data</a>
+  <li><a href="sepsis.txt">Sepsis data</a>
+  <li><a href="shingles.txt">Shingles (roofing) data</a>
+  <li><a href="sleep.txt">Sleep data</a>
+  <li><a href="stringbeans.txt" >String beans data</a></li>
+  <li><a href="asurv.txt" >Survival data</a></li>
+  <li><a href="utilities.txt" >Utilities data</a> (assgt 7)</li>
+  <li><a href="birthrate.txt" >Vital statistics data</a> (birth, death
+  and infant mortality rates)</li>
+</ul>
+
+</body>
+</html>

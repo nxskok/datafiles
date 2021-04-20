@@ -1,0 +1,43 @@
+---
+title: "Question 2"
+output:
+  html_notebook: default
+  word_document: default
+---
+
+First, we need to load the `tidyverse`:
+
+```{r}
+library(tidyverse)
+```
+
+Then we need to find our data file:
+
+```{r}
+f=file.choose()
+f
+```
+
+Now we can read in and display the data.
+
+```{r}
+mydata=read_csv(f)
+mydata
+```
+
+There are correctly six integer (whole-number) values of `x`. Some summaries follow. First the mean and SD:
+
+```{r}
+mydata %>% 
+  summarize(xmean=mean(x), xsd=sd(x))
+```
+
+The mean is 17 and the SD is about 7.35.
+
+Next, a boxplot:
+
+```{r}
+ggplot(mydata,aes(x=1,y=x))+geom_boxplot()
+```
+
+This has a long upper whisker, showing a long right tail (and thus a right skew).

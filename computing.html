@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 
+transitional//en">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Mozilla/4.77 (Macintosh; U; PPC) [Netscape]"><title>Statistics for the Life and Social Sciences</title></head>
+<body style="color: rgb(0, 0, 102); background-color: rgb(255, 255, 255);" link="#003333" vlink="#996600">
+<table style="font-family: Helvetica,Arial,sans-serif;" border="0" cellpadding="0" cellspacing="0" width="640">
+<tbody>
+<tr>
+<td valign="top"><a href="http://www.utsc.utoronto.ca"><img src="utsc_websignature.jpg" border="0" height="60" width="180"></a></td>
+<td valign="top">&nbsp;</td>
+<td valign="top">
+<p><b><font size="5">Statistics for Life and Social Sciences </font></b></p>
+<p><font size="4">STAD29/STA429/STA1007 Ken Butler</font></p>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="180">&nbsp;</td>
+<td valign="top" width="10">&nbsp;</td>
+<td valign="top" width="460">&nbsp;</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="180"><span style="text-decoration: underline;"><a href="index.html">Home page</a></span><br></td>
+<td valign="top" width="10">&nbsp;</td>
+<td valign="top" width="460">
+<h3>Computing preliminaries</h3>This is not a mathematical course, but
+it does involve computing. Specifically, we will be using the
+statistical package SAS: learning how to analyze data using the methods
+we learn, and how to interpret the output.<br><h4>Why SAS?</h4>SAS has
+been around for years (now on version 9), and has become the standard
+in industry, government and suchlike places for "routine" statistical
+analysis (that is, where more or less well-known statistical procedures
+are to be used). If you can say, therefore, that you have experience
+with SAS, it makes you that much more employable! SAS runs on Windows,
+Unix, the Mac, etc; it is big, and expensive, but there are certain
+common themes, and, as we will see, once you see how to run one
+analysis, you can easily learn how to run another. SAS is <span style="font-weight: bold;">not </span>&nbsp;point-and-click:
+you write a "program" and then run it, but you then have the advantage
+of knowing exactly what you did, and being able to run the program
+again, or modify it. Is SAS user-friendly? No. And we will be running
+it in about the least user-friendly way possible. But if you can handle
+this course, you'll be able to handle SAS later in whatever environment
+you find it.<br><h4>SAS at UTSC</h4>U of T has a "site licence" for
+SAS, and SAS is installed on the "mathlab" machine under Unix (actually
+Linux). For this course, you will have access to this machine. To get
+at "mathlab", you'll need a "ssh" program. I use Putty, which is free.
+You can download it from putty.org -- click on the top link there, go
+down to Binaries, and get putty.exe. It doesn't need installing: just
+put it on your desktop (or elsewhere) and run it.<br><br>If you get
+Putty, once you run it, you'll need to get it to connect to the right
+place. In the "host name" box, type mathlab.utsc.utoronto.ca, and make
+sure, under "connection type", SSH is selected. You can save this
+information (click the Save button bottom right) to save typing it in
+again later. When everything is good, click Open, and log in with your
+username and password (probably your UTSC intranet/email username and
+password, but I will check). Then you'll be logged into Mathlab, with
+highly fashionable white text on black background.<br><h4>Running SAS</h4>It
+seems to be easier if you work within the home directory only (rather
+than creating new directories/folders). Don't ask me why.<br><br>First get your data into a file. Type <span style="font-weight: bold;">pico </span>followed
+by the name of a file to store your data in, like mydata.dat. This
+opens a rudimentary text editor. If there is anything already in the
+file, you'll see it, otherwise it'll be empty. At the bottom of the
+screen is a list of things you might want to do: to do any of them,
+hold down Control and press the key indicated (the keyboard shortcuts
+are <span style="font-weight: bold;">not </span>the same as Windows).
+Otherwise, type away. When you are ready to exit, type Control-X, and
+allow the system to save the file under the name you gave.<br><br>Then you need your SAS code. Use <span style="font-weight: bold;">pico </span>again: type in your code, and save it in a file with extension <span style="font-weight: bold;">.sas</span> , such as <span style="font-weight: bold;">mysascode.sas . </span><br><br>Run SAS by typing (at the command line) <span style="font-weight: bold;">sas </span>&nbsp;followed by the name of your file, such as <span style="font-weight: bold;">sas mysascode.sas</span>
+. This will either run successfully or it won't, but there'll be no
+difference in what you see: just a cryptic message and a command prompt
+either way. SAS produces two output files, a <span style="font-weight: bold;">.log </span>file and a <span style="font-weight: bold;">.lst </span>file with names like <span style="font-weight: bold;">mysascode.log </span>and <span style="font-weight: bold;">mysascode.lst</span> . <br><br>Look at the log file first: you can either use <span style="font-weight: bold;">pico </span>&nbsp;again, or type something like <span style="font-weight: bold;">less mysascode.log</span>, which shows you the file one screenful at a time (hit the space bar to move on to the next screenful, <span style="font-weight: bold;">b</span> to go back and <span style="font-weight: bold;">q</span>
+to quit at any point). In the log file, SAS echoes back the commands
+you submitted, and adds comments. If something worked, there'll be some
+lines marked "NOTE:" explaining how many lines were read in from the
+data file, what pages of output were produced, and so on. If not,
+you'll see ERROR: and the thing that SAS didn't like will have an
+underline below it. You might also see WARNING:, an indication that
+something may not have turned out as you expect. If there are errors,
+go back to the <span style="font-weight: bold;">.sas</span> file and fix them up, then run SAS again, and check the new log file to make sure that everything is OK this time. <br><br>Once everything is OK, take a look at the <span style="font-weight: bold;">.lst </span>file (<span style="font-weight: bold;">mysascode.lst </span>or whatever) using <span style="font-weight: bold;">pico</span> or <span style="font-weight: bold;">less</span>. This is your output. Do with it what you will.<br><br>This
+may seem like a clunky, old-fashioned&nbsp;way of working, and to some
+extent it is, but the advantage it has is that you don't have to rely
+on remembering what items you chose from what menus to reconstruct what
+you did: everything you did is there in the .sas file. You can run it
+again as many times as you like, and you will always get the same
+answers (unless you change your data or something like that). This is a
+big plus in the industrial or governmental world, where anyone else can
+run your .sas file to check that you got what you said you did. It
+might also be a lifesaver if the analysis is part of your thesis and
+you lost the output!<br><h4>Copying and pasting in Putty</h4>Getting
+your output from SAS on mathlab is one thing, but you'll need to print
+it out, annotate it or whatever to hand it in. Putty provides
+mechanisms to copy and paste to and from Word or whatever else you use.
+They are, however, not completely obvious.<br><br>Copying from Putty first. Display on the screen the thing you want to copy (using <span style="font-weight: bold;">pico </span>or <span style="font-weight: bold;">less </span>or even <span style="font-weight: bold;">cat</span>,
+which displays the whole file without stopping when it gets to the end
+of the screen). Point your cursor at the start of what you want to
+copy, and drag until all of it is highlighted. The strange thing is
+that it is already copied to the clipboard, as you can verify by
+pasting into another document. I mention <span style="font-weight: bold;">cat </span>because this gives you a way of copying a whole large document (output file, say). In your Putty window, type something like <span style="font-weight: bold;">cat mysascode.lst</span> &nbsp;. The whole file will speed by, the last few lines of it remaining in the window. Click on the <span style="font-style: italic;">end</span>
+of the file and drag upwards. The rest of the file will come back into
+view. Keep going until&nbsp;you get back to the beginning. The whole
+file is then copied, and you can paste the whole thing at once.<br><br>A
+word about fonts. SAS's output comes in a fixed pitch font (in fact,
+SAS's output looks just the same as it did when fixed-pitch screen
+fonts were all there was). So when you're handling the output yourself
+(eg. printing it to hand it in), always use a fixed-pitch font like
+Courier, in a size small enough that lines from the SAS output are not
+getting broken in two (which looks <span style="font-style: italic;">really</span>
+ugly). Lucida Sans Unicode in 10 point works well for me. There also
+seems to be a font called&nbsp;SAS Monospace, which properly handles
+things like axes on plots.<br><br>Copying
+from the outside world and pasting into Putty is also possible (for
+example, you might want to copy some data over, or you might have
+sketched out a SAS program on your own computer). Copy in the usual
+way, then to paste into Putty, open a file with <span style="font-weight: bold;">pico</span>, then click the <span style="font-weight: bold;">right</span> mouse button when you're ready to paste. What you copied appears right away in your file on mathlab. <br><br>SAS,
+as I mentioned, comes in flavours for all different operating systems.
+Mathlab runs Linux (like Unix). The Windows version of SAS uses a
+windowing environment, with code, log file and output appearing on the
+screen, but the way it works is really much as described above. I have
+it on my laptop, and may demonstrate it in class from time to time so
+that you see what it looks like. If you ever need to use it yourself,
+it'll be easy enough to learn once you've gotten used to our bare-bones
+way of doing things.<br><br><span style="font-family: Helvetica,Arial,sans-serif;"></span><h3>An alternative to Putty</h3><span style="font-family: Helvetica,Arial,sans-serif;">There
+is an alternative to Putty, called Bitvise Tunnelier, which does all
+that Putty does, and more (at the price of being more complicated to
+use). To download it, go&nbsp;<a href="http://www.bitvise.com/download-area">here</a> and save the installation file somewhere (eg. on your desktop). Double-click to install in the usual way.<br><br>When
+you start Tunnelier, you'll see a window with a bunch of tabs (Login,
+&nbsp;Options, Terminal, SFTP and so on). The only one you need to be
+concerned with is Login. Go there, and enter mathlab.utsc.utoronto.ca
+in Host (under Server). Port 22 is good. On the right, enter your
+username (your login for mathlab), set Initial Method to Password, and
+type your password into the box below. (In case you are worried about
+passwords being saved on your computer, Tunnelier encrypts your
+password before it saves it, so that even if someone gets into your
+files, they won't be able to unravel this password.) When this is all
+done, click Login at the bottom. You'll see some messages in the bottom
+half of the window, and two new windows.<br><br>One, labelled "xterm",
+looks and acts just like Putty; you run SAS, pico, less etc. through it
+in the same way. The other one, labelled SFTP, is new. On the left
+side, under Local Files, are files on your desktop (by default: you can
+change it). On the right are your files on mathlab. To upload or
+download, select the file you want to copy (in either window) and drag
+it to the other one. (Or, single-click the file and then click the
+Upload or Download buttons at the bottom, according to which way you
+want the file to go). This means (a) you can write a SAS program
+offline, upload it to mathlab and then run SAS on it, or (b) you can
+download programs, output or whatever to your computer for editing or
+printing</span>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="180">&nbsp;
+</td>
+<td valign="top" width="10">&nbsp;</td>
+<td valign="top" width="460">&nbsp; </td>
+</tr>
+<tr>
+<td bgcolor="#003333" valign="top" width="180">&nbsp;</td>
+<td bgcolor="#996600" valign="top">&nbsp;</td>
+<td bgcolor="#996600" valign="top" width="460">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="180">&nbsp;</td>
+<td valign="top">&nbsp;</td>
+<td valign="top" width="460">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="180">
+<center> </center>
+</td>
+<td valign="top">&nbsp;</td>
+<td valign="top" width="460"><font size="2">This
+Web Page is maintained by <a href="mailto:butler@utsc.utoronto.ca">Ken
+Butler</a></font><font size="2"><br>
+<i>Last
+modified: Oct 29, 2008.</i><br>
+©
+2003-2008 University of Toronto at Scarborough. All rights reserved.</font>
+</td>
+</tr>
+<tr>
+<td colspan="4">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="4">
+<p>&nbsp; </p>
+</td>
+</tr>
+</tbody>
+</table>
+<a style="font-family: Helvetica,Arial,sans-serif;" name="grades"></a>
+</body></html>
