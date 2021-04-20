@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage{statrep}
+\usepackage{parskip,xspace}
+\newcommand*{\Statrep}{\mbox{\textsf{StatRep}}\xspace}
+\newcommand*{\Code}[1]{\texttt{\textbf{#1}}}
+\newcommand*{\cs}[1]{\texttt{\textbf{\textbackslash#1}}}
+\setcounter{secnumdepth}{0}
+\def\SRrootdir{/folders/myfolders}
+\def\SRmacropath{/folders/myfolders/statrep_macros.sas}
+
+\title{Statrep-Sweave minimal demo}
+\author{Ken Butler}
+\date{}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+This is a small document that demonstrates \texttt{statrep} for SAS
+and Sweave for R, combined. Feel free
+to use this as a template for your own work.
+
+It is designed so that you look at the source \texttt{.tex} file to
+see how to do something, and, at the same time, the output
+\texttt{.pdf} file to see how it comes out.
+
+\section{The example}
+
+I have intermingled R and SAS code below, to show that it can be
+arranged in any order.
+
+First, read in some data (made-up) into SAS:
+
+\begin{Datastep}
+data xx;
+  input x @@;
+  cards;
+  10 11 14 15 16 18 23 32 57
+  ;
+\end{Datastep}
+
+and into R:
+
+<<>>=
+x=c(10,11,14,15,16,18,23,32,57)
+@ 
+
+Then, obtain a listing of the data:
+
+\begin{Sascode}[store=a]
+proc print;  
+\end{Sascode}
+
+and print it out:
+
+\Listing[store=a]{aa}
+
+This is, of course, much simpler in R:
+
+<<>>=
+x
+@ 
+
+Next, make a boxplot:
+
+\begin{Sascode}[store=b]
+proc sgplot;
+  vbox x;
+\end{Sascode}
+
+and display it, noting that it is a graph this time:
+
+\Graphic[store=b]{bb}
+
+and in R:
+
+<<>>=
+boxplot(x)
+@ 
+
+The R boxplot does not show the mean, and is thus more in line with
+the original Tukey conception of the boxplot.
+
+\end{document}

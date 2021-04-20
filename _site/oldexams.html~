@@ -1,0 +1,49 @@
+<html>
+  <head>
+<title>Old Final Exams for STAD29 / STA 1007</title>
+</head>
+<body>
+<h1>Old Final Exams for STAD29 / STA 1007</h1>
+
+Here are (as of March 20 2017) the old final exams, with solutions, of
+all the versions of the course that were run with R. Prior to 2015,
+the code and output was included with the exam:<br><br>
+
+<table border>
+  <tr>
+    <th>Year <th>Exam<th>Solutions<th>Code/output
+  </tr>
+  <tr>
+    <td>2013<td><a href="final-20131.pdf">exam</a>
+    <td><a href="finals-20131.pdf">solutions</a>
+    <td>&nbsp;
+  </tr>
+  <tr>
+    <td>2014<td><a href="final-20141.pdf">exam</a>
+    <td><a href="finals-20141.pdf">solutions</a>
+    <td>&nbsp;
+  </tr>
+  <tr>
+    <td>2015<td><a href="final-20151-questions.pdf">exam</a>
+    <td><a href="final-20151-solutions.pdf">solutions</a>
+    <td><a href="final-20151-figures.pdf">code/output</a>
+  </tr>
+  <tr>
+    <td>2016<td><a href="final-20161-questions.pdf">exam</a>
+    <td><a href="final-20161-solutions.pdf">solutions</a>
+    <td><a href="final-20161-figures.pdf">code/output</a>
+  </tr>
+</table>
+
+<br>There is a continuous evolution in coding style over the
+years. For example, this is the first year I have
+used <tt>ggplot</tt>, and I have gradually been
+introducing <tt>tidyverse</tt> ideas in the last couple of years. The
+coding of three or four years ago is therefore not all the same that
+you would see now. The statistical ideas are the same, however.
+
+<br>Prior to 2013, the course used SAS. I doubt that those exams will be
+very helpful to you.
+
+</body>
+</html>

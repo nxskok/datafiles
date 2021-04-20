@@ -1,0 +1,30 @@
+<html>
+  <head>
+<title>Lecture slides for STAC32</title>
+</head>
+<body>
+<h1>Lecture slides for STAC32</h1>
+
+Here are my lecture slides (going up gradually). A reminder that I
+talk about more in class than is here, so that if you miss class, you
+miss useful information.
+
+<ul>
+<li><a href="intro.html">Introduction and course outline</a>
+<li><a href="helloworld.html">Demo of our software</a>
+<li><a href="install.html">How to install R and SAS</a>. I won't go through
+  all of this in class; I expect you to be able to do this yourself.
+<li><a href="dataone.html">Data analysis One</a>
+<li><a href="inference.html">Statistical Inference</a>
+<li><a href="inference2.html">Statistical Inference part 2</a>
+<li><a href="inference3.html">Statistical Inference part 3</a>
+<li><a href="inference4.html">Statistical Inference part 4</a>
+<li><a href="report.html">Writing reports</a>
+<li><a href="datatwo.html">Data analysis part 2</a>
+</ul>
+
+<address>
+<a href="butler@utsc.utoronto.ca">Ken Butler</a>
+</address>
+</body>
+</html>

@@ -1,0 +1,109 @@
+\documentclass{article}
+\usepackage{statrep}
+\usepackage{parskip,xspace}
+\newcommand*{\Statrep}{\mbox{\textsf{StatRep}}\xspace}
+\newcommand*{\Code}[1]{\texttt{\textbf{#1}}}
+\newcommand*{\cs}[1]{\texttt{\textbf{\textbackslash#1}}}
+\setcounter{secnumdepth}{0}
+\def\SRrootdir{/folders/myfolders}
+\def\SRmacropath{/folders/myfolders/statrep_macros.sas}
+
+\title{Statrep minimal demo}
+\author{Ken Butler}
+\date{}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+This is a small document that demonstrates \texttt{statrep}. Feel free
+to use this as a template for your own work.
+
+It is designed so that you look at the source \texttt{.tex} file to
+see how to do something, and, at the same time, the output
+\texttt{.pdf} file to see how it comes out.
+
+\section{The example}
+
+
+
+First, read in some data (made-up):
+
+\begin{Datastep}
+data xx;
+  input x @@;
+  cards;
+  10 11 14 15 16 18 23 32 57
+  ;
+\end{Datastep}
+
+Then, obtain a listing of the data:
+
+\begin{Sascode}[store=a]
+proc print;  
+\end{Sascode}
+
+and print it out:
+
+\Listing[store=a]{aa}
+
+Next, make a boxplot:
+
+\begin{Sascode}[store=b]
+proc sgplot;
+  vbox x;
+\end{Sascode}
+
+and display it, noting that it is a graph this time:
+
+\Graphic[store=b]{bb}
+
+We have a serious upper outlier, and even beyond that, some
+right-skewedness, so that the mean is a lot bigger than the median.
+
+Finally, note that the output from \texttt{proc univariate} is rather
+long (displayed tiny below). I am going to test that the ``centre''
+(mean or median) is 10.5, which the boxplot suggests that it isn't:
+
+\begin{Sascode}[store=c]
+proc univariate mu0=10.5;
+  var x;
+\end{Sascode}
+
+\Listing[store=c,fontsize=tiny]{cc}
+
+Suppose we only want the ``tests for location'', and we don't care
+about the rest of it. This is one of the ``objects'' in the output. To
+find out what it is called, go back to SAS Studio and look at the Log
+tab (or look at the \texttt{.log} file if you are running SAS from the
+command line). It's at the bottom of the log output; it's called
+\texttt{Univariate.x.TestsForLocation}. The first thing says what
+\texttt{proc} it is, the second says what variable it is (\texttt{x}),
+and the third says which table it is. You only need the third bit, and
+it is \emph{not} case sensitive.\footnote{So you do not need to
+  preserve the CamelCase.}
+The \texttt{store=} must be the \emph{same} and the final label
+in the curly brackets must be \emph{different} from before:
+
+\Listing[store=c,objects=testsforlocation]{cd}
+
+At $\alpha=0.05$, the $t$-test and the sign test disagree. Probably
+what is happening is that high outlier is inflating the sample SD
+(grossly: the SD is 15), so that the sample mean (22) is not so much
+higher than 
+the hypothesized mean (10.5) \emph{relative to the SD}. The $t$-statistic is
+2.28, which, with a small sample size, is not quite big enough to
+reach a P-value as small as 0.05.
+
+The sign test is telling a different story. In the data, there are 8
+values bigger than 10.5 and only one below. Even with a small sample
+size of 9, this is the kind of imbalance above and below that you would
+be unlikely to see by chance.
+
+The signed-rank test doesn't apply here (that requires approximately
+symmetric data). So I would trust the sign-test result and not the others.
+
+\end{document}

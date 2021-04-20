@@ -1,0 +1,1216 @@
+html><head>
+<title>STAC32: Applications of Statistical Methods</title>
+</head>
+<body>
+<table>
+  <col style="background-color: thistle" width=20%>
+  <col style="background-color: azure" width=80%>
+  <tr>
+    <td valign="top">
+      <h2>University of Toronto Scarborough</h2>
+      <h1>STAC32: Applications of Statistical Methods</h1>
+      <h3>Fall 2017</h3>
+      <h3>Ken Butler</h3>
+      <ul>
+	<li> <a href="notes/">Lecture notes</a> (last update
+	  2017-11-20: new section on regression with categorical
+	  variables, and edited the dates and times section)
+	<li> <a href="assignments/">Assignments</a> (last update
+	  2017-10-12)
+	<li> <a href="oldexams/">Old exams</a> (last update 2017-11-23)
+      </ul>
+      <h3>Links to software</h3>
+      <ul>
+	<li> <a href="http://www.r-project.org/" >R Project</a></li>
+	<li><a href="http://www.rstudio.com/" >R Studio</a></li>
+	<li><a
+	href="http://documentation.sas.com/?cdcId=pgmmvacdc&cdcVersion=9.4&docsetId=basewn&docsetTarget=helpcenterfeedback.htm&locale=en"
+	>SAS documentation</a> (look for "Base SAS procedures" or
+	under SAS/STAT in SAS Analytics).</li>
+      </ul>
+      <h3> Links to texts</h3>
+      <ul>
+	<li><a href="https://www.amazon.ca/SAS-Essentials-Mastering-Data-Analytics/dp/111904216X/ref=pd_sim_14_3?_encoding=UTF8&psc=1&refRID=KBNGGH3TQJYYDHFCHVFK">SAS
+	Essentials</a>
+	<li><a href="http://r4ds.had.co.nz/">R for Data Science</a>
+      </ul>
+    <td>
+      <table>
+	<tr>
+	  <td valign="top"><img src="ken-megan-2.jpg" width="300" height="240" alt="Ken">
+	  <td>Ken Butler (and daughter, taking in a <a href="https://www.torontowolfpack.com/">Wolfpack</a> game)
+	</tr>
+      </table>    
+      <p>If you are reading this, you have found your way to the fall
+    2017 STAC32 home page. Welcome!
+	<h2>News:</h2>
+	<ul>
+	  <li>2017-12-15 12:30: course grades are submitted. They have to be
+	    approved (probably today) and will then be released to
+	    you. With that, I wish you a Merry Christmas (or, if you
+	    don't celebrate that, a happy break from your studies), and
+	    look forward to seeing some of you again in January for
+	    STAD29. 
+	  <li>2017-12-15 12:00: I am almost ready to submit the
+	    grades. Some points (so that you don't have to ask):
+	    
+	    <ul>
+	      <li>I used two marking schemes: scheme 1 is the one in
+		the course outline, and scheme 2 replaces the midterm
+		mark with the final exam one. You automatically get
+		whichever marking scheme is better for you. It was about
+		50-50. I did this because, in my opinion, if you can
+		demonstrate your learning on the final exam, that's what
+		really counts, and if you can do that, you deserve a
+		grade boost. (The people who missed the midterm
+		automatically get scheme 2.)
+	      <li>If you got less than 42/104 on the final exam, you
+		cannot pass the course. In that case, your grade will
+		be the smaller of your calculated grade and 45. I have
+		already relaxed the final exam requirement from the
+		course outline. Do not ask me to relax it any more.
+	      <li>Grade rounding: I do not give grades one mark below
+		a grade-point boundary, such as 79. The procedure: if
+		you actually got 79.5 or more that would round up, you
+		get 80; if not (for example 79.3), it's rounded down to
+		78. The principle is that if you want 80, you have to
+		earn it, and 79.3 is not earning it. The same applies
+		to other grade-point boundaries such as 66: 66.5+ is
+		rounded up to 67, less than that is rounded down to
+		65. 
+	    </ul>
+	  <li>2017-12-14 21:45: official course grades tomorrow. I
+	  want to be more awake than I am now in order to calculate
+	  them correctly (or, to be more precise, to instruct R to
+	  calculate them correctly).
+	  <li>2017-12-14 21:35: I'm going to post the final exam marks
+	  on Blackboard in a moment. Before you go looking, read this
+	  first: if you are unhappy with your final exam mark, or the
+	  course grade to which it leads (which you will be in a
+	  position to calculate), DO NOT contact me. I am not allowed
+	  to engage in any discussion about it. Wait for the course
+	  grades to come out, and then speak to the Registrar's
+	  office, who will be able to advise you of your
+	    rights. Course grades are based <em>only</em> on the work
+	  you have done in this course. If you need a certain grade in
+	    this course for whatever personal reason, it is <em>up to
+	  you</em> to do the work required to get it.
+	  <li>2017-12-14 21:30: I said that you have to pass the final
+	  exam to pass the course. I'm going to relax that:
+	  if you got 42 or more out of 104 (that's about 40% or more),
+	  you pass the course <em>if</em> your course
+	  grade, as calculated, comes out to 50 or more. This allows
+	  about 10 more people a shot at passing the course.  (There
+	  were some final exam marks less than 42; I do not think that
+	  the people who wrote those exams have demonstrated enough
+	  learning in this course to be allowed to pass it, based on
+	  what I saw while marking their exams.)
+	  <li>2017-12-14 21:30: final exam stats (out of 104 marks):
+	  median 74, Q1 60, Q3 84. High score 99. This was an exam of
+	  average difficulty overall: some hard parts, but some very
+	  easy ones as well. There were some really good
+	  performances on this exam.
+	  <li>2017-12-14 18:15: final exam marks are in Blackboard,
+	  but not released to you (yet). I want to look them over
+	  tonight. When I am happy with them, I will let you see what
+	    you got, so that you know where you stand. Warning
+	  now: <em>I am not allowed to discuss or negotiate any
+	  aspect of the grades.</em> I am sharing the final exam marks
+	  as a courtesy to you. Don't abuse this courtesy.
+	  <li>2017-12-14 17:30: added up, now sorting. Then: enter
+	  final exam marks, look them over, then compute grades.
+	  <li>2017-12-14 13:30: eating lunch (fresh bread!) On the
+	  agenda for this afternoon: adding up (the marks on the front
+	  page), sorting and recording. Then I have to calculate the
+	  course grades.
+	  <li>2017-12-14 12:30: marking done! I have to go one more
+	  time through the pile to add up and record the last
+	  page. Imagine, if you will, a rather unsteady pile of exams
+	  all open to the last page. (By the way, my bread is done,
+	  but I'm not having any until I finish this job.)
+	  <li>2017-12-14 11:55: 10(c) done. Marking code goes fast
+	  (often). I knew I put this question last for a reason!
+	  <li>2017-12-14 11:25: 10(b) done. Fast work. I went back
+	    over (a) also and gave some people an extra mark, since I
+	    felt I had been too mean.  Two parts left. I am baking
+	    bread, hopefully to celebrate the end of marking.
+	    
+	  <li>2017-12-14 10:45: 10(a) done. Three parts to go.
+	  <li>2017-12-13 23:15: page 11 is marked. 91.67% done
+	  marking. It looks as if I have about 4 hours of marking
+	  left, plus 2 pages to add up, before I get to the totalling,
+	  sorting and recording.
+	  <li>2017-12-13 22:15: 9(b) done. I <em>might</em> have it in
+	  me to tackle part (c) and finish the page tonight.
+	  <li>2017-12-13 21:00: question 9(a) on page 11 done. One
+	  more time through the pile tonight, I think, unless 9(b) is
+	  very quick.
+	  <li>2017-12-13 18:15: page 10 added up. Dinner, then to see
+	  if I can make a (figurative) dent in page 11 tonight.
+	  <li>2017-12-13 17:00: page 10 done. 83.33% done. With the
+	  marking part, anyway.
+	  <li>2017-12-13 15:00: one part into page 10 (question
+	    8(a)). Need tea.
+	    
+	  <li>2017-12-13 13:00: page 9 (question 7)
+	  done. Lunchtime. If you are curious about what would happen
+	  if we do a square root transformation in question 7, take a
+	    look at <a href="final.pdf">my solutions</a>, where I do it.
+	  <li>2017-12-13 11:30: 7(d) (second part of page 9) done.
+	  <li>2017-12-12 22:30: busy evening on other things, but the
+	  first part of page 9 (question 7(c)) is done. Hoping for a
+	  productive day tomorrow. Marking supported by Beethoven's
+	  Symphony no. 1 (partly to get "Rocking All Over The World"
+	    out of my head: see <a href="final.pdf">my solutions</a>
+	  for why that was in there). 
+	  <li>2017-12-12 16:35: page 8 added up. Two-thirds
+	  done. Might be grades on Thursday, but don't count your
+	  chickens yet.
+	  <li>2017-12-12 16:00: a slow afternoon, but page 8 is done
+	  now, needing only adding up.
+	  <li>2017-12-12 12:45: third of four parts done (that's
+	  question 7(a) on page 8).
+	  <li>2017-12-12 11:30: second of four parts done. (That
+	  completes question 6, if you're keeping track.)
+	  <li>2017-12-12 10:15: first of four parts on page 8 done.
+	  <li>2017-12-11 23:00: page 7 is done.
+	  <li>2017-12-11 21:30: third part done, much faster. I want
+	  to see if I can take care of the fourth part and the adding
+	  up of page 7 tonight. 
+	  <li>2017-12-11 21:00: the second part is now done, but it
+	  took me a lot longer than expected because there were a
+	  bunch of possible correct answers, some of which I had to
+	  check because I wasn't sure whether they would work. As
+	    ever, <a href="final.pdf">my solutions</a> contain the
+	  gory details.
+	  <li>2017-12-11 19:20: first of four parts on page 7
+	  done. I'm hoping this will be a quick page.
+	  <li>2017-12-11 17:30: page 6 added up. Halfway. And dinner
+	  time. 
+	  <li>2017-12-11 16:30: page 6 done. When I have added it up,
+	  I'll be halfway done marking. (Always a pleasing thought.)
+	  <li>2017-12-11 15:45: part (c) done. One more part to go on
+	  this page. (In between the last note and this one, we had a
+	  power outage here, and I had the exams right up against the
+	  window so that I had enough light to see them! Power is back
+	  now.)
+	  <li>2017-12-11 14:15: parts (a) and (b) done on page 6. Part
+	  (c) will require thinking. We are apparently two and a half
+	  hours away from snow. If I get snowed in, I have enough to
+	  keep me occupied.
+	  <li>2017-12-11 11:15: I have the Accessability exams and
+	  have caught them up to the other pile. Back, shortly, to all
+	  the exams combined.
+	  <li>2017-12-10 21:45: page 5 added up. That's it for
+	  tonight. I think I have some easy marking to start with
+	  tomorrow. 
+	  <li>2017-12-10 21:00: page 5 done, but not added up yet.
+	  <li>2017-12-10 19:45: third of those four parts done, with a
+	  break for dinner in between. 
+	  <li>2017-12-10 17:15: second of those four parts done.
+	  <li>2017-12-10 16:30: first of the four parts on page 5
+	  done. (I decided to go for a walk before it started snowing.)
+	  <li>2017-12-10 13:45: page 4 added up. There are 2 people
+	  who still have a perfect score. Lunch break.
+	  <li>2017-12-10 13:00: page 4 done. The second part on page 4
+	  did indeed require a fair bit of thinking on my part.
+	  <li>2017-12-09 22:50: first of the two parts on page 4
+	  done. That's my limit for tonight (the second part requires
+	  more thinking than I have in me now).
+	  <li>2017-12-09 21:20: page 3 added up. This takes a long
+	  time with so many students. Planning one more assault on the
+	  pile tonight, but I need a break first. There are about 6
+	  people with a perfect score through 3 pages.
+	  <li>2017-12-09 20:30: page 3 done (but yet to be added up).
+	  <li>2017-12-09 19:30: dinner, and also part 2(c), done. 
+	  <li>2017-12-09 18:30: dinner time. Halfway through 2(c). (If
+	    you read <a href="final.pdf">my solutions</a>, you'll see
+	    how I can stop halfway through 2(c) and still be
+	    consistent.) 
+	  <li>2017-12-09 17:30: 2(b) done, at the speed of light.
+	  <li>2017-12-09 16:30: 2(a) done, at the top of page 3.
+	  <li>2017-12-08 21:30: page 2 done. A mere 10 pages to
+	  go. Megan went to sleep early, but she just woke up (after
+	    I'd finished page 2), wanting dinner. The
+	  latest <a href="final.pdf">solutions</a> with marking notes.
+	  <li>2017-12-08 13:00: 1(f)(i) done (if you see what I
+	  mean). I wanted to go all the way through the pile, for
+	  consistency, so I have checked to see whether you drew the
+	  appropriate conclusion from Figure 2. The rest I'll get to
+	  later. 
+	  <li>2017-12-08 11:30: 1(e) done. I may take the complicated
+	  1(f) in stages, plus I have to go meet Megan off the school
+	  bus after lunch.
+	  <li>2017-12-07 23:00: finished 1(d) (at the top of page
+	  2). That'll be it for tonight.
+	  <li>2017-12-07 21:00: I have to say something here. I have
+	  received several requests from students asking me to "let
+	  them pass the course" (or similar words). I need to be very
+	    clear about this: <b>do not ever do this, in any
+	  course</b>. I also need to be very clear about what such
+	  students are asking for: special treatment available to them
+	    alone, and not to all students. <b>No professor will ever
+	  give you this kind of special treatment.</b> Your personal
+	    circumstances as a student are <em>irrelevant</em> to the
+	    grade you get for work in a course; the <em>only</em> thing that
+	  affects your grade in a course is the work that you do in
+	    that course, and the <em>only</em> way to pass a course is
+	  to do work of the required standard. If you don't, you don't
+	  pass the course. Appeals to the professor don't do anything
+	  to change this, and may even have the opposite effect to the
+	  one you are looking for. 
+	  <li>2017-12-07 20:55: 1(c) done, and next I add up page 1.
+	  <li>2017-12-07 18:45: 1(b) is done. Dinner break. I'm going
+	    to upload
+	    my <a href="final.pdf">solutions-with-grading-notes</a> as
+	    I go along, so if you want to, you can check to see what I
+	    was expecting. 
+	  <li>2017-12-07 17:30: and so it begins. 1(a) is done. I may
+	  have a long evening ahead of me. 
+	  <li>2017-12-06 17:00: I think I'm done marking
+	  projects. Check Blackboard for your grade. All members of a
+	  group got the same grade. The most likely error I have made
+	  is in recording the grade for other members of a group apart
+	  from the person who handed the project in. If your project
+	  grade is missing or is inconsistent with the other members
+	  of your group, send me email with your name and student
+	    number <em>and</em> the name (and student  number if you
+	  have it) of the person who handed in the project, so that I
+	  can check. You don't need to rush to do this now, but do it
+	  before 11:59pm on Monday December 11, so that your course
+	    grade is computed properly.
+
+	    <p> The project grades are not open to negotiation. I am
+	    happy that they are consistent with each other and with my
+	    norms for this course. As I said, this is a "summative
+	    assessment", the purpose of which is to give you a grade,
+	    not feedback. Under other circumstances (like a later
+	    final exam), I would be happy to discuss how you could
+	    have done better, but there isn't time for that this
+	    semester. 
+	  <li>2017-12-06 13:30: marking projects. 25 of them to go. If
+	  you handed yours in before about 10:30pm. it should be
+	  marked now.
+	  <li>2017-12-05 22:20: I think I have 35 projects left to
+	  grade, which I intend to spend tomorrow doing. If you handed
+	  your project in before 9:00pm on Monday, it should be
+	  marked; if not, not yet.
+	  <li>2017-12-04 22:00: stopping for tonight. If
+	  I got it before 8 tonight, it's marked. If not, it'll have
+	  to wait until tomorrow or (at the latest, I hope) Wednesday.
+	  <li>2017-12-04 20:00: working through the projects received
+	  since this afternoon. The project is what's known in the
+	  jargon as a "summative assessment" (that is, I read it
+	  through and give you a grade) rather than a "formative
+	  assessment" (where I would give you feedback, like the
+	  assignments). The comments on these are therefore
+	  minimal. When you see your project, you should see four
+	  numbers, the sum of which is your score:
+	    <ul>
+	      <li>a mark out of 10 for the introduction
+	      <li>a mark out of 25 for the analysis
+	      <li>a mark out of 10 for the conclusion (and discussion, if you have one)
+	      <li>a mark out of 5 for the writing, shown below your conclusion, but above the appendix if you have one.
+	    </ul>
+	    No-one will get 50 out of 50, because there are always
+	    things that can be improved. As a guideline, a mark around
+	    70% (on each item) is what I would expect to see in this
+	    course, and a mark of 80% or above struck me as being good
+	    work, where your comments or process was especially
+	    clear. To get 90%, you need to really impress me.
+	    If you got below 70%, I noted things clearly
+	    missing, or mistakes made, or your process was hard to
+	    follow. By marking the projects in as short a timeframe as
+	    I can, I am grading them as consistently as I can manage.
+
+	    <p> I have 5 working days after our final exam to get all
+	    the projects marked, all the exams marked, and the grades
+	      in. (I also have two STAD94 projects due in tonight that
+	      have to be graded within the same 5 working days.)
+	      It will be enormously difficult to get this done in
+	    time. I am not therefore available to discuss the grading
+	      of the project.
+
+	    <p> What I would like to do, but have so far not been able
+	    to manage, is to make the project at least partly a
+	    formative assessment, for example  by having you hand in a
+	    draft and I return it with comments which you can then
+	    take into account for the final version. The problem in
+	    this course is that the projects are mostly regressions,
+	    which we don't tackle until late on in the course because
+	    we have other things to get through first. So, in this
+	      course, the project is a summative
+	    assessment. See <a href="https://www.cmu.edu/teaching/assessment/basics/formative-summative.html">here</a>
+	    for a good discussion of what these things are, with
+	    examples of each.
+	  <li>2017-12-04 12:30: I have graded all the projects I have
+	  received so far. This means that if your project reaches me
+	  before late this afternoon, it has a good chance of being
+	  marked today. I won't have much marking time tomorrow (since
+	  I'll be having office hours), so if it doesn't get done
+	  today, it'll likely be Wednesday (or later, depending how
+	  many come in at the last minute).
+	  <li>2017-12-04 10:00: last chance for course
+	  evaluations. These close on Wednesday at 23:59. Thanks to
+	  the 39 people who have completed them so far.
+	  <li>2017-12-03 18:15: I have graded the projects that were
+	  handed in before 2:00pm today. I see there are about 6 more
+	  since then which I intend to get to tonight. I will release
+	  the marks for those on Tuesday morning, after everyone has
+	  handed their projects in.
+	  <li>2017-11-30 10:30: pre-exam office hours
+	  on <em>Tuesday</em>, 11:00-3:00, in my office. I am not
+	  available other days because I am marking projects or have
+	  other responsibilities. Sorry. I will release the marks for
+	  projects I have marked on Tuesday morning; the earlier you
+	  hand it in, the better your chances of having your mark
+	  before the final exam.
+	  <li>2017-11-30 10:30: Last lecture today. I will be doing
+	  Section 15 "Miscellaneous Stuff" today, but I will be
+	  skipping parts. Come to the lecture or watch the video to
+	  find out which bits to skip. I have to leave after lecture.
+	  <li>2017-11-28 12:45: there *are* tutorials tomorrow in the
+	  usual place. Use this opportunity to ask final questions
+	  about the project (bearing in mind that part of the reason
+	  for the project is for *you* to make decisions about how it
+	  should look), and about the old exams or extra
+	  non-assignments. I will have pre-exam office hours on
+	  Tuesday next week, but am likely not available Friday or
+	  Monday, since I will be marking the projects that were
+	  handed in early.
+	  <li>2017-11-27 23:30: I added a question on writing
+	    functions to <a href="assignments/a87.pdf">"Assignment
+	    8.7"</a>, on this week's material.
+	  <li>2017-11-27 12:30: I think I'm done with the final
+	  exam. 10 questions on 12 pages (with lots of room for
+	  writing), for a total of what came out to be 104 marks.
+	  <li>2017-11-27 11:30: course evaluations are open until
+	  December 6. Why is it important for you to complete a course
+	    evaluation?
+	    <ul>
+	      <li>If you liked the course, you help <em>me</em> by saying what
+		you liked and why. (Everyone in the department has
+		their performance reviewed at the end of the year, and
+		student evaluations go a long way towards saying what
+		that review looks like.)
+	      <li>If there was something you disliked, you
+	      help <em>future students</em> by saying what
+	      you disliked and how you think it could be improved.
+	      <li>You also help <em>yourself</em>: you help your own
+		thinking process by getting accustomed to thinking
+		critically about what you are learning and how you are
+		learning it.
+	    </ul>
+
+	    Thank you to those who have completed course evaluations
+	    already. (I don't see the evaluations until next semester,
+	    so they cannot affect the grade you get.)
+	  <li>2017-11-26 12:30: The room allocation for the final exam
+	  (Thursday December 7 at 9:00am) is: last names A-L in SW
+	  309, last names M-Z in SW 319. There are not many spare
+	  seats, so make sure you go to the correct room.
+	  <li>2017-11-24 13:00: the 2015 final exam has been
+	    2017-ized. Find it on the <a href="oldexams/">old exams page</a>.
+	    
+	  <li>2017-11-23 17:35: the revised <a href="oldexams/final16.pdf">2016 final exam</a> and
+	    <a href="oldexams/final16s.pdf">solutions</a> is up. I had
+	  to add to some of the questions to make it reasonable to do
+	  for you, based on what we have done this year. Let me know
+	  if anything is missing or confusing. I have a long GO bus
+	  ride tomorrow, during which I might be able to tackle the
+	  2015 exam.
+	  <li>2017-11-23 17:05: I am 2017-ifying last year's final
+	  exam, which is taking longer than I expected, partly because
+	  I realized that my version of R was getting old, and in
+	  updating it, I had to reinstall all my packages.
+	  <li>2017-11-23 13:05: I forgot to mention in class today
+	  that I am currently looking over old final exams and adding
+	  a "2017" piece to the solutions that are there now. I will
+	  let you know when the new versions are up.
+	  <li>2017-11-22 21:30: looking ahead to next week, which is
+	  the last week of classes: I would like to talk about
+	  functions in R (Tuesday) and some additional graphing stuff
+	  (Thursday). I will make an "Assignment 8.7" on this from any
+	  questions I have lying around about these. (This is not to
+	  overburden you with work, but to help you prepare for the
+	  final exam.)
+	    <P> Looking further ahead, I will have pre-exam office
+	    hours one of the days before the exam (I'm thinking
+	    Tuesday), but my time will be short because I will be
+	    marking projects. On that note, if you hand your project
+	    in early, I may be able to start marking it early, which
+	    improves my chances of getting your mark to you before the
+	    final exam. With the timing how it is, however, don't
+	    expect anything more than a mark from me on your project;
+	    there won't be time for feedback or discussion.
+	      <p> I'm planning to have tutorials next Wednesday, which
+	      will give you a chance for final questions about your
+	      project (best addressed to me) or questions about the course
+	      material (ask me or the TA). 
+	  <li>2017-11-22 21:30: there is now
+	  an <a href="assignments/a86.pdf">"Assignment 8.6"</a> of
+	  practice questions on this week's stuff. The first question
+	  there is yet another take on the crickets data. 
+	  <li>2017-11-21 16:30: I have a draft copy of the final exam
+	  (which will undergo some editing before I send it for
+	  printing). It has 10 questions on 12 pages worth a total of
+	  108 marks, as it stands now. The midterm totalled 80 marks,
+	  which means that the final is about 30% longer than the
+	  midterm, but you have 50% more time to do it. It's 12 pages
+	  rather than 10 or 11 because I have spaced things out to
+	  give you more room to write. (Later: I tinkered some more,
+	  and it now stands at 106 marks.)
+	  <li>2017-11-20 14:45: tidied up the dates and times piece of
+	    the <a href="notes/slides.pdf">lecture notes</a>.
+	  <li>2017-11-19 22:15: there is no assignment due this week,
+	    so I think I will <em>cancel tutorials</em> this week. I
+	    will be available in my office during tutorial times, 11-1
+	    and 3-5, if you want to find me.
+	  <li>2017-11-19 22:00: on this week's agenda (after a little
+	  consideration from me): categorical variables in regression
+	  (Tuesday) and dates and times (Thursday). This is a bit out
+	  of order, but I will get back to the serious business of R
+	    functions next week. There should be a non-assignment on
+	  these things later in the week.
+
+	    <p>I am just uploading the <a href="notes/slides.pdf">updated
+	    lecture notes</a>. As I read through it, I think I have to
+	    tidy up some of the SAS stuff on dates and times, so there
+	    might be another update before Thursday.
+	  <li>2017-11-19 21:30: I spent today's subway ride writing up
+	    some thoughts on <a href="catreg0.pdf">regression with
+	    categorical variables</a>. This goes over some ground
+	    covered in the last question
+	    of <a href="assignments/a85.pdf">assignment 8.5</a>, but
+	    in SAS as well. I will merge these notes into the main
+	    lecture notes, but you can use the link above to get at
+	    them separately. I plan to talk about this in Tuesday's
+	    lecture. Here are the links to the
+	    tidied <a href="pigs2.txt">pigs data</a> and the
+	    tidied <a href="crickets2.csv">crickets data</a>.
+	  <li>2017-11-18
+	  12:00: <a href="assignments/a85.pdf">"Assignment 8.5"</a>,
+	  some practice questions on multiple regression, is up.
+	  <li>2017-11-17 11:30: I promised no more assignments to hand
+	  in, but I have some "assignment" questions on this week's
+	  stuff, which I will put up in due course as Assignment 8.5
+	  (with solutions), for you to work through. There will
+	  probably be some other fractionally-numbered non-assignments on
+	    the material in the last two weeks of lectures.
+	    <p> Just so that you know, we have done what we are going
+	  to do on regression (edit: except for the stuff on
+	  regression with categorical variables), so if your chosen
+	  project looks like a regression, you can get to work on it
+	  now.
+
+	      <p> It just occurred to me that I would like to talk
+	      about regression with categorical variables, but I don't
+	      have anything in the lecture notes about that. So I may
+	      write up some extra stuff about that, and let you know
+	      where to find it.
+	  <li>2017-11-17 11:30:
+	  my <a href="assignments/a8.pdf">solutions to assignment
+	  8</a> are up. The grader knows that there are several possible
+	  ways to tackle things and will mark accordingly.
+	  <li>2017-11-13
+	  13:00: <a href="assignments/a8.pdf">Assignment 8</a> is up
+	  on Blackboard.
+	  <li>2017-11-13 13:00: I forgot to
+	  upload <a href="assignments/a7.pdf">my solutions to
+	  assignment 7</a>. They are up now.
+	  <li>2017-11-08 11:00: thanks to those who told me
+	  that <a href="assignments/a7.pdf">assignment 7</a> question
+	  1 was missing its solutions. Fixed now. Heading for tutorial.
+	  <li>2017-11-06 12:00: I
+	  think <a href="assignments/a8.pdf">Assignment 8</a> is ready
+	  to go for next week. There is one data-management question
+	  and one regression question, reflecting what we're doing in
+	  class this week. This is a longish assignment, but it's the
+	  last one, so I figure you can cope.
+	  <li>2017-11-06 09:45: on the agenda for this week:
+	  reorganizing data using SAS, and the first (probably) of our
+	  three case studies. The case studies illustrate various
+	  aspects of regression, and so may be useful to you in
+	  preparation for your project. There are three case studies,
+	    so we'll be looking at these this week and next.
+
+	    <p>I currently have an enormously long Assignment 8, which
+	    I will edit down over the next couple of days. This will
+	    be the last assignment to hand in and will be due on
+	    November 16.
+	  <li>2017-11-03 13:00: I made a few small clarifications
+	  to <a href="assignments/a7.pdf">Assignment 7</a>. None of
+	  the questions changed. I am about to put it up on Blackboard.
+	  <li>2017-11-03 10:30:
+	  my <a href="assignments/a6.pdf">assignment 6 solutions</a>
+	  up. 
+	  <li>2017-11-02 16:00: extra exam pick-up time Monday
+	  11:00-11:15am in my office.
+	  <li>2017-11-02 16:00: the final exam is scheduled for
+	  Thursday December 7 at 9:00am (three-hour exam) in SW 309
+	  and SW 319. There are only three days between the course
+	  project being due and the final exam, so you will have to
+	  budget your time between the project and preparation  for
+	  the final exam. We have some more material to cover on
+	  regression that may be helpful for your project. This is
+	  coming up soon. (Getting started on your project as soon as
+	  you can, once we have covered appropriate material in class,
+	    would be a good idea.)
+
+	    <p> It is likely that I will still be marking projects
+	    when the final exam is being written, so there may be a
+	    delay between the final exam and grades being available. 
+	  <li>2017-11-02 16:00: instructions for
+	  the <a href="assignments/project.pdf">course project</a> are
+	  now final. 
+	  <li>2017-11-02 11:00: last Thursday's missing lecture is now
+	  recorded, and will be up soon. I now have to get my mind
+	  around today's lecture!
+	  <li>2017-11-01 09:45: extra exam pickup times: today (Wed)
+	  2:00-2:15pm, Thursday after class 1:00-1:15 (and before
+	  class in office hours).
+	  <li>2017-10-30 22:30: Here
+	  is <a href="assignments/a7.pdf">assignment 7</a> as it
+	  stands now. There will be an assignment 8, which will be the
+	  last "official" one (with something to hand in). However,
+	  there will be one or two "fractional" assignments with
+	  numbers like 8.5 and 8.75, on the last two weeks of
+	  material (but with nothing to hand in), so that you get a
+	  chance to prepare properly for the final exam.
+	  <li>2017-10-30 13:00: I have arranged with the WebOption
+	  people to record last Thursday's lecture. This will happen
+	    on Thursday morning of <em>this</em> week, so that
+	  tomorrow's lecture is likely to be up first, but both
+	  lectures will be up eventually. With that in mind, I will do
+	  a little bit of R Markdown review tomorrow, but I won't have
+	  time to do much.
+	  <li>2017-10-30 11:30: there was a mixup with the weboption
+	  scheduling last Thursday, so we don't currently have a
+	  recording of last Thursday's lecture. I am working with the
+	  weboption people to see what we can do about that.
+	  <li>2017-10-30 11:00: on the agenda for this week's
+	  lectures: finish the R Markdown stuff, and then onto
+	  "tidying and organizing data", which begins with R and gets
+	  (eventually) onto SAS.
+	  <li>2017-10-29 13:30: I am about to put the midterm marks up
+	  on Blackboard. The exam is out of 80, with the percentage
+	    also displayed. Median mark was 55 (69%), Q1 was 46 (58%),
+	    Q3 was 63 (79%). Highest mark was 75. By the standards of
+	    this course, this was a fairly straightforward exam; there
+	    were only a few places requiring careful thought.
+
+	    <p> I am convinced that I have marked these exams
+	    consistently with each other and with the marking scheme,
+	    so therefore do not expect me to change any marks.
+
+	      <p> The only exception is if I have
+	    made an error, which is one of these:
+	      <ul>
+		<li>adding up the marks on a page incorrectly
+		<li>mis-copying the mark at the bottom of the page to
+		  the table on the front of the exam
+		<li>adding up the marks on the front page
+		    incorrectly
+		<li>incorrectly copying the mark on your exam
+		  to Blackboard.
+	      </ul>
+
+	      <p>I will of course correct any of these. Draw my
+	      attention to it. I may need to borrow your exam to check
+	      that I am correcting all my errors.
+	      
+	      <p>A mark that you disagree with is not
+		an error. Look at <a href="midterm.pdf">my exam
+		  solutions</a> to see why I marked it as I did. (Note
+		that I do not give half points.)
+
+	      <p> You can collect your exam from me in my office hours
+	      (or, if inconvenient, make an appointment by email). I
+	      will need to see your student card to be sure that I am
+		giving the exam back to the right person. If you do
+	      not collect your exam, you are wasting an opportunity to
+	      learn how you might do better on the final exam.
+
+	      <p> If you are disappointed by your mark,
+		do <em>not</em> complain to me. You need to
+		do <em>all</em> of the following:
+
+		<ol>
+		  <li>Collect your exam from me.
+		  <li>Check for addition and transcription errors, as
+		    described above. If you find any, let me know and
+		    I will correct them.
+		  <li>Go through the exam carefully with my solutions
+		    until you are clear why you got the mark you did,
+		    and until you understand what you needed to do to
+		    get full marks. (The solutions contain details
+		    about what kind of answer was worth how many points.)
+		  <li>Make a study plan for the rest of the
+		    course. This will certainly include coming to
+		    every single lecture (and, if necessary, watching
+		    the WebOption video as well later), and will probably
+		    include working through all of the questions on
+		    the assignments, not just the ones you need to
+		    hand in, and reading carefully through my
+		    solutions. This will help you learn what is important in
+		    this course. It should go without saying that you
+		    must do your own work on the assignments;
+		    otherwise you waste an opportunity to learn things
+		    for yourself that will help you on the exams (and
+		    beyond this course). If you are stuck, <em>get
+		    help</em>. That's what office hours are for.
+		</ol>
+
+	      <P> I want you to succeed in this course, and will do my
+	      best to help you, but you also need to do what it takes
+		to help <em>yourself</em>, so that you can demonstrate
+	      mastery of the course on the final exam.
+
+	      <p>If you failed the midterm, consider whether you have
+		  a strong enough background to learn the material in
+		  this course. (A 55 in a prerequisite course means
+		  that you did not learn very much there.) If your
+		  background is weak, think about whether you would
+		  benefit from taking this course later rather than
+		  now.
+	    
+	  <li>2017-10-28 23:00: part way through totalling up. My
+	  process is to add the marks with an abacus (usually most
+	  reliable for me) and then to do one of the following checks:
+	    (i) add up from the end of the list in my head, (ii) add up the
+	  marks <em>dropped</em> on the abacus. If these don't give
+	  the same answer I check again. (My commonest errors on the
+	  abacus are to be off by 5 or 10, and these catch those.)
+	  Hoping to get the exam marks up tomorrow.
+	  <li>2017-10-28 22:00: I may start with the totalling up
+	  tonight, since that doesn't have to be done in one
+	    sitting. Here is the (possibly) final version
+	  of <a href="midterm.pdf">my exam solutions</a>.
+	  <li>2017-10-28 21:30: all the actual marking is done! I now
+	  have to (a) add and record the last page, (b) add up all the
+	  marks, (c) sort the exams into alphabetical order, (d)
+	  record the marks on Blackboard. With so many exams, these
+	  are non-trivial tasks and won't all get done tonight.
+	  <li>2017-10-28 20:15: 8(b) done. The end is in sight!
+	  <li>2017-10-28 18:15: 8(a) done. If I have enough energy I
+	  might even be done marking tonight!
+	  <li>2017-10-28 16:45: reminder
+	  that <a href="assignments/a6.pdf">Assignment 6</a> is due on
+	  Thursday. 
+	  <li>2017-10-28 13:00: page 7 added up and recorded while
+	  Megan was doing her homework.
+	  <li>2017-10-28 10:30: I finally remembered to upload
+	  the <a href="bmi.Rmd">R Markdown</a> document that we were
+	  working on in class on Thursday. Download it, save it, and
+	  open it in R Studio. Feel free to play with adding to it. I
+	  may embellish it myself later.
+	  <li>2017-10-27 21:15: 7(c) done while Megan was watching
+	  videos. Now I need to get her to bed.
+	  <li>2017-10-27 13:00: meeting shorter than expected, 7(b)
+	  done in one sitting (afterwards).
+	  <li>2017-10-27 11:30: 7(a) done. I was hoping to get
+	  further, but I have a meeting at 12 and I prefer to go all
+	  the way through the pile at one sitting, so I won't start
+	  7(b) yet.
+	  <li>2017-10-26 22:45: page 6 added up and recorded. Two
+	  pages to go, starting tomorrow.
+	  <li>2017-10-26 21:30: 6(d) done.
+	  <li>2017-10-26 20:30: 6(c) done. I seem to have added a lot
+	  of comments to my solutions on this one. I will upload the R
+	  Markdown code from class today, but later, since it
+	  involves actual thinking on my part.
+	  <li>2017-10-25 23:30: I just uploaded the latest version
+	  of <a href="midterm.pdf">my midterm solutions</a>, up to the
+	  first two parts of the sign test question. I won't be able
+	  to get back to the marking until (likely) tomorrow
+	    evening. We're looking at sometime next week for marks.
+
+	    <p>Tomorrow's class will continue the discussion on
+	    report-writing, with a look at R Markdown later in the
+	    hour. I have the usual office hours before class, but I
+	      have to run off after class.
+
+	      <p>Looking ahead: it appears that we will be having an
+	      early final exam. This will be not long after your
+	      project is due (December 4), and so you will have to
+	      budget your time carefully to be properly prepared for
+		the final exam.
+
+	      <p> Talking of the project, here
+	      are <a href="project.pdf">last year's
+	      instructions</a>. I don't imagine I'll make any large
+	      changes this year. The story is: pick one of the data
+	      sets (or use one of your own), do a sufficiently
+	      thoughtful analysis of the data, using what we have
+	      learned in this class, and write a report
+	      describing what you found, the report being structured
+	      as we are seeing in class now. Sometimes I am able to
+	      give feedback, but the way things are this year, the
+	      only feedback you are likely to get is the mark. The due
+	      date is December 4 at 11:59pm, but if you hand it in
+	      then, you are unlikely to have the project mark in hand
+	      before you write the final exam. Earlier is better.
+	  <li>2017-10-25 23:00: 6(b) done. That's as far as I go
+	  tonight. I'm drinking the ginger tea now. It did get burnt,
+	  but it's a very curious taste. I've never experienced
+	  anything liquid before that tastes so much like bacon. 
+	  <li>2017-10-25 21:45: 6(a) done. Maybe one more time through
+	  the pile tonight. I made some ginger tea to help my cold,
+	  but the water nearly boiled away as I was marking, and so it
+	  will now probably have that oh-so-attractive burnt taste.
+	  <li>2017-10-25 15:40: 5(c) done, faster than I thought.
+	  <li>2017-10-25 14:55: 5(b) done. Fast going.
+	  <li>2017-10-25 14:15: 5(a) done. Tea required.
+	  <li>2017-10-25 12:30: back in the saddle. 4(c) is done, and
+	  in a few moments, page 4 will be history.
+	  <li>2017-10-24 16:15: I forgot to mention in class, so will
+	  say here now: NO TUTORIALS TOMORROW, since there is no
+	  assignment due.
+	  <li>2017-10-24 16:00: question 4(b) done, on the tail end of
+	    office hours.
+	  <li>2017-10-23 23:00: question 4(a) done. That's it for
+	  tonight. 
+	  <li>2017-10-23 20:45: question 3 done. Beginning to slow
+	  down. I hope I'm through the two longest questions.
+	  <li>2017-10-23 17:00: 3(d) finally done. Heading home for
+	  dinner, more tonight (with luck).
+	  <li>2017-10-23 15:45: 3(c) done.
+	  <li>2017-10-23 14:45: 3(b) done. That went quickly. I need a
+	  cup, or perhaps more accurately, a pot of tea.
+	  <li>2017-10-23 14:00: 3(a) done. I have the Accessability
+	    exams, so now I can post <a href="midterm.pdf">my exam
+	    solutions</a>, and the 
+	    <a href="midterm-figures.pdf">code and output</a> (in case
+	    you didn't take it with you). The solutions will evolve as
+	    I mark more. Next, I have to catch up the Accessability
+	    exams to the other large pile.
+	    <li>  2017-10-23 11:30: back to work. Question 2 done.
+	<li>2017-10-22 22:20: 2(d) done, but that's my limit for tonight.
+	<li>2017-10-22 21:15: 2(c) done. Losing steam, but may try for
+	one more turn through the pile tonight.
+	<li>2017-10-22 20:15: back after dinner. 2(b) done.
+	<li>2017-10-22 16:00: question 2(a) done. I need to take a
+	walk in the sunshine.
+	<li>2017-10-22 14:30: lunch. Page 1 is done, but with this
+	many exams, it takes a long time to add up and record the
+	marks for a page!
+	<li>2017-10-22 12:30: back to work marking exams. I have now
+	finished 1(c), and intend to get page 1 finished before lunch.
+	<li>2017-10-21 21:00: the absurdly long journey of marking
+	your midterms has begun. Everyone's question 1(a) is marked. I
+	am collecting additional comments as I mark, which I will add
+	to my solutions. I will put those up once I have the exams
+	  from Accessability, which will probably be Monday. I think
+	that is as far as I will get tonight.
+
+	  <p> I have a sore throat today (which is why I let Nnenna do
+	  the announcements at the exam), which, as usually happens
+	  for me, is likely to turn into a cold. I hope I will have
+	  voice enough for class on Tuesday, and I will try not to get
+	    anything too noxious on your exam paper!
+
+	  <p> Reminder, before I forget: assignment 6 is due
+	  on <em>November 2</em>, so you have a week off before that is
+	  due. (It is up on Blackboard if you want to get started;
+	  Tuesday's class will get you most of the way through the
+	  material.)  With that in mind, there are <em>no
+	  tutorials</em> this week. If you want to talk, catch me in
+	  office hours. You will probably find me hidden behind a
+	    large pile of exams.
+
+	  <p> Yes, that was Megan at the exam today. She did get some
+	  homework done, but she found the page-turning a distraction,
+	  so she spent most of the exam watching Mario Kart videos!
+	    
+	<li>2017-10-20 09:30: <a href="assignments/a5.pdf">My
+	solutions to assignment 5</a>. Look them over (particularly
+	the last two questions) before the exam.
+	<li>2017-10-16 23:00: discovered today: on the 2016 exam, in
+	the question about coffee cups, one of the plots appeared as a
+	nonsensical histogram when it should have been a boxplot. I
+	have now corrected this, so if you re-download the 2016
+	midterm, it should now look as you would expect.
+	<li>2017-10-16 15:00: I have also updated my solutions to the
+	2015 midterm, in the light of what I would expect you to say
+	this year. This is about as far back as I am able to go
+	right now.
+	<li>2017-10-16 12:30: I have just added to the solutions
+	for <a href="oldexams/mid16s.pdf">last year's midterm</a>,
+	adding "2017 solutions" where what I expect you to answer is
+	different to the answer I expected last year. The nature of
+	this course is that the best way to do something changes over
+	time. Bear that in mind as you go further back into the past.
+	<li>2017-10-12
+	14:15: <a href="assignments/a55.pdf">"Assignment 5.5"</a>, a
+	few practice questions to look over before the
+	midterm. Nothing to hand in. Some of these may make more sense
+	  after next Tuesday's lecture.
+	<li>2017-10-12 14:00: I have an updated version
+	of <tt>smmr</tt>. If you are having trouble with it,
+	  re-install it. I have added some alternatives
+	to <a href="assignments/a5.pdf">Assignment 5</a> to give you
+	some extra options. (I haven't changed the file on
+	Blackboard, so use the link here.) 
+	<li>2017-10-12 12:30: on the agenda next week: one more thing
+	about normal quantile plots (slide 276 and on), Mood's median
+	test (slides 295 and on), Analysis of Variance (slides 313 and
+	on). It's up to you to figure out what is on the midterm and
+	what is not, which you can do by coming to the lecture or by
+	  watching
+	the <a href="http://www.utsc.utoronto.ca/weboption/">WebOption</a>
+	video (click Lecturecast Login).
+	<li>2017-10-12 11:30: timetable of upcoming events:
+	  <ul>
+	    <li>Tuesday October 17: lecture as usual (last material
+	    for midterm)
+	    <li>Wednesday October 18: tutorials as usual. Take the
+	    opportunity to ask about midterm stuff if you've finished
+	    Assignment 5.
+	    <li>Thursday October 19: lecture as usual. Material here
+	    is <em>not</em> on midterm but will be on Assignment 6.
+	    <li>Thursday October 19: pre-exam office hours after
+	    lecture (1:00-4:30pm).
+	    <li>Saturday October 21: midterm exam 9:00-11:00am in IC
+	    130
+	    <li>Tuesday October 24: lecture as usual. Assignment 6
+	    goes out, due Thursday November 2.
+	    <li>Wednesday October 25: <em>No</em> tutorials. You don't
+	    have an assignment due, and I need time to mark the exams,
+	    so this seems a better use of time.
+	    <li>Thursday October 26: lecture as usual. <em>No</em>
+	    assignment due.
+	    <li>Tuesday October 31: back to the usual routine.
+	    <li>Thursdays November 9 and 16: planned due dates for
+	    Assignments 7 and 8. There will be 8 assignments
+	    altogether.
+	    <li>Monday December 4: Project due. I will talk about this
+	    later, after I have discussed statistical reports.
+	  </ul>
+	<li>2017-10-11 13:45: the midterm is almost ready to be sent
+	for printing. I will try to get it sent off this afternoon (I
+	am on the final phase of checking it over). The exam has 8
+	questions on 8 pages (with space to write answers), covering
+	material up to and including what we will look at next Tuesday
+	in class. It will be like the old exams in that you will also
+	receive a booklet of code and output containing numbered
+	Figures to refer to during the exam. As for the kind of things
+	  I will ask, expect two possibilities:
+	  <ul>
+	    <li>give code to perform a specific task
+	    <li>look at output and answer questions on it.
+	  </ul>
+	  In an ideal world, I would put you in front of a computer
+	  for your exams in this course, so you would have the benefit
+	  of trying your code and fixing it if it doesn't work. But we
+	  have to work with the world we have, so it is a written exam
+	  and you'll have to write your code by hand. I try to make
+	  the exams like the assignments, except for the bit of you
+	  actually running your code.
+	<li>2017-10-11 13:45: re: assignment 5, I just spoke to a
+	student who couldn't get sign_test in package smmr to work
+	because of not having a function called "enquo". If this happens
+	to you, first make sure you have the most up-to-date version
+	  of the tidyverse: run <tt>tidyverse_update()</tt> and let it
+	update anything it needs to. If that doesn't help, I will
+	provide a fix (probably available tomorrow) and update the
+	practice question(s) on assignment 5 to show you how it
+	works. 
+	<li>2017-10-06 16:00: What's coming up in lectures? After
+	reading week, we have one piece of the normal quantile plot
+	picture to take care of (slide 278), and then we can move on
+	to Mood's median test, which is the two-sample version of the
+	sign test. Whatever we cover in Tuesday's lecture may be on
+	the midterm. There is a lecture on the Thursday before the
+	midterm, the contents of which <em>will</em> be on assignment
+	6 and <em>will</em> be on the final exam. I will have pre-exam
+	office hours on either the Thursday or the Friday before the
+	exam (I have to figure out my schedule first).
+	<li>2017-10-06 15:45: <a href="assignments/a4.pdf">My
+	solutions</a> to assignment 4. These are a bit long because
+	there are several different ways to tackle power (especially
+	in SAS) and I wanted to talk about at least some of them. (I
+	learned quite a bit by seeing what people were doing on
+	Wednesday.) 
+	<li>2017-10-06 15:30: Here is the final version
+	of <a href="assignments/a5.pdf">Assignment 5</a>. I took out
+	the question about insurance and simplified the sign-test
+	question. Both the remaining questions use both R and
+	SAS. They are a bit long, but they are entirely
+	straightforward applications of the sign test and the matched
+	pairs t-test. So they ought not to take you too long to
+	do. The questions will also be good preparation for the
+	midterm, given that both the sign test and matched-pairs
+	testing could be on the exam. This assignment will be due on
+	October 19, shortly before the midterm, but you have nearly
+	two weeks to work on it, so you would do well to get this out
+	of the way to give you enough time to study for the exam. 
+	<li>2017-10-05 14:45: I want to shorten Assignment 5: to two
+	  questions, and maybe shortening that first question that
+	  goes up to part (h). I haven't figured out how yet,
+	  though. Stay tuned.
+	  <p> There's one tiny piece of normal quantile plots that we
+	  didn't do yet: how to estimate $\mu$ and $\sigma$ using the
+	  IQR so that the line on a SAS normal quantile plot is more
+	  reasonable. That's the first item on the agenda for after
+	  reading week. After that, we can pick up where we left off
+	  today. 
+	<li>2017-10-04 13:30: I forgot to put the Assignment 4 hand-in
+	on Blackboard. It's there now. Thanks to those who reminded
+	me. 
+	<li>2017-10-02 13:00: a
+	draft <a href="assignments/a5.pdf">Assignment 5</a> is
+	up. There are currently three questions to hand in; I may
+	shorten this for the assignment you actually have to hand in. 
+	<li>2017-10-02 11:30: on the agenda this week: finishing off
+	the sign test (slides 239-258), matched pairs (slides
+	259-271), normal quantile plot (272-290) and possibly the sign
+	  test on matched-pair data. I might shuffle the order, for
+	example looking at the normal quantile plot earlier.
+
+	  <p>Next week (Oct 9-13) is Reading Week. There are no
+	    lectures or tutorials, and there will be no assignment due.
+
+	  <p>With that in mind, Assignment 5, on this week's stuff,
+	    will be due the following week, on October 19, so you will
+	    have an extra week to do it.
+
+	  <p> The midterm exam is scheduled for October 21 (Saturday)
+	  9:00-11:00 am in IC 130. I believe this is official now (I
+	  will check). The material on the midterm will be whatever we
+	  cover up in lecture to and including the Tuesday before the
+	  exam. You are responsible for knowing what that is. (This
+	  includes what is on Assignment 5.) The exam is open book as
+	  detailed in the course outline.  I will give you a week off
+	  assignments after the midterm; I may cancel tutorials that
+	  week so I can get the midterms marked more quickly.
+	<li>2017-09-29 10:00:
+	my <a href="assignments/a3.pdf">assignment 3 solutions</a>.
+	<li>2017-09-29 09:00: SAS went down last night, but is back up
+	now. It looks as if everybody managed to hand in their
+	assignment 3 somehow. I will accept any assignments that came
+	in between midnight and now. Remember what it said in the
+	course outline: be prepared for software to go down. If you
+	leave your assignment until the last minute, this could happen
+	to you again, and you might not be so lucky next time.
+	<li>2017-09-27 13:34: next week I'd like to talk about the
+	normal quantile plot, since I saw a number of you using it
+	this week. Maybe I'll start with that, and then get back to
+	the sign test. The normal quantile plot starts on page 272 of
+	the lecture notes.
+	<li>2017-09-27 13:45: <a href="assignments/a4.pdf">Assignment
+	4</a> is good as it is. I decided not to change anything in it.
+	<li>2017-09-26 23:15: It seems I didn't scroll down far
+	enough. There are a few Assignment 1's not marked yet. If you
+	have "grade pending", that would be the reason.
+	<li>2017-09-26 22:00: I managed to mess up displaying the
+	grades for Assignment 1 on Blackboard. I've fixed it now. Try
+	it again now.
+	<li>2017-09-25 17:15: there is
+	a <em>draft</em> <a href="assignments/a4.pdf">Assignment 4</a>
+	up. Bear in mind that I may make edits to this between now and
+	next week.
+	<li>2017-09-25 16:00: I requested a midterm
+	date <em>after</em> the reading week. As soon as I have an
+	official date I will let you know. I am planning to give you a
+	week off assignments around the midterm. My usual plan for a
+	week like that is to give you something like "Assignment 5.5"
+	with nothing to hand in, but with some practice questions for
+	the stuff we've just done in class.
+	<li>2017-09-25 15:45: on the agenda for this week is  power of
+	tests, by simulation and by calculation (well, R and SAS will
+	do the calculation for us). On the way, I want to talk a bit
+	more about functions in R (than appears in the lecture notes
+	now) because they serve as building blocks for bigger
+	things. I'm expecting that I will later get to talk about how
+	hypothesis tests and confidence intervals are related, and
+	that leads on to the sign test (which I may or may not get to
+	this week). So, on assignment 4, expect to see some questions
+	about power and type II errors.
+	<li>2017-09-25 15:45: the assignment 1's appear to have been
+	  all marked now. <a href="assignments/a3.pdf">Assignment
+	  3</a> is now up on Blackboard, so you can hand it in when
+	  you have finished it. I am currently working on assignment 4.
+	<li>2017-09-23 22:15:
+	my <a href="assignments/a2.pdf">solutions to assignment 2</a>.
+	<li>2017-09-20 13:50: the
+	updated <a href="assignments/a3.pdf">assignment 3</a> is
+	up. This will be due <em>next week Thursday</em> (the 28th).
+	<li>2017-09-20 11:50: off to the 12:00 tutorial 
+	(which <em>does</em> take place as scheduled). The improved
+	version of assignment 3 is almost ready to put up.
+	<li>2017-09-20 11:30: We got further in lecture yesterday than
+	I expected, so I think it is a good idea to put a two-sample
+	t-test question on assignment *3*, next week's assignment (and
+	take out one of the questions that is currently there). Expect
+	to see that up later today. (Assignment 2, the one you are
+	working on now, will not be changed.)
+	<li>2017-09-20 11:15: Sorry, I screwed up. If you were in the
+	11:00 tutorial, you will have discovered that there was
+	another class in the computer lab at our time today. I had
+	actually scheduled 10:00 for us today, and proceeded (a) not
+	to tell you and (b) not to show up myself. If you should have
+	been in the 11:00 tutorial, feel free to come to one of the
+	other tutorials today (12, 3 or 4 in the same room). Sorry. My
+	  fault.
+	<li>2017-09-18 12:30: I have
+	put <a href="assignments/a2.pdf">Assignment 2</a> up on
+	Blackboard. If you have done it already, you can hand it
+	  in. If you are <em>really</em> keen, you can start work
+	on <a href="assignments/a3.pdf">Assignment 3</a>, which is
+	based on this week's lectures (and therefore will begin to
+	make sense after tomorrow's class). I won't put Assignment 3
+	on Blackboard yet, since I don't want to confuse the issue. If
+	I remember, it will go up on Friday, after Assignment 2 is
+	handed in. 
+	<li>2017-09-18 11:30:
+	my <a href="assignments/a1.pdf">solutions to assignment 1</a>,
+	I realize, were actually generated from a different file than
+	the questions. There is, however, no inconsistency as far as I
+	can tell. Let me know if you find any. (For example, the text
+	of the solutions to the questions that had solutions before
+	should be the same, except that I might have added a few
+	things. Nothing should have been removed, though I got the
+	date mixed up, which I fixed.) One of the links was to the
+	wrong file, which is now fixed.
+	<li>2017-09-15 11:00: I've been thinking about next week's
+	classes, and therefore what should go on assignment 3. My
+	guess is that we will spend all of Tuesday's class and
+	probably some of Thursday's on one-sample inference (the
+	one-sample t), and so my current plan is to put only that
+	stuff on assignment 3. We will probably start the two-sample
+	inference, but I'm not sure we'll finish it, so I think I will
+	defer questions on that to Assignment 4. After that comes the
+	lecture stuff on power of tests and sample sizes, so you might
+	get questions on both of those on Assignment 4. (I am
+	conscious that I don't want to make the assignments too long,
+	so we'll see how it turns out.)
+	<li>2017-09-15 10:00: My <a href="assignments/a1.pdf">assignment 1
+	solutions</a>. Even if you thought Assignment 1 was easy, it
+	is worth your while reading through these, because I have gone
+	beyond the questions I asked you, and you might get some more
+	insight. 
+	<li>2017-09-14 17:40: next week we start on statistical
+	inference (section 6 of the notes, which is a very long
+	section). I will assume that you have seen this stuff before,
+	but that you might have forgotten the details. We start with
+	the one-sample t confidence interval and test (for the mean of
+	a single sample); at some point, maybe later in the week, we look
+	at the two-sample t, which has some extra wrinkles that you
+	have probably not seen before. I will figure out how far we
+	are likely to get next week, and put something corresponding
+	on your Assignment 3. 
+	<li>2017-09-14 17:30: about the SAS part of the North Carolina
+	births data. It seems that SAS Studio reads the variable names
+	in including spaces and question marks as they are, which
+	makes it very difficult to duplicate what I did. I added some
+	extra discussion to the appropriate part
+	of <a href="assignments/a2.pdf">Assignment 2</a>, which you
+	can read, but the TL;DR is that you need to add the
+	line <tt>options validvarname=v7;</tt> to the top of your SAS
+	code, and then SAS will convert the column names to "valid
+	variable names" for you the same as it did for
+	me. (You <em>only</em> need to do this if you have column
+	names with spaces and other junk in them; if your data set is
+	junk-free, as it usually will be, at least in this course, you
+	don't need to do this.)
+	<li>2017-09-14 17:30: the Australian athletes data
+	  is <a href="ais.txt">here</a>. Copy the URL from the address
+	  bar into R or SAS to use it. The data values are separated
+	  by <em>tabs</em>.
+	<li>2017-09-13 12:30: This week's lectures: Tuesday, section 3
+	(graphs), Thursday section 4 (short) and 5 (numerical
+	summaries). Assignment 2 will be on those two things.
+	<li>2017-09-13 12:30: I imagine you don't care yet, but here
+	is <a href="assignments/a2.pdf">Assignment 2</a>, which will
+	be due next week. It contains some more work on graphs
+	(today's class) and numerical summaries (Thursday's class).
+	<li>2017-09-07 14:30: one more thing: all the data files I use in class should be web-accessible. For example, a file called <tt>soap.txt</tt> should be accessible at <tt>http://www.utsc.utoronto.ca/~butler/c32/soap.txt</tt>. For a file of another name, replace <tt>soap.txt</tt> with the name of the file. Let me know if you find anything missing.
+	<li>2017-09-07 13:30: I forgot to mention in class today that you should feel free to follow along with the code during class (it might be a bit fast) or afterwards. I was told that the text in R Studio and SAS Studio didn't show up clearly on the WebOption video, so will try to make it bigger next time.
+
+	  <p> If you want some practice on the stuff we did in class today, take a look at Assignment 1, in particular the problems with solutions (the first three, this time). This will also get you ahead of the game for the graph stuff on Tuesday.
+	<li>2017-09-07 11:30: In tutorial yesterday, several people found that they could not get Word output out of SAS Studio (and that copying and pasting HTML was not getting graphs). I found out how to fix this:
+	  <ul>
+	    <li>Go to SAS Studio.
+	      <li>Look top right. You'll see "SAS Programmer", a funny
+	      symbol with three lines and some dots, a question mark,
+	      and "Sign out".
+		<li>The one that is three lines and some dots has a
+		tooltip "More Application Options". Click it.
+		  <li>Select Preferences from the pop-up menu.
+		    <li>Click Results (on the left).
+		      <li>Look for RTF on the right. Click the box
+		      next to "Produce RTF Output" and make sure it
+		      has a check mark in it.
+			<li>Click Save.
+			  <li>Open some SAS code and run it. The Word
+			  link should no longer be greyed out.
+			  <li>Click on the Word link. It will download
+			  a file containing the results and graphs,
+			  which you can open in Word, and copy-paste
+			  into your assignment document.
+			    <li>This should continue to work in the
+			    future (that is, you won't need to do it
+			    again).
+	  </ul>
+	<li>2017-09-07 11:00: <a href="assignments/a1.pdf">Assignment
+	1</a> is up. It's under Course Materials on Blackboard. If you
+	are unfamiliar with handing in work on Blackboard, you might
+	like
+	to <a href="http://www.utsc.utoronto.ca/~butler/c32/blackboard-assgt-howto.html">look
+	at this</a>.
+	
+	<li>2017-09-07 09:30: I forgot to mention: we are on WebOption. Start <a href="https://www.utsc.utoronto.ca/weboption/participating-courses">here</a>.
+
+	  
+	<li>2017-09-06 14:15: tomorrow's class will start from Section
+	2 of the lecture notes. 
+
+	  <p> The rest of section 1 is instructions about installing R
+	  and connecting to SAS. Also there are instructions for
+	  getting SAS to run on your own machine (so that you are not
+	  battling for run-time on SAS's servers). Be warned, the
+	  process for running SAS on your own machine is rather complicated! 
+But it is there if
+	  you want to try it. (I won't be talking about these in
+	  class.) 
+	<li>2017-09-06 10:30: Tutorials start <em>today!</em>
+	<li>2017-09-01 17:00: Lectures are Tuesday 13:00-14:00 in SW
+	319 and Thursday 12:00-13:00 in IC 130. Office hours will be
+	Tuesday after class and Thursday before class. If you want to
+	see me outside of those times, make an appointment or take
+	your chances.
+	<li>2017-09-01 16:45: Tutorials begin in the <em>first</em>
+	week of classes. This is because you will need to get some
+	things in place before the first assignment is due (week 2),
+	and it is better for you to be able to work through those
+	  things with help if you need it.
+
+	  <p> This course has WebOption. The lectures will be recorded
+	  and will be available for two weeks. I spoke to the guy in
+	  charge of WebOption today; anything that appears on the big
+	  screen in class, slides or software, will also appear on the
+	  WebOption video, plus you can access my entire lecture notes
+	  from up there at the top left.
+	<li>2017-09-01 16:30: We have a fourth tutorial Wed 11-12 in
+	BV 498. This is official. At the moment, tutorials 1 and 2 are
+	full and tutorial 3 is almost full, so if your schedule allows
+	for you to go to tutorial 4, feel free to switch to it. This
+	will also free up space for those students whose schedules are
+	  more constrained.
+
+	  <p> You will want to be in one of the tutorials by the start
+	  of classes.
+	<li>2017-08-28 10:30: we are shooting for Wed 11-12 for the
+	fourth tutorial, but not official yet.
+	<li>2017-08-21 16:30: it looks as if room has been found for
+	everyone on the wait list. We will need to arrange one more
+	computer-lab tutorial (you will want to be enrolled in one
+	eventually). 
+	<li>2017-08-15 12:00: Course news will go here, most recent at
+	the top.
+      </ul>
+      <p>You can e-mail
+      me <a href="mailto:butler@utsc.utoronto.ca">here</a>. 
+    </tr>
+</table>
+</body></html>
