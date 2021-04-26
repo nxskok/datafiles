@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>list-them.utf8</title>
+
+<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Datafiles</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="http://ritsokiguess.site/home/courses.html">Ken's other courses</a>
+</li>
+<li>
+  <a href="http://ritsokiguess.site/home">Ken Butler homepage</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<p>find all the datafiles and make clickable list of them</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
+<pre><code>## ✓ ggplot2 3.3.3     ✓ purrr   0.3.4
+## ✓ tibble  3.1.0     ✓ dplyr   1.0.5
+## ✓ tidyr   1.1.3     ✓ stringr 1.4.0
+## ✓ readr   1.4.0     ✓ forcats 0.5.1</code></pre>
+<pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>list.files(pattern = &quot;*.txt$|*.csv$|*.dat$&quot;) %&gt;% 
+  enframe() %&gt;% 
+  mutate(rmd = glue::glue(&quot;- [{value}]({value})&quot;)) %&gt;% 
+  pull(rmd) %&gt;% cat(sep = &quot;\n&quot;)</code></pre>
+<pre><code>## - [abortion.txt](abortion.txt)
+## - [acidrain.csv](acidrain.csv)
+## - [additive.txt](additive.txt)
+## - [adhd-parents.txt](adhd-parents.txt)
+## - [adhd.txt](adhd.txt)
+## - [admin.dat](admin.dat)
+## - [agora.csv](agora.csv)
+## - [airline_passengers.csv](airline_passengers.csv)
+## - [airlines.txt](airlines.txt)
+## - [airpollution.csv](airpollution.csv)
+## - [airport-dos.dat](airport-dos.dat)
+## - [airport.dat](airport.dat)
+## - [airport.txt](airport.txt)
+## - [ais.txt](ais.txt)
+## - [alligator.txt](alligator.txt)
+## - [analgesic.txt](analgesic.txt)
+## - [analgesic2.txt](analgesic2.txt)
+## - [ancova-dos.dat](ancova-dos.dat)
+## - [ancova.dat](ancova.dat)
+## - [ancova.dat.dat](ancova.dat.dat)
+## - [ancova.txt](ancova.txt)
+## - [animal-dissim.csv](animal-dissim.csv)
+## - [animal.tf.txt](animal.tf.txt)
+## - [animals.csv](animals.csv)
+## - [animals.dat](animals.dat)
+## - [animals.txt](animals.txt)
+## - [anovadata.txt](anovadata.txt)
+## - [apache.txt](apache.txt)
+## - [arsenic.dat](arsenic.dat)
+## - [asphalt.txt](asphalt.txt)
+## - [asurv.dat](asurv.dat)
+## - [asurv.txt](asurv.txt)
+## - [asurv2.dat](asurv2.dat)
+## - [atp.txt](atp.txt)
+## - [autonoise.txt](autonoise.txt)
+## - [babyfood.dat](babyfood.dat)
+## - [Backpack.csv](Backpack.csv)
+## - [baseball.txt](baseball.txt)
+## - [basket.dat](basket.dat)
+## - [basket.txt](basket.txt)
+## - [beer.txt](beer.txt)
+## - [beers.dat](beers.dat)
+## - [beers.txt](beers.txt)
+## - [beers2.dat](beers2.dat)
+## - [bellpepper.csv](bellpepper.csv)
+## - [bidmaint.txt](bidmaint.txt)
+## - [bikes.csv](bikes.csv)
+## - [birthrate-dos.dat](birthrate-dos.dat)
+## - [birthrate.dat](birthrate.dat)
+## - [birthrate.txt](birthrate.txt)
+## - [birthtypes.txt](birthtypes.txt)
+## - [bodyfat.txt](bodyfat.txt)
+## - [bodyfat2.txt](bodyfat2.txt)
+## - [bpdata.dat](bpdata.dat)
+## - [brakes.txt](brakes.txt)
+## - [braking.txt](braking.txt)
+## - [breastfeed.csv](breastfeed.csv)
+## - [bridges.csv](bridges.csv)
+## - [buses.txt](buses.txt)
+## - [c.txt](c.txt)
+## - [caffeine.csv](caffeine.csv)
+## - [calcium.dat](calcium.dat)
+## - [calcium.txt](calcium.txt)
+## - [calirain.txt](calirain.txt)
+## - [camera.txt](camera.txt)
+## - [cancer-dos.dat](cancer-dos.dat)
+## - [cancer-remission.txt](cancer-remission.txt)
+## - [cancer.dat](cancer.dat)
+## - [cancer.txt](cancer.txt)
+## - [car-cluster.csv](car-cluster.csv)
+## - [car-insurance.csv](car-insurance.csv)
+## - [car-speeds.csv](car-speeds.csv)
+## - [carbon.txt](carbon.txt)
+## - [caribou.txt](caribou.txt)
+## - [carnoise.dat](carnoise.dat)
+## - [carnoise.txt](carnoise.txt)
+## - [carp.txt](carp.txt)
+## - [cars_orig.dat](cars_orig.dat)
+## - [cars.csv](cars.csv)
+## - [cars.dat](cars.dat)
+## - [cars.sas7bdat](cars.sas7bdat)
+## - [cars.txt](cars.txt)
+## - [cars2.dat](cars2.dat)
+## - [cereal-sugar.txt](cereal-sugar.txt)
+## - [cereal.txt](cereal.txt)
+## - [chainsaw.txt](chainsaw.txt)
+## - [chdage.csv](chdage.csv)
+## - [chdage2.csv](chdage2.csv)
+## - [cheese.dat](cheese.dat)
+## - [cheese.txt](cheese.txt)
+## - [chemicals.dat](chemicals.dat)
+## - [chickwgt.txt](chickwgt.txt)
+## - [children-diet.dat](children-diet.dat)
+## - [chips.csv](chips.csv)
+## - [chips.txt](chips.txt)
+## - [cholesterol.csv](cholesterol.csv)
+## - [Cholesterol.csv](Cholesterol.csv)
+## - [cities-names.txt](cities-names.txt)
+## - [cities.dat](cities.dat)
+## - [cities2-story.txt](cities2-story.txt)
+## - [cities2.txt](cities2.txt)
+## - [clerical.txt](clerical.txt)
+## - [clouds.txt](clouds.txt)
+## - [coasters.csv](coasters.csv)
+## - [coffee.txt](coffee.txt)
+## - [coffeecups.csv](coffeecups.csv)
+## - [coffeecups.txt](coffeecups.txt)
+## - [cognition-dos.dat](cognition-dos.dat)
+## - [cognition.dat](cognition.dat)
+## - [cognition.txt](cognition.txt)
+## - [college-plans.txt](college-plans.txt)
+## - [colon.csv](colon.csv)
+## - [compatt.txt](compatt.txt)
+## - [cookingpot_d.dat](cookingpot_d.dat)
+## - [cookingpot.dat](cookingpot.dat)
+## - [cookingpot.txt](cookingpot.txt)
+## - [corn.txt](corn.txt)
+## - [cornseed.csv](cornseed.csv)
+## - [corollas.txt](corollas.txt)
+## - [cov.txt](cov.txt)
+## - [crickets.txt](crickets.txt)
+## - [crickets2.csv](crickets2.csv)
+## - [crime.txt](crime.txt)
+## - [crowding.txt](crowding.txt)
+## - [crudeoil.csv](crudeoil.csv)
+## - [cube-dos.dat](cube-dos.dat)
+## - [cube.dat](cube.dat)
+## - [cube.txt](cube.txt)
+## - [curvy.dat](curvy.dat)
+## - [curvy.txt](curvy.txt)
+## - [cypermethrin.dat](cypermethrin.dat)
+## - [dancing.txt](dancing.txt)
+## - [dataset_HD_euro2016.csv](dataset_HD_euro2016.csv)
+## - [dates.dat](dates.dat)
+## - [dec2013.txt](dec2013.txt)
+## - [decision.csv](decision.csv)
+## - [decision.txt](decision.txt)
+## - [deer.csv](deer.csv)
+## - [deer.txt](deer.txt)
+## - [deerleg.txt](deerleg.txt)
+## - [delivery.txt](delivery.txt)
+## - [delivery1.txt](delivery1.txt)
+## - [delivery2.txt](delivery2.txt)
+## - [diabetes.dat](diabetes.dat)
+## - [diet.txt](diet.txt)
+## - [dim1.dat](dim1.dat)
+## - [dim1.txt](dim1.txt)
+## - [disc1.dat](disc1.dat)
+## - [disc1.txt](disc1.txt)
+## - [disease.txt](disease.txt)
+## - [distances.txt](distances.txt)
+## - [dogs_orig.dat](dogs_orig.dat)
+## - [dogs-dos.dat](dogs-dos.dat)
+## - [dogs.dat](dogs.dat)
+## - [dogs.txt](dogs.txt)
+## - [dogs2-dos.dat](dogs2-dos.dat)
+## - [dogs2.dat](dogs2.dat)
+## - [dogs2.txt](dogs2.txt)
+## - [donner.txt](donner.txt)
+## - [doritos.txt](doritos.txt)
+## - [dose.txt](dose.txt)
+## - [drp.dat](drp.dat)
+## - [drp.txt](drp.txt)
+## - [drugusers.txt](drugusers.txt)
+## - [drunk-dos.dat](drunk-dos.dat)
+## - [drunk.dat](drunk.dat)
+## - [dst.txt](dst.txt)
+## - [dt.csv](dt.csv)
+## - [dt2.csv](dt2.csv)
+## - [duality.txt](duality.txt)
+## - [ecg.txt](ecg.txt)
+## - [egyptians.txt](egyptians.txt)
+## - [email.txt](email.txt)
+## - [enzyme.csv](enzyme.csv)
+## - [ess.csv](ess.csv)
+## - [europe-dos.dat](europe-dos.dat)
+## - [europe-ll.csv](europe-ll.csv)
+## - [europe.csv](europe.csv)
+## - [europe.dat](europe.dat)
+## - [Example.dat](Example.dat)
+## - [execsal2.txt](execsal2.txt)
+## - [exercise.dat](exercise.dat)
+## - [exercise.txt](exercise.txt)
+## - [expgrow.txt](expgrow.txt)
+## - [eyewear.txt](eyewear.txt)
+## - [eyewear2.txt](eyewear2.txt)
+## - [facebook.txt](facebook.txt)
+## - [factor-dos.dat](factor-dos.dat)
+## - [factor.dat](factor.dat)
+## - [factor.txt](factor.txt)
+## - [fake.csv](fake.csv)
+## - [fake.t.txt](fake.t.txt)
+## - [fall.txt](fall.txt)
+## - [fertilizer.txt](fertilizer.txt)
+## - [ferto.txt](ferto.txt)
+## - [fire_damage.txt](fire_damage.txt)
+## - [fishcatch.dat](fishcatch.dat)
+## - [fishcatch.txt](fishcatch.txt)
+## - [fluor.txt](fluor.txt)
+## - [football.txt](football.txt)
+## - [footprint.txt](footprint.txt)
+## - [forehead.txt](forehead.txt)
+## - [Fr13.txt](Fr13.txt)
+## - [fred.csv](fred.csv)
+## - [fred.txt](fred.txt)
+## - [freq.dat](freq.dat)
+## - [freq2.dat](freq2.dat)
+## - [Friday13.txt](Friday13.txt)
+## - [fruit1.txt](fruit1.txt)
+## - [fruits.txt](fruits.txt)
+## - [ftccigar.txt](ftccigar.txt)
+## - [genetic.txt](genetic.txt)
+## - [genetic2.txt](genetic2.txt)
+## - [geriatrics.txt](geriatrics.txt)
+## - [global.csv](global.csv)
+## - [globaltemp.txt](globaltemp.txt)
+## - [goals2-dos.dat](goals2-dos.dat)
+## - [goals2.dat](goals2.dat)
+## - [goat.txt](goat.txt)
+## - [gorman-toman.txt](gorman-toman.txt)
+## - [gpa.txt](gpa.txt)
+## - [grade-point-average.txt](grade-point-average.txt)
+## - [gradschool_dos.dat](gradschool_dos.dat)
+## - [gradschool.dat](gradschool.dat)
+## - [gradschool.txt](gradschool.txt)
+## - [groups.txt](groups.txt)
+## - [gss-codebook.dat](gss-codebook.dat)
+## - [gss.dat](gss.dat)
+## - [gss2.dat](gss2.dat)
+## - [ha2.txt](ha2.txt)
+## - [hairpain.txt](hairpain.txt)
+## - [hald.dat](hald.dat)
+## - [hald.txt](hald.txt)
+## - [handwashing.txt](handwashing.txt)
+## - [hard-water.csv](hard-water.csv)
+## - [hard-water.txt](hard-water.txt)
+## - [hayfever.txt](hayfever.txt)
+## - [hearing.txt](hearing.txt)
+## - [heart-rates.csv](heart-rates.csv)
+## - [heart2.csv](heart2.csv)
+## - [heartf.csv](heartf.csv)
+## - [heat.csv](heat.csv)
+## - [heights.txt](heights.txt)
+## - [heliconia.csv](heliconia.csv)
+## - [heptathlon.csv](heptathlon.csv)
+## - [hg.txt](hg.txt)
+## - [homicide1.txt](homicide1.txt)
+## - [homicide2.txt](homicide2.txt)
+## - [hospital.csv](hospital.csv)
+## - [houseprice.csv](houseprice.csv)
+## - [houses.txt](houses.txt)
+## - [hsb.csv](hsb.csv)
+## - [ideas.txt](ideas.txt)
+## - [industrial.txt](industrial.txt)
+## - [industrial2.txt](industrial2.txt)
+## - [industrial3.txt](industrial3.txt)
+## - [industrial4.txt](industrial4.txt)
+## - [industrial5.txt](industrial5.txt)
+## - [infection.txt](infection.txt)
+## - [insect.txt](insect.txt)
+## - [irs.txt](irs.txt)
+## - [irs2.txt](irs2.txt)
+## - [isocodes.csv](isocodes.csv)
+## - [jan16output.txt](jan16output.txt)
+## - [jays15-home-att.csv](jays15-home-att.csv)
+## - [jays15-home.csv](jays15-home.csv)
+## - [jays15-home2.csv](jays15-home2.csv)
+## - [jays15.csv](jays15.csv)
+## - [jobs.txt](jobs.txt)
+## - [jumping-dos.dat](jumping-dos.dat)
+## - [jumping.dat](jumping.dat)
+## - [jumping.txt](jumping.txt)
+## - [jumping2.dat](jumping2.dat)
+## - [junk.csv](junk.csv)
+## - [junk.txt](junk.txt)
+## - [kidney.csv](kidney.csv)
+## - [kids-diet.txt](kids-diet.txt)
+## - [king.csv](king.csv)
+## - [kings.txt](kings.txt)
+## - [kite.csv](kite.csv)
+## - [languages.dat](languages.dat)
+## - [languages.txt](languages.txt)
+## - [latlong.csv](latlong.csv)
+## - [latlong2.csv](latlong2.csv)
+## - [laundry.csv](laundry.csv)
+## - [ldskpr.txt](ldskpr.txt)
+## - [ldspkr.dat](ldspkr.dat)
+## - [ldspkr.txt](ldspkr.txt)
+## - [le3-dos.dat](le3-dos.dat)
+## - [le3.dat](le3.dat)
+## - [leadmoss.txt](leadmoss.txt)
+## - [learning.txt](learning.txt)
+## - [lenswear-dos.dat](lenswear-dos.dat)
+## - [lenswear.dat](lenswear.dat)
+## - [lenswear.txt](lenswear.txt)
+## - [leprosy.txt](leprosy.txt)
+## - [leslie_salt.dat](leslie_salt.dat)
+## - [leslie_salt.txt](leslie_salt.txt)
+## - [LESLIE_SALT.txt](LESLIE_SALT.txt)
+## - [letterrec.txt](letterrec.txt)
+## - [leverage.txt](leverage.txt)
+## - [life-exp.txt](life-exp.txt)
+## - [lightbulbs.txt](lightbulbs.txt)
+## - [luxurycar.dat](luxurycar.dat)
+## - [luxurycar.txt](luxurycar.txt)
+## - [m.txt](m.txt)
+## - [ma1.dat](ma1.dat)
+## - [machine.txt](machine.txt)
+## - [madeup.csv](madeup.csv)
+## - [manova1-dos.dat](manova1-dos.dat)
+## - [manova1.dat](manova1.dat)
+## - [manova1.txt](manova1.txt)
+## - [manova2_d.dat](manova2_d.dat)
+## - [manova2-dos.dat](manova2-dos.dat)
+## - [manova2.dat](manova2.dat)
+## - [manova2.txt](manova2.txt)
+## - [many.txt](many.txt)
+## - [manypieces.txt](manypieces.txt)
+## - [marathon.csv](marathon.csv)
+## - [marks.txt](marks.txt)
+## - [math.txt](math.txt)
+## - [math1.txt](math1.txt)
+## - [mathgender.txt](mathgender.txt)
+## - [mathphobia.txt](mathphobia.txt)
+## - [mathprob.dat](mathprob.dat)
+## - [mathprob2.dat](mathprob2.dat)
+## - [mathsal.txt](mathsal.txt)
+## - [maze.txt](maze.txt)
+## - [mba.txt](mba.txt)
+## - [men_track_field-dos.dat](men_track_field-dos.dat)
+## - [men_track_field.dat](men_track_field.dat)
+## - [men_track_field.txt](men_track_field.txt)
+## - [mercury.txt](mercury.txt)
+## - [mesquite.txt](mesquite.txt)
+## - [migraine.txt](migraine.txt)
+## - [miners-tab.txt](miners-tab.txt)
+## - [miners.dat](miners.dat)
+## - [miners.txt](miners.txt)
+## - [miners2.txt](miners2.txt)
+## - [minersx.txt](minersx.txt)
+## - [mixup-dos.dat](mixup-dos.dat)
+## - [mixup.dat](mixup.dat)
+## - [mlogit_d.dat](mlogit_d.dat)
+## - [mlogit-dos.dat](mlogit-dos.dat)
+## - [mlogit.csv](mlogit.csv)
+## - [mlogit.dat](mlogit.dat)
+## - [mlogit2-dos.dat](mlogit2-dos.dat)
+## - [mlogit2.dat](mlogit2.dat)
+## - [mm.csv](mm.csv)
+## - [mm.txt](mm.txt)
+## - [mobile.txt](mobile.txt)
+## - [moisture-deficit.dat](moisture-deficit.dat)
+## - [moisture.txt](moisture.txt)
+## - [moncton-snow.csv](moncton-snow.csv)
+## - [monthly.csv](monthly.csv)
+## - [movie-lengths.csv](movie-lengths.csv)
+## - [mowing1.csv](mowing1.csv)
+## - [mp.dat](mp.dat)
+## - [multiway-dos.dat](multiway-dos.dat)
+## - [multiway.dat](multiway.dat)
+## - [multiway.txt](multiway.txt)
+## - [mydata.txt](mydata.txt)
+## - [mydates.csv](mydates.csv)
+## - [myeloma.csv](myeloma.csv)
+## - [myspread.csv](myspread.csv)
+## - [mystery.txt](mystery.txt)
+## - [namegame.txt](namegame.txt)
+## - [nasdaq.txt](nasdaq.txt)
+## - [nbapoints.csv](nbapoints.csv)
+## - [ncbirths.csv](ncbirths.csv)
+## - [ncbirths2.csv](ncbirths2.csv)
+## - [nenana.txt](nenana.txt)
+## - [neuralgia.txt](neuralgia.txt)
+## - [new-car-emotions.dat](new-car-emotions.dat)
+## - [no-c.csv](no-c.csv)
+## - [no2.txt](no2.txt)
+## - [nuclear.csv](nuclear.csv)
+## - [nuclear.txt](nuclear.txt)
+## - [nuclear2.txt](nuclear2.txt)
+## - [nybirths.txt](nybirths.txt)
+## - [oddity.csv](oddity.csv)
+## - [ojuice.txt](ojuice.txt)
+## - [ologit.dat](ologit.dat)
+## - [one-ten_d.dat](one-ten_d.dat)
+## - [one-ten_d.dat-dos.dat](one-ten_d.dat-dos.dat)
+## - [one-ten_d.dat.dat](one-ten_d.dat.dat)
+## - [one-ten-dos.dat](one-ten-dos.dat)
+## - [one-ten-mds-dos.dat](one-ten-mds-dos.dat)
+## - [one-ten-mds.dat](one-ten-mds.dat)
+## - [one-ten.dat](one-ten.dat)
+## - [one-ten.txt](one-ten.txt)
+## - [one.dat](one.dat)
+## - [ontario-ll.csv](ontario-ll.csv)
+## - [ontario-road-distances-dos.dat](ontario-road-distances-dos.dat)
+## - [ontario-road-distances.csv](ontario-road-distances.csv)
+## - [ontario-road-distances.dat](ontario-road-distances.dat)
+## - [ontario-road-distances.txt](ontario-road-distances.txt)
+## - [ontario.dat](ontario.dat)
+## - [oranges-orig.txt](oranges-orig.txt)
+## - [oranges.txt](oranges.txt)
+## - [outlier.txt](outlier.txt)
+## - [oz-walkscore.csv](oz-walkscore.csv)
+## - [paper.dat](paper.dat)
+## - [patients.dat](patients.dat)
+## - [peaches.dat](peaches.dat)
+## - [peanuts.txt](peanuts.txt)
+## - [perf.txt](perf.txt)
+## - [personality.txt](personality.txt)
+## - [pew.csv](pew.csv)
+## - [pew1.txt](pew1.txt)
+## - [pew2.txt](pew2.txt)
+## - [pieces.txt](pieces.txt)
+## - [pigs1.txt](pigs1.txt)
+## - [pigs2.txt](pigs2.txt)
+## - [pinetrees.txt](pinetrees.txt)
+## - [Pizza.csv](Pizza.csv)
+## - [places.txt](places.txt)
+## - [pluggedin.txt](pluggedin.txt)
+## - [pop.txt](pop.txt)
+## - [pracexam.txt](pracexam.txt)
+## - [pressure.txt](pressure.txt)
+## - [productivity.txt](productivity.txt)
+## - [profile-dos.dat](profile-dos.dat)
+## - [profile.dat](profile.dat)
+## - [profile.txt](profile.txt)
+## - [profile2-dos.dat](profile2-dos.dat)
+## - [profile2.dat](profile2.dat)
+## - [project.txt](project.txt)
+## - [punting.dat](punting.dat)
+## - [punting.txt](punting.txt)
+## - [qbrating.txt](qbrating.txt)
+## - [radon.txt](radon.txt)
+## - [rat-dmba.dat](rat-dmba.dat)
+## - [rat-dmba.txt](rat-dmba.txt)
+## - [rat.dat](rat.dat)
+## - [rat.txt](rat.txt)
+## - [rat2.dat](rat2.dat)
+## - [rat2.txt](rat2.txt)
+## - [rats7.txt](rats7.txt)
+## - [ratsleep.txt](ratsleep.txt)
+## - [ratsleep2.txt](ratsleep2.txt)
+## - [ratweight.csv](ratweight.csv)
+## - [reaction.txt](reaction.txt)
+## - [readtyp.dat](readtyp.dat)
+## - [readtyp.txt](readtyp.txt)
+## - [REAL_ESTATE.txt](REAL_ESTATE.txt)
+## - [recife.dat](recife.dat)
+## - [regress.dat](regress.dat)
+## - [regress.txt](regress.txt)
+## - [regress3.dat](regress3.dat)
+## - [regressx-extra-space.txt](regressx-extra-space.txt)
+## - [regressx.dat](regressx.dat)
+## - [regressx.txt](regressx.txt)
+## - [rehab.txt](rehab.txt)
+## - [remote-sensing-dos.dat](remote-sensing-dos.dat)
+## - [remote-sensing.dat](remote-sensing.dat)
+## - [remote-sensing.txt](remote-sensing.txt)
+## - [repellent.txt](repellent.txt)
+## - [restaurant-tips.txt](restaurant-tips.txt)
+## - [rex2-dos.dat](rex2-dos.dat)
+## - [rex2.dat](rex2.dat)
+## - [rex2.txt](rex2.txt)
+## - [rm.dat](rm.dat)
+## - [rm.txt](rm.txt)
+## - [rm1-dos.dat](rm1-dos.dat)
+## - [rm1.dat](rm1.dat)
+## - [rm1.txt](rm1.txt)
+## - [rm2-dos.dat](rm2-dos.dat)
+## - [rm2.dat](rm2.dat)
+## - [rm3-dos.dat](rm3-dos.dat)
+## - [rm3.dat](rm3.dat)
+## - [rm4-dos.dat](rm4-dos.dat)
+## - [rm4.dat](rm4.dat)
+## - [rmdrug.dat](rmdrug.dat)
+## - [Rohwer-dos.dat](Rohwer-dos.dat)
+## - [Rohwer.dat](Rohwer.dat)
+## - [rootstock.txt](rootstock.txt)
+## - [runner.txt](runner.txt)
+## - [runners.csv](runners.csv)
+## - [running.dat](running.dat)
+## - [runs.csv](runs.csv)
+## - [salaryinc.txt](salaryinc.txt)
+## - [saskatchewan-flow.csv](saskatchewan-flow.csv)
+## - [sat.dat](sat.dat)
+## - [sat.txt](sat.txt)
+## - [satis.txt](satis.txt)
+## - [satisfaction.txt](satisfaction.txt)
+## - [saturn.txt](saturn.txt)
+## - [scaffold-dos.dat](scaffold-dos.dat)
+## - [scaffold.dat](scaffold.dat)
+## - [scaffold.txt](scaffold.txt)
+## - [scaffold2-dos.dat](scaffold2-dos.dat)
+## - [scaffold2.dat](scaffold2.dat)
+## - [scaffold2.dat.dat](scaffold2.dat.dat)
+## - [scaffold2.txt](scaffold2.txt)
+## - [scaffold3-dos.dat](scaffold3-dos.dat)
+## - [scaffold3.dat](scaffold3.dat)
+## - [scores.txt](scores.txt)
+## - [seabed.csv](seabed.csv)
+## - [seabed1.csv](seabed1.csv)
+## - [self.csv](self.csv)
+## - [sep-old.dat](sep-old.dat)
+## - [sep.dat](sep.dat)
+## - [sep.txt](sep.txt)
+## - [sepsis.dat](sepsis.dat)
+## - [sepsis.txt](sepsis.txt)
+## - [sero2.dat](sero2.dat)
+## - [serum.dat](serum.dat)
+## - [shingles.txt](shingles.txt)
+## - [shirts.csv](shirts.csv)
+## - [simple-manova.txt](simple-manova.txt)
+## - [singer2.csv](singer2.csv)
+## - [singers.csv](singers.csv)
+## - [singers2.csv](singers2.csv)
+## - [singers3.csv](singers3.csv)
+## - [singsing.dat](singsing.dat)
+## - [skating.dat](skating.dat)
+## - [sleep.dat](sleep.dat)
+## - [sleep.txt](sleep.txt)
+## - [sleepwear.txt](sleepwear.txt)
+## - [slugs.txt](slugs.txt)
+## - [slugsurvey.txt](slugsurvey.txt)
+## - [small.csv](small.csv)
+## - [small.txt](small.txt)
+## - [smith.txt](smith.txt)
+## - [smsa.txt](smsa.txt)
+## - [snow.txt](snow.txt)
+## - [soap.txt](soap.txt)
+## - [socwork.txt](socwork.txt)
+## - [softdrinks.dat](softdrinks.dat)
+## - [some.dat](some.dat)
+## - [somedata.txt](somedata.txt)
+## - [sorprate.txt](sorprate.txt)
+## - [southern-ontario.csv](southern-ontario.csv)
+## - [souvenir.txt](souvenir.txt)
+## - [sparrowhawk.txt](sparrowhawk.txt)
+## - [species.txt](species.txt)
+## - [spiders.txt](spiders.txt)
+## - [spilich.txt](spilich.txt)
+## - [SportsExamples.csv](SportsExamples.csv)
+## - [square.csv](square.csv)
+## - [steak.csv](steak.csv)
+## - [steak1.csv](steak1.csv)
+## - [stimuli.dat](stimuli.dat)
+## - [stimuli.txt](stimuli.txt)
+## - [stressedmice.txt](stressedmice.txt)
+## - [stringbeans.dat](stringbeans.dat)
+## - [stringbeans.txt](stringbeans.txt)
+## - [students.txt](students.txt)
+## - [studyhours.txt](studyhours.txt)
+## - [stuff.csv](stuff.csv)
+## - [subjects.txt](subjects.txt)
+## - [sunspots.txt](sunspots.txt)
+## - [surgunit.txt](surgunit.txt)
+## - [survival1.dat](survival1.dat)
+## - [swiss1.txt](swiss1.txt)
+## - [T60.1.txt](T60.1.txt)
+## - [tablrock.txt](tablrock.txt)
+## - [tamsales4.txt](tamsales4.txt)
+## - [tb.csv](tb.csv)
+## - [teacher.txt](teacher.txt)
+## - [tellers.txt](tellers.txt)
+## - [temperature.csv](temperature.csv)
+## - [temperature.txt](temperature.txt)
+## - [test1.csv](test1.csv)
+## - [test12-dos.dat](test12-dos.dat)
+## - [test12.dat](test12.dat)
+## - [test12.txt](test12.txt)
+## - [test23.dat](test23.dat)
+## - [testing.txt](testing.txt)
+## - [texmex.txt](texmex.txt)
+## - [thick.dat](thick.dat)
+## - [thirty.csv](thirty.csv)
+## - [three.dat](three.dat)
+## - [three.txt](three.txt)
+## - [threegroups.dat](threegroups.dat)
+## - [threegroups.txt](threegroups.txt)
+## - [threestudy-dos.dat](threestudy-dos.dat)
+## - [threestudy.dat](threestudy.dat)
+## - [throw.txt](throw.txt)
+## - [tips.txt](tips.txt)
+## - [to-school.csv](to-school.csv)
+## - [tomatoes.txt](tomatoes.txt)
+## - [tomatoes2.csv](tomatoes2.csv)
+## - [toronto-annual.txt](toronto-annual.txt)
+## - [toronto-dec31.csv](toronto-dec31.csv)
+## - [toronto-dec31.txt](toronto-dec31.txt)
+## - [tortoise-eggs.txt](tortoise-eggs.txt)
+## - [traits.csv](traits.csv)
+## - [trauma.csv](trauma.csv)
+## - [tree.txt](tree.txt)
+## - [trees.dat](trees.dat)
+## - [trend.dat](trend.dat)
+## - [tsunami.txt](tsunami.txt)
+## - [tubeflow.txt](tubeflow.txt)
+## - [tubeflow2.txt](tubeflow2.txt)
+## - [two.dat](two.dat)
+## - [twocols.txt](twocols.txt)
+## - [uk-energy.txt](uk-energy.txt)
+## - [univ.dat](univ.dat)
+## - [Untitled 1.csv](Untitled 1.csv)
+## - [uremia.txt](uremia.txt)
+## - [urine.csv](urine.csv)
+## - [us-universities.dat](us-universities.dat)
+## - [us-universities.txt](us-universities.txt)
+## - [usa-1850-by-state.csv](usa-1850-by-state.csv)
+## - [utilities.dat](utilities.dat)
+## - [utilities.txt](utilities.txt)
+## - [utilities2.dat](utilities2.dat)
+## - [utilities3.dat](utilities3.dat)
+## - [utility.txt](utility.txt)
+## - [verbmath.txt](verbmath.txt)
+## - [vitaminb.txt](vitaminb.txt)
+## - [vocab.txt](vocab.txt)
+## - [voting.txt](voting.txt)
+## - [warmup.dat](warmup.dat)
+## - [weather_2014.csv](weather_2014.csv)
+## - [weather.csv](weather.csv)
+## - [weather.txt](weather.txt)
+## - [welldump.dat](welldump.dat)
+## - [whas100.csv](whas100.csv)
+## - [whas100.txt](whas100.txt)
+## - [whas500.txt](whas500.txt)
+## - [wide.txt](wide.txt)
+## - [windmill.csv](windmill.csv)
+## - [wine_quality.csv](wine_quality.csv)
+## - [wine-acidity.txt](wine-acidity.txt)
+## - [Wine.csv](Wine.csv)
+## - [wine.txt](wine.txt)
+## - [wines.txt](wines.txt)
+## - [winestatus.dat](winestatus.dat)
+## - [winestatus.txt](winestatus.txt)
+## - [wisconsin.txt](wisconsin.txt)
+## - [workmot.txt](workmot.txt)
+## - [x.dat](x.dat)
+## - [x1.dat](x1.dat)
+## - [x1.txt](x1.txt)
+## - [xcorr-dos.dat](xcorr-dos.dat)
+## - [xcorr.dat](xcorr.dat)
+## - [xy.txt](xy.txt)
+## - [y.txt](y.txt)
+## - [ycorr-dos.dat](ycorr-dos.dat)
+## - [ycorr.dat](ycorr.dat)
+## - [yogurt.txt](yogurt.txt)
+## - [youngboys.txt](youngboys.txt)
+## - [z.txt](z.txt)</code></pre>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
