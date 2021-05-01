@@ -5,7 +5,7 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "Ken's other courses"
+    - text: "Ken's courses"
       href: http://ritsokiguess.site/home/courses.html
     - text: "Ken Butler homepage"
       href: http://ritsokiguess.site/home
