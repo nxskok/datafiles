@@ -1,5 +1,5 @@
 brand score price calories fat sodium
-  1     70    91     110    4    310     
+  1     70    91     110    4    310    
   2     45    68      90    0    420
   3     43    92      80    1    280
   4     41    75     120    5    370
