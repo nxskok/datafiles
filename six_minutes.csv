@@ -1,4 +1,4 @@
-id,gender,age,fev1,dist_base,dist_3,dist_6,dist_12
+id,gender,age,fev1,dist_00,dist_03,dist_06,dist_12
 1,m,57,0.74,1058,1932,1940,1932
 2,m,56,0.78,1690,1411,1588,1656
 3,m,58,1.58,1380,1519,1520,1726
