@@ -11,7 +11,7 @@
 
 
 
-<title>list-them.knit</title>
+<title>fruit_veg.knit</title>
 
 <script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
@@ -266,13 +266,7 @@ $(document).ready(function () {
 </div>
 
 
-<p>find all the datafiles and make clickable list of them</p>
-<pre class="r"><code>library(tidyverse)</code></pre>
-<pre class="r"><code>list.files(pattern = &quot;*.txt$|*.csv$|*.dat$&quot;) %&gt;% 
-  enframe() %&gt;% 
-  mutate(rmd = glue::glue(&quot;- [{value}]({value})&quot;)) %&gt;% 
-  pull(rmd) %&gt;% 
-  writeLines(&quot;files.text&quot;)</code></pre>
+
 
 
 

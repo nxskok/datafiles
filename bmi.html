@@ -9,9 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Ken Butler" />
 
+<meta name="date" content="2017-10-26" />
 
-<title>list-them.knit</title>
+<title>Analysis of Australian Athletes’ BMI values</title>
 
 <script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
@@ -262,17 +264,92 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">Analysis of Australian Athletes’ BMI values</h1>
+<h4 class="author">Ken Butler</h4>
+<h4 class="date">October 26, 2017</h4>
 
 </div>
 
 
-<p>find all the datafiles and make clickable list of them</p>
+<div id="setup-packages" class="section level2">
+<h2>Setup (packages)</h2>
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre class="r"><code>list.files(pattern = &quot;*.txt$|*.csv$|*.dat$&quot;) %&gt;% 
-  enframe() %&gt;% 
-  mutate(rmd = glue::glue(&quot;- [{value}]({value})&quot;)) %&gt;% 
-  pull(rmd) %&gt;% 
-  writeLines(&quot;files.text&quot;)</code></pre>
+<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──</code></pre>
+<pre><code>## ✓ ggplot2 3.3.5     ✓ purrr   0.3.4
+## ✓ tibble  3.1.3     ✓ dplyr   1.0.7
+## ✓ tidyr   1.1.3     ✓ stringr 1.4.0
+## ✓ readr   2.0.0     ✓ forcats 0.5.1</code></pre>
+<pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>library(smmr)</code></pre>
+</div>
+<div id="the-australian-athletes-data" class="section level2">
+<h2>The Australian athletes data</h2>
+<p>Data were collected on several variables for 202 Australian elite athletes:</p>
+<pre class="r"><code>athletes=read_tsv(&quot;ais.txt&quot;)</code></pre>
+<pre><code>## Rows: 202 Columns: 13</code></pre>
+<pre><code>## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: &quot;\t&quot;
+## chr  (2): Sex, Sport
+## dbl (11): RCC, WCC, Hc, Hg, Ferr, BMI, SSF, %Bfat, LBM, Ht, Wt</code></pre>
+<pre><code>## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<pre class="r"><code>athletes</code></pre>
+<pre><code>## # A tibble: 202 × 13
+##    Sex    Sport     RCC   WCC    Hc    Hg  Ferr   BMI   SSF `%Bfat`   LBM    Ht
+##    &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1 female Netball  4.56  13.3  42.2  13.6    20  19.2  49      11.3  53.1  177.
+##  2 female Netball  4.15   6    38    12.7    59  21.2 110.     25.3  47.1  173.
+##  3 female Netball  4.16   7.6  37.5  12.3    22  21.4  89      19.4  53.4  176 
+##  4 female Netball  4.32   6.4  37.7  12.3    30  21.0  98.3    19.6  48.8  170.
+##  5 female Netball  4.06   5.8  38.7  12.8    78  21.8 122.     23.1  56.0  183 
+##  6 female Netball  4.12   6.1  36.6  11.8    21  21.4  90.4    16.9  56.4  178.
+##  7 female Netball  4.17   5    37.4  12.7   109  21.5 107.     21.3  53.1  177.
+##  8 female Netball  3.8    6.6  36.5  12.4   102  24.4 157.     26.6  54.4  174.
+##  9 female Netball  3.96   5.5  36.3  12.4    71  22.6 101.     17.9  56.0  174.
+## 10 female Netball  4.44   9.7  41.4  14.1    64  22.8 126.     25.0  51.6  174.
+## # … with 192 more rows, and 1 more variable: Wt &lt;dbl&gt;</code></pre>
+<p>We will study the variable <code>BMI</code> here.</p>
+</div>
+<div id="a-90-ci-for-mean-bmi" class="section level2">
+<h2>A 90% CI for mean BMI</h2>
+<pre class="r"><code>t.test(athletes$BMI,conf.level=0.90)</code></pre>
+<pre><code>## 
+##  One Sample t-test
+## 
+## data:  athletes$BMI
+## t = 113.92, df = 201, p-value &lt; 2.2e-16
+## alternative hypothesis: true mean is not equal to 0
+## 90 percent confidence interval:
+##  22.62291 23.28887
+## sample estimates:
+## mean of x 
+##  22.95589</code></pre>
+<p>The interval is from 22.62 to 23.29.</p>
+</div>
+<div id="assessing-assumptions" class="section level2">
+<h2>Assessing assumptions</h2>
+<p>Look at a plot of the BMI values: are they approx normal? Draw a histogram, but first find number of bins from Sturges’ rule:</p>
+<pre class="r"><code>mybins=nclass.Sturges(athletes$BMI)
+mybins</code></pre>
+<pre><code>## [1] 9</code></pre>
+<pre class="r"><code>ggplot(athletes,aes(x=BMI))+geom_histogram(bins=mybins)</code></pre>
+<p><img src="bmi_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>or a normal quantile plot:</p>
+<pre class="r"><code>qqnorm(athletes$BMI)
+qqline(athletes$BMI)</code></pre>
+<p><img src="bmi_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>This is not approximately normal; the right tail is too long.</p>
+</div>
+<div id="ci-for-median-from-sign-test" class="section level2">
+<h2>CI for median from sign test</h2>
+<pre class="r"><code>v=ci_median(athletes,BMI,conf.level=0.90)
+v</code></pre>
+<pre><code>## [1] 22.37286 23.12928</code></pre>
+<p>This goes from 22.37 to 23.13.</p>
+</div>
 
 
 

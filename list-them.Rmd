@@ -8,6 +8,7 @@ library(tidyverse)
 list.files(pattern = "*.txt$|*.csv$|*.dat$") %>% 
   enframe() %>% 
   mutate(rmd = glue::glue("- [{value}]({value})")) %>% 
-  pull(rmd) %>% cat(sep = "\n")
+  pull(rmd) %>% 
+  writeLines("files.text")
 ```
 
