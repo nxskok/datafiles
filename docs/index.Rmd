@@ -1,0 +1,11 @@
+---
+title: "Datafiles page"
+---
+
+#  The datafiles
+
+Here are links to all of them. You'll have to get descriptions of the data from the lecture notes, assignments, or PASIAS:
+ 
+```{r, child="files.text"}
+```
+

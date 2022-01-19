@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Ken Butler" />
+
+<meta name="date" content="2017-07-01" />
+
+<title>Endogenous nitrogen excretion in carp</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Datafiles</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="http://ritsokiguess.site/home/courses.html">Ken's courses</a>
+</li>
+<li>
+  <a href="http://ritsokiguess.site/home">Ken Butler homepage</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Endogenous nitrogen excretion in carp</h1>
+<h4 class="author">Ken Butler</h4>
+<h4 class="date">July 1, 2017</h4>
+
+</div>
+
+
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>A paper in Fisheries Science reported on variables that affect “endogenous nitrogen excretion” or ENE in carp raised in Japan. A number of carp were divided into groups based on body weight, and each group was placed in a different tank. The mean body weight of the carp placed in each tank was recorded. The carp were then fed a protein-free diet three times daily for a period of 20 days. At the end of the experiment, the amount of ENE in each tank was measured, in milligrams of total fish body weight per day. Ten tanks were used.</p>
+<p>The aim in this report is to find a satisfactory model that predicts ENE from body weight.</p>
+</div>
+<div id="exploratory-analysis" class="section level2">
+<h2>Exploratory analysis</h2>
+<p>We begin by reading in the data:</p>
+<pre class="r"><code>library(tidyverse)
+my_url=&quot;http://www.utsc.utoronto.ca/~butler/c32/carp.txt&quot;
+carp=read_delim(my_url,&quot; &quot;)  </code></pre>
+<pre><code>## Rows: 10 Columns: 3</code></pre>
+<pre><code>## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: &quot; &quot;
+## dbl (3): tank, bodyweight, ENE</code></pre>
+<pre><code>## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<pre class="r"><code>carp</code></pre>
+<pre><code>## # A tibble: 10 × 3
+##     tank bodyweight   ENE
+##    &lt;dbl&gt;      &lt;dbl&gt; &lt;dbl&gt;
+##  1     1       11.7  15.3
+##  2     2       25.3   9.3
+##  3     3       90.2   6.5
+##  4     4      213     6  
+##  5     5       10.2  15.7
+##  6     6       17.6  10  
+##  7     7       32.6   8.6
+##  8     8       81.3   6.4
+##  9     9      142.    5.6
+## 10    10      286.    6</code></pre>
+<p>There are indeed ten tanks.</p>
+<p>With two quantitative variables, a suitable graph is a scatterplot. We are taking ENE as the response, so:</p>
+<pre class="r"><code>ggplot(carp,aes(x=bodyweight,y=ENE))+geom_point()+
+  geom_smooth()</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="carp_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>The trend is downward: as bodyweight increases, ENE decreases. However, the decrease is rapid at first and then levels off, so the relationship is nonlinear.</p>
+</div>
+<div id="model-1-a-line" class="section level2">
+<h2>Model 1: a line</h2>
+<p>Given our observations above, a straight line should be a poor description of the relationship, but we begin by exploring this:</p>
+<pre class="r"><code>carp.1=lm(ENE~bodyweight,data=carp)
+summary(carp.1)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = ENE ~ bodyweight, data = carp)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -2.800 -1.957 -1.173  1.847  4.572 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 11.40393    1.31464   8.675 2.43e-05 ***
+## bodyweight  -0.02710    0.01027  -2.640   0.0297 *  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 2.928 on 8 degrees of freedom
+## Multiple R-squared:  0.4656, Adjusted R-squared:  0.3988 
+## F-statistic: 6.971 on 1 and 8 DF,  p-value: 0.0297</code></pre>
+<p>R-squared is 47%, which is not that good.</p>
+<p>We check the residuals for this model by plotting them against the fitted values:</p>
+<pre class="r"><code>ggplot(carp.1,aes(x=.fitted,y=.resid))+geom_point()</code></pre>
+<p><img src="carp_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>This is a clear curve, which means the original relationship must have been a curve. So let’s try a second model, a parabola, by adding bodyweight-squared.</p>
+</div>
+<div id="model-2-a-parabola" class="section level2">
+<h2>Model 2: a parabola</h2>
+<pre class="r"><code>carp.2=lm(ENE~bodyweight+I(bodyweight^2),data=carp)
+summary(carp.2)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = ENE ~ bodyweight + I(bodyweight^2), data = carp)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -2.0834 -1.7388 -0.5464  1.3841  2.9976 
+## 
+## Coefficients:
+##                   Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)     13.7127373  1.3062494  10.498 1.55e-05 ***
+## bodyweight      -0.1018390  0.0288109  -3.535  0.00954 ** 
+## I(bodyweight^2)  0.0002735  0.0001016   2.692  0.03101 *  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 2.194 on 7 degrees of freedom
+## Multiple R-squared:  0.7374, Adjusted R-squared:  0.6624 
+## F-statistic: 9.829 on 2 and 7 DF,  p-value: 0.009277</code></pre>
+<p>R-squared has gone up from 47% to 74%, a substantial improvement. This suggests to me that the parabola model is a substantial improvement. This is confirmed by the coefficient for the squared term being significantly nonzero: the parabola is definitely better than the straight line.</p>
+<p>Let’s make a plot with the data and fitted curve on it. This is most easily done by “fortify”-ing the regression object. What that means, in the context of <code>ggplot</code>, is to add the original data back onto the regression object, so that we can plot any combination of original data and values derived from the regression. That goes like this:</p>
+<pre class="r"><code>carp.2.fort=fortify(carp.2)
+carp.2.fort</code></pre>
+<pre><code>##     ENE bodyweight I(bodyweight^2)      .hat   .sigma    .cooksd   .fitted
+## 1  15.3       11.7          136.89 0.2392022 1.992810 0.21499558 12.558657
+## 2   9.3       25.3          640.09 0.1629840 2.193651 0.06514640 11.311261
+## 3   6.5       90.2         8136.04 0.2396677 2.367208 0.00182089  6.751885
+## 4   6.0      213.0           45369 0.3246419 2.237874 0.12169479  4.428445
+## 5  15.7       10.2          104.04 0.2511559 1.902036 0.27859605 12.702432
+## 6  10.0       17.6          309.76 0.1993691 2.186473 0.08656338 12.005083
+## 7   8.6       32.6         1062.76 0.1425478 2.184918 0.05826041 10.683427
+## 8   6.4       81.3         6609.69 0.2112076 2.338418 0.01661407  7.240829
+## 9   5.6      141.5        20022.25 0.3546865 2.333053 0.03982493  4.778159
+## 10  6.0      285.7        81624.49 0.8745372 2.108136 3.39715895  6.939822
+##        .resid  .stdresid
+## 1   2.7413428  1.4322784
+## 2  -2.0112607 -1.0018443
+## 3  -0.2518851 -0.1316435
+## 4   1.5715555  0.8714880
+## 5   2.9975680  1.5785999
+## 6  -2.0050832 -1.0212098
+## 7  -2.0834268 -1.0253497
+## 8  -0.8408294 -0.4314448
+## 9   0.8218410  0.4662310
+## 10 -0.9398221 -1.2091687</code></pre>
+<p>and then we make the plot thus:</p>
+<pre class="r"><code>ggplot(carp.2.fort,aes(x=bodyweight,y=.fitted))+
+  geom_line(colour=&quot;blue&quot;)+
+  geom_point(aes(y=ENE))</code></pre>
+<p><img src="carp_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>The points in the middle are above the curve, and the points at the ends are below. (That is, negative residuals at the ends, and positive ones in the middle.) Another problem is that the parabola curve fails to capture the  of the relationship; for example, I see nothing much in the data suggesting that the relationship should go back up, and even given that, the fitted curve doesn’t go especially near any of the points.</p>
+<p>Once again, we need to look at the residuals:</p>
+<pre class="r"><code>ggplot(carp.2,aes(x=.fitted,y=.resid))+geom_point()</code></pre>
+<p><img src="carp_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>I think this is  a curve (or, it goes down and then sharply up at the end). Either way, there is still a pattern.</p>
+<p>Thus, our parabola was a curve all right, but it appears not to be the right <em>kind</em> of curve. I think the original data looks more like a hyperbola (a curve like <span class="math inline">\(y=1/x\)</span>) than a parabola, in that it seems to decrease fast and then gradually to a limit, and <em>that</em> suggests, as in the class example, that we should try an asymptote model. (This is upside down compared to the windmill one, but it’s same idea of tending to a limit.)</p>
+</div>
+<div id="model-3-an-asymptote-model" class="section level2">
+<h2>Model 3: an asymptote model</h2>
+<pre class="r"><code>carp.3=lm(ENE~I(bodyweight^(-1)),data=carp)
+summary(carp.3)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = ENE ~ I(bodyweight^(-1)), data = carp)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -1.29801 -0.12830  0.04029  0.26702  0.91707 
+## 
+## Coefficients:
+##                    Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)          5.1804     0.2823   18.35 8.01e-08 ***
+## I(bodyweight^(-1)) 107.6690     5.8860   18.29 8.21e-08 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.6121 on 8 degrees of freedom
+## Multiple R-squared:  0.9766, Adjusted R-squared:  0.9737 
+## F-statistic: 334.6 on 1 and 8 DF,  p-value: 8.205e-08</code></pre>
+<p>That fits <em>extraordinarily</em> well, with an R-squared up near 98%. The intercept is the asymptote, which suggests a (lower) limit of about 5.2 for ENE (in the limit for large bodyweight). We would have to ask the fisheries scientist whether this kind of thing is a reasonable biological mechanism. It says that a carp always has some ENE, no matter how big it gets, but a smaller carp will have a lot more.</p>
+<p>Does the fitted value plot look reasonable now? The “fortify” thing doesn’t quite work here, since <code>bodyweight</code> doesn’t itself get added to the fortified data set (it is not part of the model), so it looks as if we are working with two data frames. I cheated and pulled the things I wanted out of <code>carp</code> without doing a <code>data=</code>:</p>
+<pre class="r"><code>ggplot(carp.3,aes(x=carp$bodyweight,y=.fitted))+
+  geom_line(colour=&quot;blue&quot;)+
+  geom_point(aes(y=carp$ENE))</code></pre>
+<p><img src="carp_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>I’d say that does a really nice job of fitting the data. But it would be nice to have a few more tanks with large-bodyweight fish, to convince us that we have the shape of the trend right.</p>
+<p>And, as ever, the residual plot:</p>
+<pre class="r"><code>ggplot(carp.3,aes(x=.fitted,y=.resid))+geom_point()</code></pre>
+<p><img src="carp_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>All in all, that looks pretty good (and certainly a vast improvement over the ones we got before).</p>
+</div>
+<div id="conclusions" class="section level2">
+<h2>Conclusions</h2>
+<p>The nonlinear nature of this relationship — a sharp drop followed by a levelling off — requires the right kind of nonlinear model, in this case an asymptote model. We found that a straight line and a parabola were not appropriate, both by looking at the residual plots and by looking at R-squared, but the asymptote model has a very high R-squared and a satisfactory residual plot. For these data, the asymptote model, fitted as our model 3, appears to be the best.</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

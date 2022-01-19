@@ -1,0 +1,67 @@
+---
+title: "Analysis of Australian Athletes' BMI values"
+author: "Ken Butler"
+date: "October 26, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Setup (packages)
+
+```{r}
+library(tidyverse)
+library(smmr)
+```
+
+
+## The Australian athletes data
+
+Data were collected on several variables for 202 Australian elite athletes:
+
+```{r}
+athletes=read_tsv("ais.txt")
+athletes
+```
+
+We will study the variable `BMI` here.
+
+## A 90% CI for mean BMI
+
+```{r}
+t.test(athletes$BMI,conf.level=0.90)
+```
+
+The interval is from 22.62 to 23.29.
+
+## Assessing assumptions
+
+Look at a plot of the BMI values: are they approx normal? Draw a histogram, but first find number of bins from Sturges' rule:
+
+```{r}
+mybins=nclass.Sturges(athletes$BMI)
+mybins
+ggplot(athletes,aes(x=BMI))+geom_histogram(bins=mybins)
+```
+
+or a normal quantile plot:
+
+```{r}
+qqnorm(athletes$BMI)
+qqline(athletes$BMI)
+```
+
+This is not approximately normal; the right tail is too long.
+
+## CI for median from sign test
+
+```{r}
+v=ci_median(athletes,BMI,conf.level=0.90)
+v
+```
+
+This goes from `r round(v[1],2)` to `r round(v[2],2)`.
+
+

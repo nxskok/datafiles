@@ -1,0 +1,14 @@
+find all the datafiles and make clickable list of them
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+list.files(pattern = "*.txt$|*.csv$|*.dat$") %>% 
+  enframe() %>% 
+  mutate(rmd = glue::glue("- [{value}]({value})")) %>% 
+  pull(rmd) %>% 
+  writeLines("files.text")
+```
+
