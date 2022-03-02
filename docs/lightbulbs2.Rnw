@@ -1,0 +1,12 @@
+\question A company manufactures light bulbs. One particular model has a mean lifetime of 810 hours with a standard deviation of 200 hours. The company is investigating whether to put a new manufacturing process into production. 
+50 light bulbs will be produced by the new process and their lifetimes measured. Suppose the mean lifetime of bulbs produced by the new process has mean 850 hours, and the same standard deviation as before. The company will be doing a suitable hypothesis test to see whether the mean lifetime of the light bulbs has increased, compared to 810 hours. Assume that the light bulb lifetimes have a gamma distribution.
+
+In R, random values from a gamma distribution are generated using \texttt{rgamma}. In R, this has three inputs: the number of random values to generate, and the gamma distribution parameters \texttt{shape} and \texttt{rate} (in that order). Write $\alpha$ for the shape and $\beta$ for the rate. The gamma distribution has mean $\alpha/\beta$ and SD $\sqrt{\alpha}/\beta$.
+
+\part[3] Using algebra, find expressions for $\alpha$ and $\beta$ in terms of the mean $\mu$ and standard deviation $\sigma$ of a gamma distribution in terms of $\alpha$ and $\beta$.
+
+\begin{solution}
+
+Write $\mu = \alpha / \beta$ and $\sigma = \sqrt{\alpha}/\beta$ or $\sigma^2 = \alpha / \beta^2$. From the equation for $\mu$, $\alpha = \beta \mu$. Substitute into the equation for $\sigma^2$ to get $\sigma^2 = \beta \mu / \beta^2 = \mu / \beta$, and hence $\beta = \mu / \sigma^2$. Using the equation for $\alpha$, $\alpha = \beta \mu = \mu^2 / \sigma^2$.
+
+\end{solution}
