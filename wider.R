@@ -1,6 +1,6 @@
 library(tidyverse)
 d1 <- tribble(
-  ~row, ~g, ~x,
+  ~item, ~g, ~x,
   1, "treatment", 101,
   2, "treatment", 103,
   3, "treatment", 103,
@@ -12,7 +12,7 @@ d1 <- tribble(
 )
 write_csv(d1, "docs/wider1.csv")
 d2 <- tribble(
-  ~row, ~g, ~x,
+  ~item, ~g, ~x,
   1, "treatment", 101,
   2, "treatment", 103,
   3, "treatment", 103,
@@ -24,3 +24,18 @@ d2 <- tribble(
   4, "control", 100
 )
 write_csv(d2, "docs/wider2.csv")
+
+d3 <- tribble(
+  ~item, ~g, ~x,
+  1, "treatment", 101,
+  2, "treatment", 103,
+  1, "treatment", 103,
+  2, "treatment", 105,
+  1, "treatment", 108,
+  2, "control", 99,
+  1, "control", 97,
+  2, "control", 95,
+  1, "control", 100
+)
+d3
+write_csv(d2, "docs/wider3.csv")
