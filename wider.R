@@ -38,4 +38,4 @@ d3 <- tribble(
   1, "control", 100
 )
 d3
-write_csv(d2, "docs/wider3.csv")
+write_csv(d3, "docs/wider3.csv")
