@@ -1,4 +1,4 @@
-left                right               punt                         fred
+  left             right                punt                        fred
    170               170                162.50                       171 
    130               140                144.0                        136   
    170               180                174.50                       174 
