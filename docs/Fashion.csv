@@ -111,85 +111,6 @@ f,Friday,morning,business,yes,long pants,business,41-60,1
 f,Friday,morning,sandals,no,long pants,casual,26-40,1
 f,Friday,morning,thongs,no,long pants,casual,17-25,1
 f,Friday,morning,heels,no,long pants,business,26-40,1
-m,Friday,afternoon,joggers,yes,long pants,casual,17-25,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,thongs,no,shorts,casual,17-25,1
-m,Friday,afternoon,casual,yes,shorts,casual,17-25,1
-m,Friday,afternoon,joggers,yes,shorts,casual,17-25,1
-m,Friday,afternoon,thongs,no,shorts,casual,17-25,1
-m,Friday,afternoon,thongs,no,shorts,casual,17-25,1
-m,Friday,afternoon,joggers,yes,long pants,casual,17-25,1
-m,Friday,afternoon,joggers,yes,long pants,casual,17-25,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,casual,17-25,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,boots,yes,long pants,casual,17-25,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,casual,yes,shorts,casual,17-25,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,sandals,no,shorts,casual,17-25,1
-m,Friday,afternoon,thongs,no,shorts,casual,17-25,1
-m,Friday,afternoon,joggers,yes,shorts,casual,17-25,1
-m,Friday,afternoon,thongs,no,shorts,casual,17-25,1
-m,Friday,afternoon,joggers,yes,shorts,casual,17-25,1
-m,Friday,afternoon,casual,yes,shorts,casual,17-25,1
-m,Friday,afternoon,casual,yes,shorts,casual,17-25,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,joggers,yes,shorts,casual,17-25,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,thongs,no,shorts,casual,17-25,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,joggers,yes,shorts,casual,17-25,1
-m,Friday,afternoon,joggers,yes,shorts,casual,17-25,1
-m,Friday,afternoon,thongs,no,long pants,casual,17-25,1
-m,Friday,afternoon,boots,yes,long pants,business,41-60,1
-m,Friday,afternoon,boots,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,thongs,no,shorts,casual,17-25,1
-m,Friday,afternoon,casual,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,17-25,1
-m,Friday,afternoon,business,yes,long pants,business,60+,1
-m,Friday,afternoon,thongs,no,shorts,casual,17-25,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,casual,yes,long pants,casual,17-25,1
-m,Friday,afternoon,casual,yes,long pants,casual,17-25,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,boots,yes,shorts,casual,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,thongs,no,long pants,casual,17-25,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,thongs,no,shorts,casual,17-25,1
-m,Friday,afternoon,thongs,no,shorts,casual,17-25,1
-m,Friday,afternoon,thongs,no,shorts,casual,17-25,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,casual,yes,long pants,casual,17-25,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,casual,yes,shorts,casual,17-25,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,joggers,yes,shorts,casual,17-25,1
-m,Friday,afternoon,thongs,no,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,joggers,yes,long pants,casual,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
 f,Friday,afternoon,thongs,no,long pants,casual,17-25,1
 f,Friday,afternoon,thongs,no,short skirt,casual,17-25,1
 f,Friday,afternoon,heels,stockings,short skirt,business,41-60,1
@@ -311,90 +232,36 @@ f,Friday,afternoon,joggers,yes,shorts,casual,26-40,1
 f,Friday,afternoon,sandals,no,long pants,casual,41-60,1
 f,Friday,afternoon,heels,no,long pants,casual,60+,1
 f,Friday,afternoon,heels,no,long pants,dressy,41-60,1
-m,Wednesday,morning,casual,yes,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,41-60,1
-m,Wednesday,morning,business,yes,long pants,business,41-60,1
 f,Wednesday,morning,casual,no,short skirt,casual,17-25,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,41-60,1
 f,Wednesday,morning,casual,no,long skirt,casual,17-25,1
 f,Wednesday,morning,casual,yes,long pants,casual,17-25,1
 f,Wednesday,morning,heels,no,long skirt,business,26-40,1
 f,Wednesday,morning,heels,no,long skirt,business,26-40,1
 f,Wednesday,morning,heels,no,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,41-60,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
 f,Wednesday,morning,heels,no,long skirt,business,26-40,1
 f,Wednesday,morning,heels,no,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,41-60,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,casual,yes,long pants,casual,26-40,1
 f,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
 f,Wednesday,morning,thongs,no,long pants,casual,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
 f,Wednesday,morning,thongs,no,long pants,casual,26-40,1
 f,Wednesday,morning,thongs,no,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,casual,26-40,1
 f,Wednesday,morning,heels,no,short skirt,casual,26-40,1
 f,Wednesday,morning,joggers,yes,long pants,casual,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,joggers,yes,long pants,casual,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
 f,Wednesday,morning,casual,yes,long pants,casual,26-40,1
 f,Wednesday,morning,business,no,long skirt,casual,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
 f,Wednesday,morning,business,no,long skirt,business,26-40,1
 f,Wednesday,morning,heels,no,long pants,casual,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,casual,17-25,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,41-60,1
-m,Wednesday,morning,business,yes,long pants,business,41-60,1
-m,Wednesday,morning,joggers,yes,long pants,casual,17-25,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,41-60,1
-m,Wednesday,morning,business,yes,long pants,business,41-60,1
-m,Wednesday,morning,joggers,yes,shorts,casual,26-40,1
 f,Wednesday,morning,joggers,yes,shorts,casual,26-40,1
 f,Wednesday,morning,casual,no,long skirt,business,26-40,1
 f,Wednesday,morning,casual,no,long pants,business,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,60+,1
 f,Wednesday,afternoon,casual,no,long pants,business,26-40,1
 f,Wednesday,afternoon,heels,no,long skirt,business,26-40,1
-m,Wednesday,afternoon,casual,yes,long skirt,casual,17-25,1
-m,Wednesday,afternoon,joggers,yes,long skirt,casual,17-25,1
-m,Wednesday,afternoon,joggers,yes,long pants,casual,17-25,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,41-60,1
-m,Wednesday,afternoon,business,yes,long pants,business,41-60,1
-m,Wednesday,afternoon,business,yes,long pants,business,60+,1
-m,Wednesday,afternoon,business,yes,long pants,business,41-60,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
 f,Wednesday,afternoon,heels,no,long skirt,casual,26-40,1
-m,Wednesday,afternoon,joggers,yes,long pants,casual,17-25,1
 f,Wednesday,afternoon,joggers,yes,long pants,business,26-40,1
 f,Wednesday,afternoon,casual,no,long pants,business,26-40,1
 f,Wednesday,afternoon,casual,no,long pants,business,26-40,1
-m,Wednesday,afternoon,joggers,yes,long skirt,casual,41-60,1
-m,Wednesday,afternoon,casual,yes,long skirt,casual,17-25,1
 f,Wednesday,afternoon,heels,no,long pants,casual,26-40,1
 f,Wednesday,afternoon,heels,no,long pants,business,26-40,1
 f,Wednesday,afternoon,casual,no,long pants,business,26-40,1
-m,Wednesday,afternoon,joggers,yes,long skirt,business,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
 f,Wednesday,afternoon,heels,no,short skirt,business,26-40,1
 f,Wednesday,afternoon,casual,yes,long pants,casual,17-25,1
 f,Wednesday,afternoon,joggers,yes,shorts,casual,17-25,1
@@ -408,10 +275,7 @@ f,Wednesday,afternoon,heels,no,long pants,business,26-40,1
 f,Wednesday,afternoon,heels,no,long pants,business,26-40,1
 f,Wednesday,afternoon,heels,no,long pants,casual,26-40,1
 f,Wednesday,afternoon,heels,no,long pants,casual,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
 f,Wednesday,afternoon,heels,no,long skirt,business,41-60,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
 f,Wednesday,afternoon,heels,no,long pants,business,26-40,1
 f,Wednesday,afternoon,heels,no,long pants,casual,26-40,1
 f,Wednesday,afternoon,boots,yes,short skirt,casual,17-25,1
@@ -420,262 +284,9 @@ f,Wednesday,afternoon,heels,no,long skirt,casual,26-40,1
 f,Wednesday,afternoon,heels,no,long pants,casual,26-40,1
 f,Wednesday,afternoon,heels,no,long pants,casual,26-40,1
 f,Wednesday,afternoon,heels,no,short skirt,casual,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,41-60,1
 f,Wednesday,afternoon,heels,no,long skirt,casual,41-60,1
 f,Wednesday,afternoon,heels,no,long pants,casual,26-40,1
 f,Wednesday,afternoon,heels,no,long pants,business,41-60,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,thongs,no,shorts,casual,26-40,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,casual,yes,shorts,casual,17-25,1
-m,Friday,morning,casual,yes,long pants,casual,26-40,1
-m,Friday,morning,business,yes,long pants,business,60+,1
-m,Friday,morning,business,yes,long pants,casual,26-40,1
-m,Friday,morning,business,yes,shorts,business,60+,1
-m,Friday,morning,joggers,yes,shorts,casual,17-25,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,casual,yes,long pants,casual,17-25,1
-m,Friday,morning,casual,yes,long pants,casual,17-25,1
-m,Friday,morning,casual,yes,long pants,casual,17-25,1
-m,Friday,morning,casual,yes,long pants,casual,17-25,1
-m,Friday,morning,casual,yes,long pants,casual,17-25,1
-m,Friday,morning,casual,yes,long pants,casual,17-25,1
-m,Friday,morning,casual,yes,long pants,casual,17-25,1
-m,Friday,morning,business,yes,long pants,casual,17-25,1
-m,Friday,morning,casual,yes,shorts,casual,17-25,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,casual,yes,shorts,casual,17-25,1
-m,Friday,morning,casual,yes,shorts,casual,17-25,1
-m,Friday,morning,casual,yes,long pants,casual,17-25,1
-m,Friday,morning,casual,yes,shorts,casual,26-40,1
-m,Friday,morning,casual,yes,long pants,casual,17-25,1
-m,Friday,morning,casual,yes,long pants,casual,26-40,1
-m,Friday,morning,joggers,yes,shorts,casual,17-25,1
-m,Friday,morning,boots,yes,shorts,casual,17-25,1
-m,Friday,morning,sandals,no,shorts,casual,17-25,1
-m,Friday,morning,casual,yes,long pants,casual,26-40,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,joggers,yes,long pants,casual,26-40,1
-m,Friday,morning,casual,yes,long pants,casual,41-60,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,thongs,no,shorts,casual,17-25,1
-m,Friday,morning,casual,yes,long pants,casual,41-60,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,casual,yes,long pants,casual,17-25,1
-m,Friday,morning,casual,yes,shorts,casual,17-25,1
-m,Friday,morning,casual,yes,shorts,casual,17-25,1
-m,Friday,morning,business,yes,long pants,casual,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,casual,yes,shorts,casual,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,casual,yes,long pants,casual,17-25,1
-m,Friday,afternoon,casual,yes,long pants,casual,17-25,1
-m,Friday,afternoon,casual,yes,shorts,casual,17-25,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,17-25,1
-m,Friday,afternoon,casual,yes,long pants,casual,26-40,1
-m,Friday,afternoon,joggers,yes,long pants,casual,17-25,1
-m,Friday,afternoon,casual,yes,long pants,casual,17-25,1
-m,Friday,afternoon,casual,yes,shorts,casual,17-25,1
-m,Friday,afternoon,casual,yes,shorts,casual,17-25,1
-m,Friday,afternoon,casual,yes,shorts,casual,17-25,1
-m,Friday,afternoon,casual,yes,long pants,casual,17-25,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,casual,yes,long pants,casual,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,casual,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,casual,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,joggers,yes,long pants,casual,26-40,1
-m,Friday,afternoon,joggers,yes,shorts,casual,41-60,1
-m,Friday,afternoon,joggers,yes,long pants,casual,41-60,1
-m,Friday,afternoon,casual,yes,shorts,casual,17-25,1
-m,Friday,afternoon,casual,yes,shorts,casual,17-25,1
-m,Friday,afternoon,casual,yes,shorts,casual,17-25,1
-m,Friday,afternoon,joggers,yes,shorts,casual,0-16,1
-m,Friday,afternoon,casual,yes,shorts,casual,41-60,1
-m,Friday,afternoon,casual,yes,shorts,casual,17-25,1
-m,Friday,afternoon,joggers,yes,shorts,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,casual,yes,shorts,casual,17-25,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,casual,no,shorts,casual,17-25,1
-m,Friday,afternoon,casual,yes,shorts,casual,17-25,1
-m,Friday,afternoon,casual,yes,shorts,casual,17-25,1
-m,Friday,afternoon,casual,yes,long pants,casual,17-25,1
-m,Friday,afternoon,casual,yes,long pants,casual,17-25,1
-m,Friday,afternoon,casual,yes,long pants,casual,17-25,1
-m,Friday,afternoon,casual,yes,long pants,casual,17-25,1
-m,Friday,afternoon,casual,yes,long pants,casual,17-25,1
-m,Friday,afternoon,casual,yes,long pants,casual,17-25,1
-m,Friday,afternoon,casual,yes,long pants,casual,17-25,1
-m,Friday,afternoon,casual,yes,shorts,casual,17-25,1
-m,Friday,afternoon,business,yes,long pants,business,17-25,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,41-60,1
-m,Friday,afternoon,casual,yes,long pants,casual,17-25,1
-m,Friday,afternoon,casual,yes,long pants,casual,17-25,1
-m,Friday,afternoon,boots,yes,shorts,casual,17-25,1
-m,Friday,afternoon,joggers,yes,shorts,business,26-40,1
-m,Friday,afternoon,business,yes,long pants,business,60+,1
-m,Friday,afternoon,business,yes,long pants,business,60+,1
-m,Friday,afternoon,business,yes,long pants,business,26-40,1
-m,Friday,afternoon,casual,yes,long pants,casual,26-40,1
-m,Friday,afternoon,casual,yes,long pants,casual,26-40,1
-m,Friday,afternoon,casual,yes,shorts,casual,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,41-60,1
-m,Wednesday,morning,business,yes,long pants,business,41-60,1
-m,Wednesday,morning,casual,yes,shorts,casual,41-60,1
-m,Wednesday,morning,casual,yes,shorts,casual,26-40,1
-m,Wednesday,morning,casual,no,shorts,casual,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,41-60,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,thongs,no,shorts,casual,17-25,1
-m,Wednesday,morning,thongs,no,shorts,casual,17-25,1
-m,Wednesday,morning,joggers,yes,shorts,casual,17-25,1
-m,Wednesday,morning,joggers,yes,shorts,casual,17-25,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,thongs,no,shorts,alternative,17-25,1
-m,Wednesday,morning,joggers,yes,long pants,casual,26-40,1
-m,Wednesday,morning,casual,no,shorts,casual,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,41-60,1
-m,Wednesday,morning,business,yes,long pants,business,41-60,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,joggers,yes,long pants,alternative,41-60,1
-m,Wednesday,morning,business,yes,long pants,business,41-60,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,joggers,yes,shorts,casual,17-25,1
-m,Wednesday,morning,thongs,no,shorts,casual,17-25,1
-m,Wednesday,morning,joggers,yes,shorts,casual,26-40,1
-m,Wednesday,morning,thongs,no,shorts,casual,17-25,1
-m,Wednesday,morning,thongs,no,shorts,casual,17-25,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,thongs,no,long pants,casual,17-25,1
-m,Wednesday,morning,business,yes,long pants,casual,17-25,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Wednesday,morning,business,yes,long pants,business,41-60,1
-m,Wednesday,morning,joggers,yes,shorts,casual,17-25,1
-m,Wednesday,morning,business,yes,long pants,business,41-60,1
-m,Wednesday,morning,business,yes,long pants,business,41-60,1
-m,Wednesday,morning,casual,no,shorts,casual,17-25,1
-m,Wednesday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,joggers,yes,shorts,casual,17-25,1
-m,Friday,morning,joggers,yes,shorts,casual,17-25,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,thongs,no,shorts,casual,17-25,1
-m,Friday,morning,business,yes,long pants,business,17-25,1
-m,Friday,morning,joggers,yes,long pants,casual,17-25,1
-m,Friday,morning,casual,yes,long pants,casual,17-25,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,thongs,no,shorts,casual,17-25,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,casual,yes,long pants,casual,17-25,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,joggers,yes,shorts,casual,41-60,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,thongs,no,long pants,casual,17-25,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,joggers,yes,shorts,casual,17-25,1
-m,Friday,morning,casual,yes,long pants,casual,17-25,1
-m,Friday,morning,boots,yes,long pants,casual,41-60,1
-m,Friday,morning,casual,yes,shorts,casual,17-25,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,boots,yes,long pants,business,41-60,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,joggers,yes,shorts,casual,17-25,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,casual,yes,long pants,casual,17-25,1
-m,Friday,morning,casual,yes,long pants,casual,17-25,1
-m,Friday,morning,joggers,yes,long pants,casual,17-25,1
-m,Friday,morning,joggers,yes,shorts,casual,17-25,1
-m,Friday,morning,joggers,yes,shorts,casual,17-25,1
-m,Friday,morning,joggers,yes,shorts,casual,17-25,1
-m,Friday,morning,joggers,yes,shorts,casual,17-25,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,thongs,no,long pants,casual,17-25,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,business,yes,long pants,business,26-40,1
-m,Friday,morning,casual,yes,long pants,casual,17-25,1
-m,Friday,morning,casual,yes,long pants,casual,17-25,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
-m,Friday,morning,business,yes,long pants,business,41-60,1
 f,Wednesday,morning,sandals,no,short skirt,casual,26-40,1
 f,Wednesday,morning,joggers,yes,long pants,casual,17-25,1
 f,Wednesday,morning,joggers,no,short skirt,casual,17-25,1
@@ -760,63 +371,3 @@ f,Wednesday,afternoon,thongs,no,long pants,casual,17-25,1
 f,Wednesday,afternoon,business,yes,long pants,business,26-40,1
 f,Wednesday,afternoon,sandals,no,long pants,business,26-40,1
 f,Wednesday,afternoon,heels,no,long pants,business,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,casual,yes,shorts,casual,17-25,1
-m,Wednesday,afternoon,thongs,no,long pants,casual,17-25,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,casual,no,shorts,casual,17-25,1
-m,Wednesday,afternoon,business,yes,long pants,business,41-60,1
-m,Wednesday,afternoon,business,yes,long pants,business,41-60,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,thongs,no,shorts,casual,17-25,1
-m,Wednesday,afternoon,thongs,no,shorts,casual,17-25,1
-m,Wednesday,afternoon,thongs,no,shorts,casual,17-25,1
-m,Wednesday,afternoon,boots,yes,shorts,casual,17-25,1
-m,Wednesday,afternoon,casual,yes,long pants,casual,17-25,1
-m,Wednesday,afternoon,boots,yes,long pants,casual,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,41-60,1
-m,Wednesday,afternoon,business,yes,long pants,business,41-60,1
-m,Wednesday,afternoon,thongs,no,shorts,casual,17-25,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,joggers,yes,shorts,casual,17-25,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,casual,yes,shorts,casual,17-25,1
-m,Wednesday,afternoon,casual,yes,shorts,casual,17-25,1
-m,Wednesday,afternoon,joggers,yes,shorts,casual,17-25,1
-m,Wednesday,afternoon,casual,no,shorts,casual,17-25,1
-m,Wednesday,afternoon,casual,yes,long pants,casual,17-25,1
-m,Wednesday,afternoon,casual,yes,long pants,casual,17-25,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,thongs,no,shorts,casual,17-25,1
-m,Wednesday,afternoon,thongs,no,long pants,casual,17-25,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,casual,yes,long pants,casual,17-25,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,joggers,yes,long pants,casual,17-25,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,casual,yes,long pants,casual,17-25,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,thongs,no,shorts,casual,17-25,1
-m,Wednesday,afternoon,casual,yes,shorts,casual,17-25,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,business,yes,long pants,business,26-40,1
-m,Wednesday,afternoon,joggers,yes,long pants,casual,17-25,1
-m,Wednesday,afternoon,sandals,no,shorts,casual,17-25,1
-m,Wednesday,afternoon,joggers,yes,shorts,casual,41-60,1
-m,Wednesday,afternoon,thongs,no,shorts,casual,17-25,1
-m,Wednesday,afternoon,sandals,no,shorts,casual,17-25,1
-m,Wednesday,afternoon,business,yes,long pants,business,41-60,1
-m,Wednesday,afternoon,business,yes,long pants,business,41-60,1
-m,Wednesday,afternoon,business,yes,long pants,business,41-60,1
-m,Wednesday,afternoon,business,yes,long pants,business,41-60,1
-m,Wednesday,afternoon,joggers,yes,long pants,casual,17-25,1
