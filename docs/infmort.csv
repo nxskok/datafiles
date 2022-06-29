@@ -22,6 +22,7 @@ Americas,5523,17.6,no oil exports
 Africa,400,86.3,oil exports
 Americas,250,78.5,oil exports
 Asia,110,125,oil exports
+Asia,1280,NA,oil exports
 Asia,560,28.1,oil exports
 Africa,3010,300,oil exports
 Africa,220,58,oil exports
@@ -80,12 +81,15 @@ Africa,70,160,no oil exports
 Africa,81,109.6,no oil exports
 Africa,79,84.2,no oil exports
 Africa,79,216,no oil exports
+Americas,100,NA,no oil exports
 Asia,93,60.6,no oil exports
 Africa,169,55,no oil exports
+Asia,71,NA,no oil exports
 Africa,120,102,no oil exports
 Africa,130,148.3,no oil exports
 Africa,50,120,no oil exports
 Africa,174,187,no oil exports
+Asia,90,NA,no oil exports
 Africa,70,200,no oil exports
 Asia,102,124.3,no oil exports
 Africa,61,132.9,no oil exports
